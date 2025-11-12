@@ -1,0 +1,31 @@
+{
+	"name": "Doosan Robotics ROS2 Dev Container",
+	"image": "osrf/ros:jazzy-desktop",
+	"workspaceFolder": "/workspaces/doosan_ws/src/doosan-robot2",
+	"workspaceMount": "source=${localWorkspaceFolder},target=${containerWorkspaceFolder},type=bind",
+	"postCreateCommand": ".devcontainer/post-command.sh",
+	"runArgs": [
+		"--network=host",
+		"--volume=/var/run/docker.sock:/var/run/docker.sock",
+		"--volume=/tmp/.X11-unix:/tmp/.X11-unix",
+		"--ipc=host",
+		"--privileged"
+	],
+	"containerEnv": {
+		"DISPLAY": "${localEnv:DISPLAY}",
+		"LIBGL_ALWAYS_SOFTWARE": "1",
+		"QT_X11_NO_MITSHM": "1",
+		"XDG_RUNTIME_DIR": "/tmp/runtime-root"
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-iot.vscode-ros",
+				"ms-python.python",
+				"ms-vscode.cpptools",
+				"twxs.cmake",
+				"ms-azuretools.vscode-docker"
+			]
+		}
+	}
+}
