@@ -25,8 +25,38 @@
 					<mesh filename="package://dsr_description2/meshes/e0509_white/E0509_0_0.dae" scale="0.001 0.001 0.001" />
 				</geometry>
 				<material name="dr_white" />
+			</visual>		
+		</link>
+
+		<!-- table -->
+		 <joint name="stable_ base" type="fixed">
+			<parent link="base_link" />
+			<child link="table" />
+			<origin rpy="0 0 -1.5708" xyz="0.85 0 -0.03"/>
+      <axis xyz="0 0 1"/>
+		</joint>
+		<link name="table">
+			<inertial>
+				<mass value="0.5"/>
+        <origin xyz="0.000755   -0.0005815   -0.00018"/>
+        <inertia ixx="0.0048272" ixy="5.6302e-06" ixz="5.5274e-06" iyy="0.0046772" iyz="3.9598e-06" izz="0.0079424"/>
+			</inertial>
+			<collision>
+				<origin rpy="0 0 0" xyz="0 0 0" />
+				<geometry>
+					<mesh filename="package://dsr_description2/meshes/custom_collision/table.stl" scale="0.001 0.001 0.001" />
+				</geometry>
+				<material name="dr_white" />
+			</collision>
+			<visual>
+				<origin rpy="0 0 0" xyz="0 0 0" />
+				<geometry>
+					<mesh filename="package://dsr_description2/meshes/custom/table.stl" scale="0.001 0.001 0.001" />
+				</geometry>
+				<material name="dr_white" />
 			</visual>
 		</link>
+
 		<!-- joint 1 -->
 		<joint name="joint_1" type="revolute">
 			<parent link="base_link" />
@@ -306,6 +336,36 @@
 				<material name="dr_white" />
 			</visual>
 		</link>
+
+		<!-- end_effector -->
+		<joint name="gripper_add" type="fixed">
+			<parent link="link_6" />
+			<child link="gripper" />
+			<origin rpy="1.5708 0 0" xyz="0 0 0.048091"/>
+      <axis xyz="0 0 1"/>
+		</joint>
+		<link name="gripper">
+			<inertial>
+				<mass value="0.5"/>
+        <origin xyz="0.000755   -0.0005815   -0.00018"/>
+        <inertia ixx="0.0048272" ixy="5.6302e-06" ixz="5.5274e-06" iyy="0.0046772" iyz="3.9598e-06" izz="0.0079424"/>
+			</inertial>
+			<collision>
+				<origin rpy="0 0 0" xyz="0 0 0" />
+				<geometry>
+					<mesh filename="package://dsr_description2/meshes/custom_collision/RH-P12-RN.stl" scale="0.001 0.001 0.001" />
+				</geometry>
+				<material name="dr_white" />
+			</collision>
+			<visual>
+				<origin rpy="0 0 0" xyz="0 0 0" />
+				<geometry>
+					<mesh filename="package://dsr_description2/meshes/custom/RH-P12-RN.stl" scale="0.001 0.001 0.001" />
+				</geometry>
+				<material name="dr_white" />
+			</visual>
+		</link>
+		
 		<xacro:dsr_transmission />
 		<xacro:dsr_gazebo namespace="${namespace}" />
 	</xacro:macro>
