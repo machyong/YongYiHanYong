@@ -51,4 +51,4 @@ qtcreator-*
 CATKIN_IGNORE
 
 .vscode/
-.env
+.envsrc/pick_and_place_voice_new/resource/.env
