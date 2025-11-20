@@ -1,0 +1,13 @@
+yolo_depth_node:
+  ros__parameters:
+    # 모델 타입: 'yolov5' 또는 'yolov8'
+    model_type: 'yolov5'
+    
+    # 사전 학습된 모델 사용 시
+    # YOLOv5: yolov5s, yolov5m, yolov5l, yolov5x
+    # YOLOv8: yolov8n, yolov8s, yolov8m, yolov8l, yolov8x
+    model_name: 'yolov5s'
+    
+    # 커스텀 모델 사용 시 (절대 경로 또는 상대 경로)
+    # 예: '/home/user/models/best.pt'
+    model_path: ''
