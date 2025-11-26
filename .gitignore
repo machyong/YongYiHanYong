@@ -52,3 +52,9 @@ CATKIN_IGNORE
 
 .vscode/
 .envsrc/pick_and_place_voice_new/resource/.env
+
+#env
+.env
+*.env
+**/.env
+
