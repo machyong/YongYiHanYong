@@ -2,6 +2,7 @@
 
 import os
 import rclpy
+import json
 from rclpy.node import Node
 import pyaudio
 
@@ -18,6 +19,8 @@ from std_srvs.srv import Trigger
 from llm_for_pick_place_voice.MicController import MicController, MicConfig
 from llm_for_pick_place_voice.wakeup_word import WakeupWord
 from llm_for_pick_place_voice.stt import STT
+
+from std_msgs.msg import String
 
 
 ############ Package Path & Environment Setting ############
@@ -142,6 +145,8 @@ class GetKeyword(Node):
         # wakeupword 탐지
         self.wakeup_word = WakeupWord(mic_config.buffer_size)
 
+        self.keyword_pub = self.create_publisher(String, "keyword_topic", 10)
+        self.voice_state_pub = self.create_publisher(String, "voice_state", 10)
 
     ### 중요 키워드(table num, action) 추출
     def extract_keyword(self, output_message):
@@ -185,13 +190,16 @@ class GetKeyword(Node):
         # 서비스 처리
         try:
             # wakeup word 대기
+            self.publish_voice_state("waiting")
             self.get_logger().info("Waiting for wakeupword...")
             while not self.wakeup_word.is_wakeup():
                 pass
             self.get_logger().info("Wakeupword detected!")
 
             # STT --> Keword Extract --> Embedding
+            self.publish_voice_state("listening")
             output_message = self.stt.speech2text()
+            self.publish_voice_state("waiting")
             keyword = self.extract_keyword(output_message)
 
 
@@ -219,6 +227,26 @@ class GetKeyword(Node):
                 res.message = ""
                 objects_str = "NONE"
                 actions_str = "NONE"
+
+            payload = {
+
+                "type": "keyword",
+
+                "tables": tables,            # 예: ['1번']
+
+                "command": actions[0] if actions else "",# 예: 'clean'
+
+                "text": output_message,                # STT 전체 텍스트
+
+            }
+
+            msg = String()
+
+            msg.data = json.dumps(payload, ensure_ascii=False)
+
+            self.keyword_pub.publish(msg)
+
+            self.get_logger().info(f"Published keyword_topic: {msg.data}")
             
             self.get_logger().info(
                 f"[Service response] success={res.success}, object={objects_str}, action={actions_str}"
@@ -232,6 +260,18 @@ class GetKeyword(Node):
             self.mic_controller.close_stream()
         
         return res
+    
+    def publish_voice_state(self, state: str):
+
+        msg = String()
+
+        msg.data = state  # "wakeup_waiting", "listening"
+
+        self.voice_state_pub.publish(msg)
+
+        self.get_logger().info(f"[VOICE_STATE] {state}")
+
+    
 
 
 ### get_keyword.py 실행

@@ -30,6 +30,8 @@ setup(
             'get_keyword_client = llm_for_pick_place_voice.get_keyword_client:main',
             'stt = llm_for_pick_place_voice.stt:main',
             'wakeup_word = llm_for_pick_place_voice.wakeup_word:main',
+            'ros_web_bridge = llm_for_pick_place_voice.ros_web_bridge:main',
+            'arrive_test = llm_for_pick_place_voice.arrive_test:main',
         ],
     },
 )
