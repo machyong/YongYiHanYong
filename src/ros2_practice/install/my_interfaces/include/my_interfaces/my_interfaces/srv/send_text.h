@@ -1,0 +1,1 @@
+/home/jw/ros2_practice/build/my_interfaces/rosidl_generator_c/my_interfaces/srv/send_text.h

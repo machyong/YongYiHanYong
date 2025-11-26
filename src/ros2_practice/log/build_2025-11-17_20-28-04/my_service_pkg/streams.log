@@ -1,0 +1,29 @@
+[0.464s] Invoking command in '/home/jw/ros2_practice/build/my_service_pkg': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/jw/ros2_practice/install/my_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/jw/ros2_practice/build/my_service_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jw/ros2_practice/install/my_service_pkg/lib/python3.12/site-packages:/home/jw/ros2_practice/install/my_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/jw/ros2_practice/build/my_service_pkg/build --no-deps symlink_data
+[0.648s] running develop
+[0.735s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:363: UserWarning: Unbuilt egg for pytest-repeat [unknown version] (/usr/lib/python3/dist-packages)
+[0.735s]   self.local_index = Environment(self.shadow_path + sys.path)
+[0.754s] running egg_info
+[0.755s] creating my_service_pkg.egg-info
+[0.764s] writing my_service_pkg.egg-info/PKG-INFO
+[0.764s] writing dependency_links to my_service_pkg.egg-info/dependency_links.txt
+[0.764s] writing entry points to my_service_pkg.egg-info/entry_points.txt
+[0.765s] writing requirements to my_service_pkg.egg-info/requires.txt
+[0.765s] writing top-level names to my_service_pkg.egg-info/top_level.txt
+[0.765s] writing manifest file 'my_service_pkg.egg-info/SOURCES.txt'
+[0.785s] reading manifest file 'my_service_pkg.egg-info/SOURCES.txt'
+[0.786s] writing manifest file 'my_service_pkg.egg-info/SOURCES.txt'
+[0.796s] running build_ext
+[0.796s] Creating /home/jw/ros2_practice/install/my_service_pkg/lib/python3.12/site-packages/my-service-pkg.egg-link (link to .)
+[0.797s] Installing add_two_ints_client script to /home/jw/ros2_practice/install/my_service_pkg/lib/my_service_pkg
+[0.797s] Installing add_two_ints_server script to /home/jw/ros2_practice/install/my_service_pkg/lib/my_service_pkg
+[0.797s] Installing text_echo_client script to /home/jw/ros2_practice/install/my_service_pkg/lib/my_service_pkg
+[0.797s] Installing text_echo_server script to /home/jw/ros2_practice/install/my_service_pkg/lib/my_service_pkg
+[0.797s] 
+[0.797s] Installed /home/jw/ros2_practice/build/my_service_pkg
+[0.797s] running symlink_data
+[0.797s] creating /home/jw/ros2_practice/install/my_service_pkg/share/ament_index
+[0.797s] creating /home/jw/ros2_practice/install/my_service_pkg/share/ament_index/resource_index
+[0.797s] creating /home/jw/ros2_practice/install/my_service_pkg/share/ament_index/resource_index/packages
+[0.798s] symbolically linking /home/jw/ros2_practice/build/my_service_pkg/resource/my_service_pkg -> /home/jw/ros2_practice/install/my_service_pkg/share/ament_index/resource_index/packages
+[0.798s] symbolically linking /home/jw/ros2_practice/build/my_service_pkg/package.xml -> /home/jw/ros2_practice/install/my_service_pkg/share/my_service_pkg
+[0.817s] Invoked command in '/home/jw/ros2_practice/build/my_service_pkg' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/jw/ros2_practice/install/my_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/jw/ros2_practice/build/my_service_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jw/ros2_practice/install/my_service_pkg/lib/python3.12/site-packages:/home/jw/ros2_practice/install/my_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/jw/ros2_practice/build/my_service_pkg/build --no-deps symlink_data

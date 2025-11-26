@@ -1,0 +1,195 @@
+-- The C compiler identification is GNU 13.3.0
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found rosidl_default_generators: 1.6.0 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rosidl_adapter: 4.6.6 (/opt/ros/jazzy/share/rosidl_adapter/cmake)
+-- Found ament_cmake_ros: 0.12.0 (/opt/ros/jazzy/share/ament_cmake_ros/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found python_cmake_module: 0.11.1 (/opt/ros/jazzy/share/python_cmake_module/cmake)
+-- Found PythonExtra: /usr/bin/python3  
+-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter Development NumPy Development.Module Development.Embed 
+-- Found ament_lint_auto: 0.17.3 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done (2.4s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/jw/ros2_practice/build/my_interfaces
+[  2%] [34m[1mGenerating type hashes for ROS interfaces[0m
+[  2%] Built target ament_cmake_python_symlink_my_interfaces
+[  2%] Built target my_interfaces__rosidl_generator_type_description
+[  5%] [34m[1mGenerating C code for ROS interfaces[0m
+[  8%] [34m[1mGenerating C++ code for ROS interfaces[0m
+running egg_info
+creating my_interfaces.egg-info
+writing my_interfaces.egg-info/PKG-INFO
+writing dependency_links to my_interfaces.egg-info/dependency_links.txt
+writing top-level names to my_interfaces.egg-info/top_level.txt
+writing manifest file 'my_interfaces.egg-info/SOURCES.txt'
+reading manifest file 'my_interfaces.egg-info/SOURCES.txt'
+writing manifest file 'my_interfaces.egg-info/SOURCES.txt'
+[  8%] Built target ament_cmake_python_build_my_interfaces_egg
+[  8%] Built target my_interfaces__cpp
+[ 11%] [32mBuilding C object CMakeFiles/my_interfaces__rosidl_generator_c.dir/rosidl_generator_c/my_interfaces/srv/detail/send_text__description.c.o[0m
+[ 14%] [32mBuilding C object CMakeFiles/my_interfaces__rosidl_generator_c.dir/rosidl_generator_c/my_interfaces/srv/detail/send_text__type_support.c.o[0m
+[ 17%] [32mBuilding C object CMakeFiles/my_interfaces__rosidl_generator_c.dir/rosidl_generator_c/my_interfaces/srv/detail/send_text__functions.c.o[0m
+[ 20%] [32m[1mLinking C shared library libmy_interfaces__rosidl_generator_c.so[0m
+[ 20%] Built target my_interfaces__rosidl_generator_c
+[ 32%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[ 32%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[ 32%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[ 35%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[ 35%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[ 38%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[ 44%] [32mBuilding CXX object CMakeFiles/my_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/my_interfaces/srv/send_text__type_support.cpp.o[0m
+[ 44%] [32mBuilding CXX object CMakeFiles/my_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/my_interfaces/srv/send_text__type_support.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/my_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/my_interfaces/srv/detail/send_text__type_support.cpp.o[0m
+[ 50%] [32mBuilding C object CMakeFiles/my_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/my_interfaces/srv/detail/send_text__type_support.c.o[0m
+[ 52%] [32m[1mLinking CXX shared library libmy_interfaces__rosidl_typesupport_c.so[0m
+[ 55%] [32mBuilding CXX object CMakeFiles/my_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/my_interfaces/srv/detail/dds_fastrtps/send_text__type_support.cpp.o[0m
+[ 58%] [32mBuilding CXX object CMakeFiles/my_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/my_interfaces/srv/detail/send_text__type_support_c.cpp.o[0m
+[ 61%] [32m[1mLinking C shared library libmy_interfaces__rosidl_typesupport_introspection_c.so[0m
+[ 61%] Built target my_interfaces__rosidl_typesupport_c
+[ 61%] Built target my_interfaces__rosidl_typesupport_introspection_c
+[ 64%] [32m[1mLinking CXX shared library libmy_interfaces__rosidl_typesupport_cpp.so[0m
+[ 67%] [32m[1mLinking CXX shared library libmy_interfaces__rosidl_typesupport_introspection_cpp.so[0m
+[ 67%] Built target my_interfaces__rosidl_typesupport_cpp
+[ 67%] Built target my_interfaces__rosidl_typesupport_introspection_cpp
+[ 70%] [32m[1mLinking CXX shared library libmy_interfaces__rosidl_typesupport_fastrtps_c.so[0m
+[ 70%] Built target my_interfaces__rosidl_typesupport_fastrtps_c
+[ 73%] [32m[1mLinking CXX shared library libmy_interfaces__rosidl_typesupport_fastrtps_cpp.so[0m
+[ 73%] Built target my_interfaces__rosidl_typesupport_fastrtps_cpp
+[ 73%] Built target my_interfaces
+[ 76%] [34m[1mGenerating Python code for ROS interfaces[0m
+[ 76%] Built target my_interfaces__py
+[ 79%] [32mBuilding C object CMakeFiles/my_interfaces__rosidl_generator_py.dir/rosidl_generator_py/my_interfaces/srv/_send_text_s.c.o[0m
+[ 82%] [32m[1mLinking C shared library libmy_interfaces__rosidl_generator_py.so[0m
+[ 82%] Built target my_interfaces__rosidl_generator_py
+[ 88%] [32mBuilding C object CMakeFiles/my_interfaces_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generator_py/my_interfaces/_my_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[ 88%] [32mBuilding C object CMakeFiles/my_interfaces_s__rosidl_typesupport_introspection_c.dir/rosidl_generator_py/my_interfaces/_my_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[ 91%] [32mBuilding C object CMakeFiles/my_interfaces_s__rosidl_typesupport_c.dir/rosidl_generator_py/my_interfaces/_my_interfaces_s.ep.rosidl_typesupport_c.c.o[0m
+[ 94%] [32m[1mLinking C shared module rosidl_generator_py/my_interfaces/my_interfaces_s__rosidl_typesupport_introspection_c.so[0m
+[ 97%] [32m[1mLinking C shared module rosidl_generator_py/my_interfaces/my_interfaces_s__rosidl_typesupport_c.so[0m
+[100%] [32m[1mLinking C shared module rosidl_generator_py/my_interfaces/my_interfaces_s__rosidl_typesupport_fastrtps_c.so[0m
+[100%] Built target my_interfaces_s__rosidl_typesupport_fastrtps_c
+[100%] Built target my_interfaces_s__rosidl_typesupport_introspection_c
+[100%] Built target my_interfaces_s__rosidl_typesupport_c
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/jw/ros2_practice/install/my_interfaces/share/ament_index/resource_index/rosidl_interfaces/my_interfaces
+-- Symlinking: /home/jw/ros2_practice/install/my_interfaces/share/my_interfaces/srv/SendText.json
+-- Symlinking: /home/jw/ros2_practice/install/my_interfaces/include/my_interfaces/my_interfaces/msg/rosidl_generator_c__visibility_control.h
+-- Symlinking: /home/jw/ros2_practice/install/my_interfaces/include/my_interfaces/my_interfaces/srv/detail/send_text__functions.h
+-- Symlinking: /home/jw/ros2_practice/install/my_interfaces/include/my_interfaces/my_interfaces/srv/detail/send_text__struct.h
+-- Symlinking: /home/jw/ros2_practice/install/my_interfaces/include/my_interfaces/my_interfaces/srv/detail/send_text__type_support.h
+-- Symlinking: /home/jw/ros2_practice/install/my_interfaces/include/my_interfaces/my_interfaces/srv/send_text.h
+-- Symlinking: /home/jw/ros2_practice/install/my_interfaces/share/my_interfaces/environment/library_path.sh
+-- Symlinking: /home/jw/ros2_practice/install/my_interfaces/share/my_interfaces/environment/library_path.dsv
+-- Symlinking: /home/jw/ros2_practice/install/my_interfaces/include/my_interfaces/my_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+-- Symlinking: /home/jw/ros2_practice/install/my_interfaces/include/my_interfaces/my_interfaces/srv/detail/send_text__rosidl_typesupport_fastrtps_c.h
+-- Symlinking: /home/jw/ros2_practice/install/my_interfaces/include/my_interfaces/my_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+-- Symlinking: /home/jw/ros2_practice/install/my_interfaces/include/my_interfaces/my_interfaces/srv/detail/send_text__rosidl_typesupport_introspection_c.h
+-- Symlinking: /home/jw/ros2_practice/install/my_interfaces/include/my_interfaces/my_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
+-- Symlinking: /home/jw/ros2_practice/install/my_interfaces/include/my_interfaces/my_interfaces/srv/detail/send_text__builder.hpp
+-- Symlinking: /home/jw/ros2_practice/install/my_interfaces/include/my_interfaces/my_interfaces/srv/detail/send_text__struct.hpp
+-- Symlinking: /home/jw/ros2_practice/install/my_interfaces/include/my_interfaces/my_interfaces/srv/detail/send_text__traits.hpp
+-- Symlinking: /home/jw/ros2_practice/install/my_interfaces/include/my_interfaces/my_interfaces/srv/detail/send_text__type_support.hpp
+-- Symlinking: /home/jw/ros2_practice/install/my_interfaces/include/my_interfaces/my_interfaces/srv/send_text.hpp
+-- Symlinking: /home/jw/ros2_practice/install/my_interfaces/include/my_interfaces/my_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+-- Symlinking: /home/jw/ros2_practice/install/my_interfaces/include/my_interfaces/my_interfaces/srv/detail/send_text__rosidl_typesupport_fastrtps_cpp.hpp
+-- Symlinking: /home/jw/ros2_practice/install/my_interfaces/include/my_interfaces/my_interfaces/srv/detail/send_text__rosidl_typesupport_introspection_cpp.hpp
+-- Symlinking: /home/jw/ros2_practice/install/my_interfaces/share/my_interfaces/environment/pythonpath.sh
+-- Symlinking: /home/jw/ros2_practice/install/my_interfaces/share/my_interfaces/environment/pythonpath.dsv
+-- Symlinking: /home/jw/ros2_practice/install/my_interfaces/lib/python3.12/site-packages/my_interfaces-0.0.0-py3.12.egg-info/PKG-INFO
+-- Symlinking: /home/jw/ros2_practice/install/my_interfaces/lib/python3.12/site-packages/my_interfaces-0.0.0-py3.12.egg-info/SOURCES.txt
+-- Symlinking: /home/jw/ros2_practice/install/my_interfaces/lib/python3.12/site-packages/my_interfaces-0.0.0-py3.12.egg-info/dependency_links.txt
+-- Symlinking: /home/jw/ros2_practice/install/my_interfaces/lib/python3.12/site-packages/my_interfaces-0.0.0-py3.12.egg-info/top_level.txt
+-- Symlinking: /home/jw/ros2_practice/install/my_interfaces/lib/python3.12/site-packages/my_interfaces/__init__.py
+-- Symlinking: /home/jw/ros2_practice/install/my_interfaces/lib/python3.12/site-packages/my_interfaces/_my_interfaces_s.ep.rosidl_typesupport_c.c
+-- Symlinking: /home/jw/ros2_practice/install/my_interfaces/lib/python3.12/site-packages/my_interfaces/_my_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+-- Symlinking: /home/jw/ros2_practice/install/my_interfaces/lib/python3.12/site-packages/my_interfaces/_my_interfaces_s.ep.rosidl_typesupport_introspection_c.c
+-- Symlinking: /home/jw/ros2_practice/install/my_interfaces/lib/python3.12/site-packages/my_interfaces/my_interfaces_s__rosidl_typesupport_c.so
+-- Symlinking: /home/jw/ros2_practice/install/my_interfaces/lib/python3.12/site-packages/my_interfaces/my_interfaces_s__rosidl_typesupport_fastrtps_c.so
+-- Symlinking: /home/jw/ros2_practice/install/my_interfaces/lib/python3.12/site-packages/my_interfaces/my_interfaces_s__rosidl_typesupport_introspection_c.so
+-- Symlinking: /home/jw/ros2_practice/install/my_interfaces/lib/python3.12/site-packages/my_interfaces/srv/__init__.py
+-- Symlinking: /home/jw/ros2_practice/install/my_interfaces/lib/python3.12/site-packages/my_interfaces/srv/_send_text.py
+-- Symlinking: /home/jw/ros2_practice/install/my_interfaces/lib/python3.12/site-packages/my_interfaces/srv/_send_text_s.c
+-- Up-to-date symlink: /home/jw/ros2_practice/install/my_interfaces/lib/python3.12/site-packages/my_interfaces/my_interfaces_s__rosidl_typesupport_fastrtps_c.so
+-- Up-to-date symlink: /home/jw/ros2_practice/install/my_interfaces/lib/python3.12/site-packages/my_interfaces/my_interfaces_s__rosidl_typesupport_introspection_c.so
+-- Up-to-date symlink: /home/jw/ros2_practice/install/my_interfaces/lib/python3.12/site-packages/my_interfaces/my_interfaces_s__rosidl_typesupport_c.so
+-- Symlinking: /home/jw/ros2_practice/install/my_interfaces/share/my_interfaces/srv/SendText.idl
+-- Symlinking: /home/jw/ros2_practice/install/my_interfaces/share/my_interfaces/srv/SendText.srv
+-- Symlinking: /home/jw/ros2_practice/install/my_interfaces/share/ament_index/resource_index/package_run_dependencies/my_interfaces
+-- Symlinking: /home/jw/ros2_practice/install/my_interfaces/share/ament_index/resource_index/parent_prefix_path/my_interfaces
+-- Symlinking: /home/jw/ros2_practice/install/my_interfaces/share/my_interfaces/environment/ament_prefix_path.sh
+-- Symlinking: /home/jw/ros2_practice/install/my_interfaces/share/my_interfaces/environment/ament_prefix_path.dsv
+-- Symlinking: /home/jw/ros2_practice/install/my_interfaces/share/my_interfaces/environment/path.sh
+-- Symlinking: /home/jw/ros2_practice/install/my_interfaces/share/my_interfaces/environment/path.dsv
+-- Symlinking: /home/jw/ros2_practice/install/my_interfaces/share/my_interfaces/local_setup.bash
+-- Symlinking: /home/jw/ros2_practice/install/my_interfaces/share/my_interfaces/local_setup.sh
+-- Symlinking: /home/jw/ros2_practice/install/my_interfaces/share/my_interfaces/local_setup.zsh
+-- Symlinking: /home/jw/ros2_practice/install/my_interfaces/share/my_interfaces/local_setup.dsv
+-- Symlinking: /home/jw/ros2_practice/install/my_interfaces/share/my_interfaces/package.dsv
+-- Symlinking: /home/jw/ros2_practice/install/my_interfaces/share/ament_index/resource_index/packages/my_interfaces
+-- Symlinking: /home/jw/ros2_practice/install/my_interfaces/share/my_interfaces/cmake/rosidl_cmake-extras.cmake
+-- Symlinking: /home/jw/ros2_practice/install/my_interfaces/share/my_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Symlinking: /home/jw/ros2_practice/install/my_interfaces/share/my_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Symlinking: /home/jw/ros2_practice/install/my_interfaces/share/my_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+-- Symlinking: /home/jw/ros2_practice/install/my_interfaces/share/my_interfaces/cmake/ament_cmake_export_targets-extras.cmake
+-- Symlinking: /home/jw/ros2_practice/install/my_interfaces/share/my_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+-- Symlinking: /home/jw/ros2_practice/install/my_interfaces/share/my_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+-- Symlinking: /home/jw/ros2_practice/install/my_interfaces/share/my_interfaces/cmake/my_interfacesConfig.cmake
+-- Symlinking: /home/jw/ros2_practice/install/my_interfaces/share/my_interfaces/cmake/my_interfacesConfig-version.cmake
+-- Symlinking: /home/jw/ros2_practice/install/my_interfaces/share/my_interfaces/package.xml
+-- Installing: /home/jw/ros2_practice/install/my_interfaces/lib/libmy_interfaces__rosidl_generator_c.so
+-- Set non-toolchain portion of runtime path of "/home/jw/ros2_practice/install/my_interfaces/lib/libmy_interfaces__rosidl_generator_c.so" to ""
+-- Installing: /home/jw/ros2_practice/install/my_interfaces/lib/libmy_interfaces__rosidl_typesupport_fastrtps_c.so
+-- Set non-toolchain portion of runtime path of "/home/jw/ros2_practice/install/my_interfaces/lib/libmy_interfaces__rosidl_typesupport_fastrtps_c.so" to ""
+-- Installing: /home/jw/ros2_practice/install/my_interfaces/lib/libmy_interfaces__rosidl_typesupport_introspection_c.so
+-- Set non-toolchain portion of runtime path of "/home/jw/ros2_practice/install/my_interfaces/lib/libmy_interfaces__rosidl_typesupport_introspection_c.so" to ""
+-- Installing: /home/jw/ros2_practice/install/my_interfaces/lib/libmy_interfaces__rosidl_typesupport_c.so
+-- Set non-toolchain portion of runtime path of "/home/jw/ros2_practice/install/my_interfaces/lib/libmy_interfaces__rosidl_typesupport_c.so" to ""
+-- Installing: /home/jw/ros2_practice/install/my_interfaces/lib/libmy_interfaces__rosidl_typesupport_fastrtps_cpp.so
+-- Set non-toolchain portion of runtime path of "/home/jw/ros2_practice/install/my_interfaces/lib/libmy_interfaces__rosidl_typesupport_fastrtps_cpp.so" to ""
+-- Installing: /home/jw/ros2_practice/install/my_interfaces/lib/libmy_interfaces__rosidl_typesupport_introspection_cpp.so
+-- Set non-toolchain portion of runtime path of "/home/jw/ros2_practice/install/my_interfaces/lib/libmy_interfaces__rosidl_typesupport_introspection_cpp.so" to ""
+-- Installing: /home/jw/ros2_practice/install/my_interfaces/lib/libmy_interfaces__rosidl_typesupport_cpp.so
+-- Set non-toolchain portion of runtime path of "/home/jw/ros2_practice/install/my_interfaces/lib/libmy_interfaces__rosidl_typesupport_cpp.so" to ""
+Listing '/home/jw/ros2_practice/install/my_interfaces/lib/python3.12/site-packages/my_interfaces'...
+Compiling '/home/jw/ros2_practice/install/my_interfaces/lib/python3.12/site-packages/my_interfaces/__init__.py'...
+Listing '/home/jw/ros2_practice/install/my_interfaces/lib/python3.12/site-packages/my_interfaces/srv'...
+Compiling '/home/jw/ros2_practice/install/my_interfaces/lib/python3.12/site-packages/my_interfaces/srv/__init__.py'...
+Compiling '/home/jw/ros2_practice/install/my_interfaces/lib/python3.12/site-packages/my_interfaces/srv/_send_text.py'...
+-- Installing: /home/jw/ros2_practice/install/my_interfaces/lib/libmy_interfaces__rosidl_generator_py.so
+-- Set non-toolchain portion of runtime path of "/home/jw/ros2_practice/install/my_interfaces/lib/libmy_interfaces__rosidl_generator_py.so" to ""
+-- Installing: /home/jw/ros2_practice/install/my_interfaces/share/my_interfaces/cmake/export_my_interfaces__rosidl_generator_cExport.cmake
+-- Installing: /home/jw/ros2_practice/install/my_interfaces/share/my_interfaces/cmake/export_my_interfaces__rosidl_generator_cExport-noconfig.cmake
+-- Installing: /home/jw/ros2_practice/install/my_interfaces/share/my_interfaces/cmake/export_my_interfaces__rosidl_typesupport_fastrtps_cExport.cmake
+-- Installing: /home/jw/ros2_practice/install/my_interfaces/share/my_interfaces/cmake/export_my_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+-- Installing: /home/jw/ros2_practice/install/my_interfaces/share/my_interfaces/cmake/my_interfaces__rosidl_typesupport_introspection_cExport.cmake
+-- Installing: /home/jw/ros2_practice/install/my_interfaces/share/my_interfaces/cmake/my_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake
+-- Installing: /home/jw/ros2_practice/install/my_interfaces/share/my_interfaces/cmake/my_interfaces__rosidl_typesupport_cExport.cmake
+-- Installing: /home/jw/ros2_practice/install/my_interfaces/share/my_interfaces/cmake/my_interfaces__rosidl_typesupport_cExport-noconfig.cmake
+-- Installing: /home/jw/ros2_practice/install/my_interfaces/share/my_interfaces/cmake/export_my_interfaces__rosidl_generator_cppExport.cmake
+-- Installing: /home/jw/ros2_practice/install/my_interfaces/share/my_interfaces/cmake/export_my_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake
+-- Installing: /home/jw/ros2_practice/install/my_interfaces/share/my_interfaces/cmake/export_my_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+-- Installing: /home/jw/ros2_practice/install/my_interfaces/share/my_interfaces/cmake/my_interfaces__rosidl_typesupport_introspection_cppExport.cmake
+-- Installing: /home/jw/ros2_practice/install/my_interfaces/share/my_interfaces/cmake/my_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+-- Installing: /home/jw/ros2_practice/install/my_interfaces/share/my_interfaces/cmake/my_interfaces__rosidl_typesupport_cppExport.cmake
+-- Installing: /home/jw/ros2_practice/install/my_interfaces/share/my_interfaces/cmake/my_interfaces__rosidl_typesupport_cppExport-noconfig.cmake
+-- Installing: /home/jw/ros2_practice/install/my_interfaces/share/my_interfaces/cmake/export_my_interfaces__rosidl_generator_pyExport.cmake
+-- Installing: /home/jw/ros2_practice/install/my_interfaces/share/my_interfaces/cmake/export_my_interfaces__rosidl_generator_pyExport-noconfig.cmake

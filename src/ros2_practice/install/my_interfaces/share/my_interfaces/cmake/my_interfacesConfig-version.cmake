@@ -1,0 +1,1 @@
+/home/jw/ros2_practice/build/my_interfaces/ament_cmake_core/my_interfacesConfig-version.cmake

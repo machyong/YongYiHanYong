@@ -1,0 +1,1 @@
+/home/jw/ros2_practice/build/my_interfaces/rosidl_typesupport_fastrtps_cpp/my_interfaces/srv/detail/send_text__rosidl_typesupport_fastrtps_cpp.hpp

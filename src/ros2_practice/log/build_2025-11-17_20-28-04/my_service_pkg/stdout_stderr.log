@@ -1,0 +1,27 @@
+running develop
+/usr/lib/python3/dist-packages/setuptools/command/easy_install.py:363: UserWarning: Unbuilt egg for pytest-repeat [unknown version] (/usr/lib/python3/dist-packages)
+  self.local_index = Environment(self.shadow_path + sys.path)
+running egg_info
+creating my_service_pkg.egg-info
+writing my_service_pkg.egg-info/PKG-INFO
+writing dependency_links to my_service_pkg.egg-info/dependency_links.txt
+writing entry points to my_service_pkg.egg-info/entry_points.txt
+writing requirements to my_service_pkg.egg-info/requires.txt
+writing top-level names to my_service_pkg.egg-info/top_level.txt
+writing manifest file 'my_service_pkg.egg-info/SOURCES.txt'
+reading manifest file 'my_service_pkg.egg-info/SOURCES.txt'
+writing manifest file 'my_service_pkg.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/jw/ros2_practice/install/my_service_pkg/lib/python3.12/site-packages/my-service-pkg.egg-link (link to .)
+Installing add_two_ints_client script to /home/jw/ros2_practice/install/my_service_pkg/lib/my_service_pkg
+Installing add_two_ints_server script to /home/jw/ros2_practice/install/my_service_pkg/lib/my_service_pkg
+Installing text_echo_client script to /home/jw/ros2_practice/install/my_service_pkg/lib/my_service_pkg
+Installing text_echo_server script to /home/jw/ros2_practice/install/my_service_pkg/lib/my_service_pkg
+
+Installed /home/jw/ros2_practice/build/my_service_pkg
+running symlink_data
+creating /home/jw/ros2_practice/install/my_service_pkg/share/ament_index
+creating /home/jw/ros2_practice/install/my_service_pkg/share/ament_index/resource_index
+creating /home/jw/ros2_practice/install/my_service_pkg/share/ament_index/resource_index/packages
+symbolically linking /home/jw/ros2_practice/build/my_service_pkg/resource/my_service_pkg -> /home/jw/ros2_practice/install/my_service_pkg/share/ament_index/resource_index/packages
+symbolically linking /home/jw/ros2_practice/build/my_service_pkg/package.xml -> /home/jw/ros2_practice/install/my_service_pkg/share/my_service_pkg

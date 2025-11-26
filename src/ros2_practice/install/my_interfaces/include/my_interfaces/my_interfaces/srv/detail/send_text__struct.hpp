@@ -1,0 +1,1 @@
+/home/jw/ros2_practice/build/my_interfaces/rosidl_generator_cpp/my_interfaces/srv/detail/send_text__struct.hpp
