@@ -1,0 +1,6 @@
+# request
+string prompt
+---
+# response
+string answer
+bool success

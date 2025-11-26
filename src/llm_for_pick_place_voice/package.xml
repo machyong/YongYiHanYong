@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>llm_for_pick_place_voice</name>
+  <version>0.0.0</version>
+  <description>TODO: Package description</description>
+  <maintainer email="jihun3333@gmail.com">hun</maintainer>
+  <license>TODO: License declaration</license>
+
+  <depend>rclpy</depend>
+  <depend>std_msgs</depend>
+  <depend>std_srvs</depend>
+  <depend>example_interface</depend>
+  <depend>ament_index_python</depend>
+  <depend>rosidl_default_generators</depend>
+  <depend>rosidl_default_runtime</depend>
+
+  <!-- <member_of_group>rosidl_interface_packages</member_of_group> -->
+
+    <!-- Python packages for voice processing and LLM -->
+  <exec_depend>python3-langchain</exec_depend>
+  <exec_depend>python3-langchain-core</exec_depend>
+  <exec_depend>python3-langchain-openai</exec_depend>
+  <exec_depend>python3-dotenv</exec_depend>
+  <exec_depend>python3-openai</exec_depend>
+  <exec_depend>python3-sounddevice</exec_depend>
+  <exec_depend>python3-scipy</exec_depend>
+  <exec_depend>python3-numpy</exec_depend>
+  <exec_depend>python3-pyaudio</exec_depend>
+  <exec_depend>python3-openwakeword</exec_depend>
+
+  <test_depend>ament_copyright</test_depend>
+  <test_depend>ament_flake8</test_depend>
+  <test_depend>ament_pep257</test_depend>
+  <test_depend>python3-pytest</test_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>
