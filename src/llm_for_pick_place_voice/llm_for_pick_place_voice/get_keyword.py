@@ -75,13 +75,13 @@ class GetKeyword(Node):
 
             <목표>
             - 문장에서 다음 리스트에 포함된 테이블 번호를 최대한 정확히 추출하세요.
-            - 각 테이블 번호와 함께 해당 테이블에 요청한 작업(action: clear 또는 setting)을 매핑하세요.
+            - 각 테이블 번호와 함께 해당 테이블에 요청한 작업(action: clean 또는 setting)을 매핑하세요.
 
             <테이블 번호 리스트>
             - table1 table2 table3 table4
             
             <작업(action) 리스트>
-            - clear, setting
+            - clean, setting
 
             <출력 형식>
             - 다음 형식을 반드시 따르세요: [table1:action1 table2:action2 ... / primary_action]
@@ -92,10 +92,11 @@ class GetKeyword(Node):
             - 테이블 번호의 순서는 문장에 등장한 순서를 따릅니다.
             - 각 테이블마다 명확한 작업이 없으면 그 테이블은 'NONE'으로 표시합니다.
             - 답은 테이블 번호 리스트 내에서만 추출하세요.
+            - "출력"이라는 단어를 포함하지 마세요.
 
             <특수 규칙>
             - "몇 번 테이블", "3번", "3번 자리" 등 숫자 기반 표현을 table3과 같이 리스트 항목으로 변환하세요.
-            - "치워줘, 정리해줘, 비워줘" → clear
+            - "치워줘, 정리해줘, 비워줘, 채워줘, 재워줘" → clean
             - "세팅해줘, 준비해줘, 셋팅해줘, 세트해줘" → setting
             - 여러 테이블 번호가 동시에 등장할 경우 각각에 맞는 작업을 지정하세요.
             - "1번 세팅하고 2번 정리해줘" 같은 문장에서는 각 테이블마다 다른 작업을 지정합니다.
@@ -104,16 +105,16 @@ class GetKeyword(Node):
 
             <예시>
             - 입력: "3번 테이블 좀 치워줘"
-            출력: table3:clear / clear
+            출력: table3:clean / clean
 
             - 입력: "1번이랑 3번 테이블 세팅해줘"
             출력: table1:setting table3:setting / setting
 
             - 입력: "1번 세팅하고 2번 테이블 정리해줘"
-            출력: table1:setting table2:clear / setting
+            출력: table1:setting table2:clean / setting
 
             - 입력: "저기 2번 정리 좀 부탁해"
-            출력: table2:clear / clear
+            출력: table2:clean / clean
 
             - 입력: "4번 테이블 준비해놔"
             출력: table4:setting / setting
@@ -167,7 +168,7 @@ class GetKeyword(Node):
         # 디버깅 출력
         print(f"llm's response: {result}")
         print(f"object: {tables}")
-        print(f"action: {action}")
+        print(f"action: {actions}")
 
         return {
             "tables": tables,
@@ -214,7 +215,7 @@ class GetKeyword(Node):
             if not tables or tables == []:
                 self.get_logger().warn("Warning: No tables detected (object is empty)")
             if not actions or all(a == "NONE" for a in actions):
-                self.get_logger().warn("Warning: Action is NONE (not clearly specified)")
+                self.get_logger().warn("Warning: Action is NONE (not cleanly specified)")
 
             # 서비스 보내기
             res.success = True

@@ -9,13 +9,13 @@ class STT:
     def __init__(self, openai_api_key):
         self.openai_api_key = openai_api_key
         self.client = OpenAI(api_key=openai_api_key)
-        self.duration = 5  # seconds
+        self.duration = 6  # seconds
         self.samplerate = 16000  # Whisper는 16kHz를 선호
 
 
     def speech2text(self):
         # 녹음 설정
-        print("음성 녹음을 시작합니다. \n5초 동안 말해주세요...")
+        print("음성 녹음을 시작합니다. \n6초 동안 말해주세요...")
         audio = sd.rec(
             int(self.duration * self.samplerate),
             samplerate=self.samplerate,

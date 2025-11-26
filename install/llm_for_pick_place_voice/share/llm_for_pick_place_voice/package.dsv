@@ -1,0 +1,9 @@
+source;share/llm_for_pick_place_voice/hook/pythonpath.ps1
+source;share/llm_for_pick_place_voice/hook/pythonpath.dsv
+source;share/llm_for_pick_place_voice/hook/pythonpath.sh
+source;share/llm_for_pick_place_voice/hook/ament_prefix_path.ps1
+source;share/llm_for_pick_place_voice/hook/ament_prefix_path.dsv
+source;share/llm_for_pick_place_voice/hook/ament_prefix_path.sh
+source;../../build/llm_for_pick_place_voice/share/llm_for_pick_place_voice/hook/pythonpath_develop.ps1
+source;../../build/llm_for_pick_place_voice/share/llm_for_pick_place_voice/hook/pythonpath_develop.dsv
+source;../../build/llm_for_pick_place_voice/share/llm_for_pick_place_voice/hook/pythonpath_develop.sh

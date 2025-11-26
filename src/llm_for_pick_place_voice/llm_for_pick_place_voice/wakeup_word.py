@@ -6,8 +6,8 @@ from ament_index_python.packages import get_package_share_directory
 
 ######### Wakeup Word model 설정 ############
 # MODEL 추가시: setup.py의 data_files에 model 추가 필
-# MODEL_NAME = "alexa.onnx" 
-MODEL_NAME = "hey_yong_yihan.onnx"
+MODEL_NAME = "alexa.onnx"
+# MODEL_NAME = "hey_yong_yihan.onnx"
 package_path = get_package_share_directory("llm_for_pick_place_voice")
 MODEL_PATH = os.path.join(f"{package_path}/resource/{MODEL_NAME}")
 

@@ -1,0 +1,33 @@
+running develop
+/usr/lib/python3/dist-packages/setuptools/command/easy_install.py:363: UserWarning: Unbuilt egg for pytest-repeat [unknown version] (/usr/lib/python3/dist-packages)
+  self.local_index = Environment(self.shadow_path + sys.path)
+running egg_info
+creating llm_for_pick_place_voice.egg-info
+writing llm_for_pick_place_voice.egg-info/PKG-INFO
+writing dependency_links to llm_for_pick_place_voice.egg-info/dependency_links.txt
+writing entry points to llm_for_pick_place_voice.egg-info/entry_points.txt
+writing requirements to llm_for_pick_place_voice.egg-info/requires.txt
+writing top-level names to llm_for_pick_place_voice.egg-info/top_level.txt
+writing manifest file 'llm_for_pick_place_voice.egg-info/SOURCES.txt'
+reading manifest file 'llm_for_pick_place_voice.egg-info/SOURCES.txt'
+writing manifest file 'llm_for_pick_place_voice.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/jw/llm/YongYiHanYong/install/llm_for_pick_place_voice/lib/python3.12/site-packages/llm-for-pick-place-voice.egg-link (link to .)
+Installing arrive_test script to /home/jw/llm/YongYiHanYong/install/llm_for_pick_place_voice/lib/llm_for_pick_place_voice
+Installing get_keyword script to /home/jw/llm/YongYiHanYong/install/llm_for_pick_place_voice/lib/llm_for_pick_place_voice
+Installing get_keyword_client script to /home/jw/llm/YongYiHanYong/install/llm_for_pick_place_voice/lib/llm_for_pick_place_voice
+Installing ros_web_bridge script to /home/jw/llm/YongYiHanYong/install/llm_for_pick_place_voice/lib/llm_for_pick_place_voice
+Installing stt script to /home/jw/llm/YongYiHanYong/install/llm_for_pick_place_voice/lib/llm_for_pick_place_voice
+Installing wakeup_word script to /home/jw/llm/YongYiHanYong/install/llm_for_pick_place_voice/lib/llm_for_pick_place_voice
+
+Installed /home/jw/llm/YongYiHanYong/build/llm_for_pick_place_voice
+running symlink_data
+creating /home/jw/llm/YongYiHanYong/install/llm_for_pick_place_voice/share/ament_index
+creating /home/jw/llm/YongYiHanYong/install/llm_for_pick_place_voice/share/ament_index/resource_index
+creating /home/jw/llm/YongYiHanYong/install/llm_for_pick_place_voice/share/ament_index/resource_index/packages
+symbolically linking /home/jw/llm/YongYiHanYong/build/llm_for_pick_place_voice/resource/llm_for_pick_place_voice -> /home/jw/llm/YongYiHanYong/install/llm_for_pick_place_voice/share/ament_index/resource_index/packages
+symbolically linking /home/jw/llm/YongYiHanYong/build/llm_for_pick_place_voice/package.xml -> /home/jw/llm/YongYiHanYong/install/llm_for_pick_place_voice/share/llm_for_pick_place_voice
+creating /home/jw/llm/YongYiHanYong/install/llm_for_pick_place_voice/share/llm_for_pick_place_voice/resource
+symbolically linking /home/jw/llm/YongYiHanYong/build/llm_for_pick_place_voice/resource/.env -> /home/jw/llm/YongYiHanYong/install/llm_for_pick_place_voice/share/llm_for_pick_place_voice/resource
+symbolically linking /home/jw/llm/YongYiHanYong/build/llm_for_pick_place_voice/resource/alexa.onnx -> /home/jw/llm/YongYiHanYong/install/llm_for_pick_place_voice/share/llm_for_pick_place_voice/resource
+symbolically linking /home/jw/llm/YongYiHanYong/build/llm_for_pick_place_voice/resource/hey_yong_yihan.onnx -> /home/jw/llm/YongYiHanYong/install/llm_for_pick_place_voice/share/llm_for_pick_place_voice/resource

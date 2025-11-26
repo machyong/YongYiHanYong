@@ -10,7 +10,7 @@ class MicConfig:
     chunk: int = 12000
     rate: int = 48000
     channels: int = 1
-    record_seconds: int = 5
+    record_seconds: int = 6
     fmt: int = pyaudio.paInt16
     device_index: int = 10
     buffer_size: int = 24000

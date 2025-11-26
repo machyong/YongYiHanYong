@@ -1,0 +1,24 @@
+[0.535s] Invoking command in '/home/jw/llm/YongYiHanYong/build/llm_for_pick_place_voice': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ PYTHONPATH=/home/jw/llm/YongYiHanYong/build/llm_for_pick_place_voice/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jw/llm/YongYiHanYong/install/llm_for_pick_place_voice/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/jw/llm/YongYiHanYong/build/llm_for_pick_place_voice/build --no-deps symlink_data
+[0.755s] running develop
+[0.858s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:363: UserWarning: Unbuilt egg for pytest-repeat [unknown version] (/usr/lib/python3/dist-packages)
+[0.859s]   self.local_index = Environment(self.shadow_path + sys.path)
+[0.885s] running egg_info
+[0.896s] writing llm_for_pick_place_voice.egg-info/PKG-INFO
+[0.897s] writing dependency_links to llm_for_pick_place_voice.egg-info/dependency_links.txt
+[0.897s] writing entry points to llm_for_pick_place_voice.egg-info/entry_points.txt
+[0.897s] writing requirements to llm_for_pick_place_voice.egg-info/requires.txt
+[0.897s] writing top-level names to llm_for_pick_place_voice.egg-info/top_level.txt
+[0.920s] reading manifest file 'llm_for_pick_place_voice.egg-info/SOURCES.txt'
+[0.921s] writing manifest file 'llm_for_pick_place_voice.egg-info/SOURCES.txt'
+[0.933s] running build_ext
+[0.933s] Creating /home/jw/llm/YongYiHanYong/install/llm_for_pick_place_voice/lib/python3.12/site-packages/llm-for-pick-place-voice.egg-link (link to .)
+[0.933s] Installing arrive_test script to /home/jw/llm/YongYiHanYong/install/llm_for_pick_place_voice/lib/llm_for_pick_place_voice
+[0.933s] Installing get_keyword script to /home/jw/llm/YongYiHanYong/install/llm_for_pick_place_voice/lib/llm_for_pick_place_voice
+[0.933s] Installing get_keyword_client script to /home/jw/llm/YongYiHanYong/install/llm_for_pick_place_voice/lib/llm_for_pick_place_voice
+[0.933s] Installing ros_web_bridge script to /home/jw/llm/YongYiHanYong/install/llm_for_pick_place_voice/lib/llm_for_pick_place_voice
+[0.934s] Installing stt script to /home/jw/llm/YongYiHanYong/install/llm_for_pick_place_voice/lib/llm_for_pick_place_voice
+[0.934s] Installing wakeup_word script to /home/jw/llm/YongYiHanYong/install/llm_for_pick_place_voice/lib/llm_for_pick_place_voice
+[0.934s] 
+[0.934s] Installed /home/jw/llm/YongYiHanYong/build/llm_for_pick_place_voice
+[0.934s] running symlink_data
+[0.955s] Invoked command in '/home/jw/llm/YongYiHanYong/build/llm_for_pick_place_voice' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ PYTHONPATH=/home/jw/llm/YongYiHanYong/build/llm_for_pick_place_voice/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jw/llm/YongYiHanYong/install/llm_for_pick_place_voice/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/jw/llm/YongYiHanYong/build/llm_for_pick_place_voice/build --no-deps symlink_data
