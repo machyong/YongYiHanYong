@@ -124,7 +124,7 @@ source install/setup.bash
 ros2 run llm_for_pick_place_voice get_keyword
 ```
 
-## 7-3. ROS-Web 브리지(FastAPI WebSocket 서버)
+## 7-3. ROS & Web Bridge (FastAPI WebSocket 서버)
 ``` bash
 cd ~/llm_ws
 source /opt/ros/jazzy/setup.bash
@@ -150,6 +150,7 @@ npm run dev
 Top View GUI와 음성 상태 패널을 확인할 수 있습니다.
 
 ---
+
 
 ## 🔁 GUI 프로세스 및 사용 가이드
 
