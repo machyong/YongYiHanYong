@@ -194,12 +194,15 @@ Top View GUI와 음성 상태 패널을 확인할 수 있습니다.
 
 ### 1) 시작 화면 (Idle)
 프로그램 실행 직후 로봇은 기본 위치에 있으며 마이크는 웨이크업 워드 대기 상태입니다.
+
 ![Idle](./src/bussing_gui/robot-topview/src/assets/UI_1.png)
 
 ### 2) 웨이크업 워드 감지 후 음성 명령 입력 화면 (Listening + STT)
 웨이크업 워드가 감지되면 마이크가 Listening 상태로 전환되고 사용자의 음성 명령(STT 결과)이 화면에 실시간으로 표시됩니다.
+
 ![Listening + STT](./src/bussing_gui/robot-topview/src/assets/UI_2.png)
 
 ### 3) 로봇 이동 화면 (Moving)
 LLM이 분석한 테이블/작업 정보에 따라 로봇 Dot이 해당 테이블까지 애니메이션으로 이동하는 장면입니다.
+
 ![Moving](./src/bussing_gui/robot-topview/src/assets/UI_3.png)
