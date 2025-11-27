@@ -1,3 +1,5 @@
+# ros2 service call /get_keyword std_srvs/srv/Trigger "{}"
+
 import os
 import rclpy
 import json
@@ -8,8 +10,12 @@ from ament_index_python.packages import get_package_share_directory
 from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
 from langchain_core.prompts import PromptTemplate
+# from langchain_core.runnables import RunnablePassthrough
+# from langchain_classic.chains import LLMChain
 
 from std_srvs.srv import Trigger
+# 자체 서비스 인터페이스 생성 모듈
+# from llm_node_pkg.srv import TriggerLLM
 from llm_for_pick_place_voice.MicController import MicController, MicConfig
 from llm_for_pick_place_voice.wakeup_word import WakeupWord
 from llm_for_pick_place_voice.stt import STT
@@ -22,13 +28,21 @@ current_dir = os.getcwd()
 package_path = get_package_share_directory("llm_for_pick_place_voice")
 is_load = load_dotenv(dotenv_path=os.path.join(f"{package_path}/resource/.env"))
 openai_api_key = os.getenv("OPENAI_API_KEY")
+# openai_api_key 경로
+# env_path = "/home/hun/ws/llm_ws/src/llm_for_pick_place_voice"
+
+
+############ AI Processor ############
+# class AIProcessor:
+#     def __init__(self):
+
 
 
 ############ get_keyword_server (서버) Node ############
 class GetKeyword(Node):
     def __init__(self):
         super().__init__("get_keyword_server")
-        
+        # openai_api_key 로드 확인
         if not is_load:
             self.get_logger().error("Failed to load openai_api_key from .env file.")
         else:
@@ -51,8 +65,8 @@ class GetKeyword(Node):
 
         # LangChain LLM 모델 초기화
         self.llm = ChatOpenAI(
-            model="gpt-4o",
-            temperature=0.2,
+            model="gpt-4o",  # 원하는 모델
+            temperature=0.2, # 다음 단어 선택을 위한 확률(0일 경우 확률 높은 단어)
             openai_api_key=openai_api_key
         )
 
@@ -125,24 +139,18 @@ class GetKeyword(Node):
         self.stt = STT(openai_api_key=openai_api_key)
 
 
+        # 서버 서비스 생성
+        self.get_keyword_srv = self.create_service(
+            Trigger, "get_keyword", self.get_keyword_callback
+        )
         # wakeupword 탐지
         self.wakeup_word = WakeupWord(mic_config.buffer_size)
 
         self.keyword_pub = self.create_publisher(String, "keyword_topic", 10)
         self.voice_state_pub = self.create_publisher(String, "voice_state", 10)
-        
-        # 서비스 생성 (클라이언트가 명시적으로 요청할 수 있도록)
-        self.get_keyword_srv = self.create_service(
-            Trigger, "get_keyword", self.get_keyword_callback
-        )
-        
-        # 타이머로 지속적인 wakeup word 감지 (자동 모드)
-        self.create_timer(0.1, self.wakeup_detection_loop)
-        self.is_processing = False
-        self.auto_mode = True
 
+    ### 중요 키워드(table num, action) 추출
     def extract_keyword(self, output_message):
-        """LLM을 사용하여 음성 텍스트에서 테이블 번호와 액션 추출"""
         llm_response = self.lang_chain.invoke({"user_input": output_message})
         result = llm_response.content.strip()
         
@@ -157,6 +165,7 @@ class GetKeyword(Node):
                     tables.append(table)
                     actions.append(action)
         
+        # 디버깅 출력
         print(f"llm's response: {result}")
         print(f"object: {tables}")
         print(f"action: {actions}")
@@ -166,41 +175,36 @@ class GetKeyword(Node):
             "actions": actions
         }
     
-    def wakeup_detection_loop(self):
-        """타이머 콜백: 자동으로 wakeup word 감지"""
-        if not self.auto_mode or self.is_processing:
-            return
-        
-        # ============================================================
-        # [마이크 재개 처리 1] 스트림이 닫혀있으면 다시 열기
-        # ============================================================
-        if not self.mic_controller.stream or not self.mic_controller.stream.is_active():
-            try:
-                self.mic_controller.open_stream()
-                self.wakeup_word.set_stream(self.mic_controller.stream)
-                self.publish_voice_state("waiting")
-                self.get_logger().info("[Auto Mode] Waiting for wakeupword...")
-            except OSError as e:
-                self.get_logger().error(f"Error: Failed to open audio stream: {e}")
-                return
-        
-        if self.wakeup_word.is_wakeup():
-            self.is_processing = True
-            self.get_logger().info("[Auto Mode] Wakeupword detected!")
-            self.process_voice_command()
-            # ============================================================
-            # [마이크 재개 처리 2] 처리 완료 후 플래그 해제 → 다음 루프에서 다시 감지 가능
-            # ============================================================
-            self.is_processing = False
-    
-    def process_voice_command(self):
-        """음성 명령 처리: STT → 키워드 추출 → 토픽 발행"""
+
+    ### 서비스 동작 콜백 (request, response 필요)
+    def get_keyword_callback(self, req, res):
+        # audio stream 열기
         try:
+            # print("open stream")
+            self.mic_controller.open_stream()
+            self.wakeup_word.set_stream(self.mic_controller.stream)
+        except OSError:
+            self.get_logger().error("Error: Failed to open audio stream")
+            self.get_logger().error("Please check your device index")
+            return None
+
+        # 서비스 처리
+        try:
+            # wakeup word 대기
+            self.publish_voice_state("waiting")
+            self.get_logger().info("Waiting for wakeupword...")
+            while not self.wakeup_word.is_wakeup():
+                pass
+            self.get_logger().info("Wakeupword detected!")
+
+            # STT --> Keword Extract --> Embedding
             self.publish_voice_state("listening")
             output_message = self.stt.speech2text()
             self.publish_voice_state("waiting")
             keyword = self.extract_keyword(output_message)
 
+
+            # object나 action이 None인 경우 경고
             if keyword:
                 tables = keyword.get("tables", [])
                 actions = keyword.get("actions", [])
@@ -213,82 +217,7 @@ class GetKeyword(Node):
             if not actions or all(a == "NONE" for a in actions):
                 self.get_logger().warn("Warning: Action is NONE (not cleanly specified)")
 
-            # 결과 발행
-            if tables and actions:
-                objects_str = " ".join(tables)
-                actions_str = " ".join(actions)
-            else:
-                objects_str = "NONE"
-                actions_str = "NONE"
-
-            payload = {
-                "type": "keyword",
-                "tables": tables,
-                "command": actions[0] if actions else "",
-                "text": output_message,
-            }
-
-            msg = String()
-            msg.data = json.dumps(payload, ensure_ascii=False)
-            self.keyword_pub.publish(msg)
-
-            self.get_logger().info(f"Published keyword_topic: {msg.data}")
-            self.get_logger().info(
-                f"[Processing result] object={objects_str}, action={actions_str}"
-            )
-        except Exception as e:
-            self.get_logger().error(f"Error: Failed processing: {e}")
-    
-    def get_keyword_callback(self, req, res):
-        """서비스 콜백: 클라이언트가 명시적으로 요청 시 wakeup word 감지 및 처리"""
-        self.get_logger().info("[Service Mode] Service called by client")
-        
-        if self.is_processing:
-            self.get_logger().warn("Already processing, please wait...")
-            res.success = False
-            res.message = "busy"
-            return res
-        
-        self.is_processing = True
-        
-        try:
-            # ============================================================
-            # [마이크 재개 처리 3] 서비스 모드에서도 스트림 확인 및 재개
-            # ============================================================
-            if not self.mic_controller.stream or not self.mic_controller.stream.is_active():
-                try:
-                    self.mic_controller.open_stream()
-                    self.wakeup_word.set_stream(self.mic_controller.stream)
-                except OSError as e:
-                    self.get_logger().error(f"Error: Failed to open audio stream: {e}")
-                    res.success = False
-                    res.message = f"audio_error: {e}"
-                    self.is_processing = False
-                    return res
-            
-            self.publish_voice_state("waiting")
-            self.get_logger().info("[Service Mode] Waiting for wakeupword...")
-            while not self.wakeup_word.is_wakeup():
-                pass
-            self.get_logger().info("[Service Mode] Wakeupword detected!")
-            
-            self.publish_voice_state("listening")
-            output_message = self.stt.speech2text()
-            self.publish_voice_state("waiting")
-            keyword = self.extract_keyword(output_message)
-            
-            if keyword:
-                tables = keyword.get("tables", [])
-                actions = keyword.get("actions", [])
-            else:
-                tables = []
-                actions = []
-            
-            if not tables:
-                self.get_logger().warn("Warning: No tables detected")
-            if not actions or all(a == "NONE" for a in actions):
-                self.get_logger().warn("Warning: Action is NONE")
-            
+            # 서비스 보내기
             res.success = True
             if tables and actions:
                 table_action_pairs = " ".join([f"{t}:{a}" for t, a in zip(tables, actions)])
@@ -299,37 +228,48 @@ class GetKeyword(Node):
                 res.message = ""
                 objects_str = "NONE"
                 actions_str = "NONE"
-            
+
             payload = {
+
                 "type": "keyword",
-                "tables": tables,
-                "command": actions[0] if actions else "",
-                "text": output_message,
+
+                "tables": tables,            # 예: ['1번']
+
+                "command": actions[0] if actions else "",# 예: 'clean'
+
+                "text": output_message,                # STT 전체 텍스트
+
             }
+
             msg = String()
+
             msg.data = json.dumps(payload, ensure_ascii=False)
+
             self.keyword_pub.publish(msg)
+
+            self.get_logger().info(f"Published keyword_topic: {msg.data}")
             
             self.get_logger().info(
-                f"[Service Mode] Response: success={res.success}, object={objects_str}, action={actions_str}"
+                f"[Service response] success={res.success}, object={objects_str}, action={actions_str}"
             )
-            
         except Exception as e:
             self.get_logger().error(f"Error: Failed processing: {e}")
             res.success = False
-            res.message = f"error: {e}"
+            res.message = f"Error: {e}"
         finally:
-            # ============================================================
-            # [마이크 재개 처리 4] 서비스 처리 완료 후 플래그 해제
-            # ============================================================
-            self.is_processing = False
+            # 오디오 stream 닫기
+            self.mic_controller.close_stream()
         
         return res
     
     def publish_voice_state(self, state: str):
+
         msg = String()
+
         msg.data = state  # "wakeup_waiting", "listening"
+
         self.voice_state_pub.publish(msg)
+
         self.get_logger().info(f"[VOICE_STATE] {state}")
 
     

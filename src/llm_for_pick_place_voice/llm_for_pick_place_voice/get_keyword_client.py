@@ -1,41 +1,45 @@
 import rclpy
 from rclpy.node import Node
 from std_srvs.srv import Trigger
-# 자체 서비스 인터페이스 생성 모듈
-# from llm_node_pkg.srv import TriggerLLM
+import time
 
 
-
-############ get_keyword_client (클라이언트) Node ############
 class GetKeywordClient(Node):
+    """
+    get_keyword 서비스를 호출하고 응답을 다른 노드로 전달하는 클라이언트
+    
+    흐름: 
+    1. get_keyword 서비스 호출
+    2. 서버가 wakeup word 감지 → STT → 키워드 추출
+    3. 응답 받음 (table:action 형식)
+    4. 다른 노드로 전달 (TODO)
+    5. 반복
+    """
     def __init__(self):
         super().__init__('get_keyword_client')
         
-        # get_keyword_client 생성 (get_keyword 서비스 받기)
         self.cli = self.create_client(Trigger, 'get_keyword')
-        # get_keyword_server 준비 대기
+        
         while not self.cli.wait_for_service(timeout_sec=1.0):
-            self.get_logger().info("Waiting for get_keyword_server...")
-    
-        # service 요청 객체 생성 및 service 호출
+            self.get_logger().info("Waiting for get_keyword service...")
+        
         self.req = Trigger.Request()
+        self.latest_keyword = None
+        
+        self.get_logger().info("GetKeywordClient initialized.")
         self.call_service()
-
-
-    ### server에 service 요청
+    
     def call_service(self):
-        self.get_logger().info("Calling service...")
-        # 비동기 호출
+        """get_keyword 서비스 호출"""
+        self.get_logger().info("Calling get_keyword service...")
         future = self.cli.call_async(self.req)
         future.add_done_callback(self.service_callback)
-        self.get_logger().info("Service called, waiting for response(wakeupword, stt)...")
     
-    ### service 응답 콜백
     def service_callback(self, future):
+        """get_keyword 서비스 응답 처리"""
         try:
             res = future.result()
-
-            # object나 action이 None인 경우 경고
+            
             tables = []
             actions = []
             
@@ -47,40 +51,66 @@ class GetKeywordClient(Node):
                         tables.append(table)
                         actions.append(action)
             
-            if tables and actions:
-                objects_str = " ".join(tables)
-                actions_str = " ".join(actions)
-            else:
-                objects_str = "NONE"
-                actions_str = "NONE"
-
-            if not tables or tables == []:
-                self.get_logger().warn("Warning: No tables detected (object is empty)")
+            objects_str = " ".join(tables) if tables else "NONE"
+            actions_str = " ".join(actions) if actions else "NONE"
+            
+            if not tables:
+                self.get_logger().warn("Warning: No tables detected")
             if not actions or all(a == "NONE" for a in actions):
-                self.get_logger().warn("Warning: Action is NONE (not clearly specified)")
-
-            # service 응답 로그
+                self.get_logger().warn("Warning: Action is NONE")
+            
             self.get_logger().info(
-                f"[Service response] success={res.success}, object={objects_str}, action={actions_str}"
+                f"[Response] success={res.success}, tables={objects_str}, actions={actions_str}"
             )
             
-            # service 재호출
+            self.latest_keyword = {
+                "tables": tables,
+                "actions": actions,
+                "message": res.message
+            }
+            
+            if res.success and tables and actions:
+                self.forward_to_other_node(tables, actions)
+            
+            # 다음 서비스 호출
             self.call_service()
-            self.get_logger().info("Next Service waiting...")
-
+            
         except Exception as e:
             self.get_logger().error(f"Error: Service call failed: {e}")
-
-
-### get_keyword_client.py 실행
+            time.sleep(1.0)
+            self.call_service()
+    
+    def forward_to_other_node(self, tables, actions):
+        """
+        받은 키워드를 로봇 노드로 전달 (TODO: 구현 필요)
+        
+        예시:
+        req = YourServiceType.Request()
+        req.tables = tables
+        req.actions = actions
+        future = self.your_client.call_async(req)
+        future.add_done_callback(self.forward_response_callback)
+        """
+        self.get_logger().info(f"TODO: Forward to other node - tables={tables}, actions={actions}")
+    
+    def forward_response_callback(self, future):
+        """로봇 노드 응답 처리"""
+        try:
+            response = future.result()
+            self.get_logger().info(f"Forward response: {response}")
+        except Exception as e:
+            self.get_logger().error(f"Forward failed: {e}")
 def main(args=None):
     rclpy.init(args=args)
     node = GetKeywordClient()
 
-    rclpy.spin(node)
-
-    node.destroy_node()
-    rclpy.shutdown()
+    try:
+        rclpy.spin(node)
+    except KeyboardInterrupt:
+        pass
+    finally:
+        node.destroy_node()
+        rclpy.shutdown()
 
 
 if __name__ == "__main__":
