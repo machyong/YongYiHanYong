@@ -102,7 +102,7 @@ ros2 run 명령을 사용할 수 있습니다.
 ---
 
 ### 7. ROS2 노드 실행
-## 7-1. 음성 명령 트리거 클라이언 (get_keyword_client)
+## 7-1. 음성 명령 트리거 클라이언트 노드 (get_keyword_client)
 get_keyword 서비스에 한 번 요청을 보내
 웨이크업 워드 감지 → STT → LLM 파싱을 한 사이클 수행시키는 클라이언트 노드입니다.
 ``` bash
@@ -116,7 +116,7 @@ ros2 run llm_for_pick_place_voice get_keyword_client
 ros2 service call /get_keyword std_srvs/srv/Trigger "{}"
 ```
 
-## 7-2. LLM + 음성 처리 노드
+## 7-2. LLM + STT 음성 처리 서버 노드 (get_keyword)
 ``` bash
 cd ~/llm_ws
 source /opt/ros/jazzy/setup.bash
@@ -131,7 +131,6 @@ source /opt/ros/jazzy/setup.bash
 source install/setup.bash
 ros2 run llm_for_pick_place_voice ros_web_bridge
 ```
-
 ---
 
 ### 8. React GUI 실행
