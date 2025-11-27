@@ -46,19 +46,18 @@ source .venv/bin/activate
 
 requirements.txt:
 ``` txt
-scipy
-openwakeword
-sounddevice
-python-dotenv
-pyaudio
-onnxruntime
-langchain-openai
-langchain-core
-langchain-classic
-openai
-fastapi
-uvicorn
-numpy
+scipy==1.16.3
+openwakeword==0.4.0
+sounddevice==0.5.3
+python-dotenv==1.2.1
+PyAudio==0.2.13
+onnxruntime==1.23.2
+langchain_openai==1.1.0
+langchain_core==1.1.0
+openai==2.8.1
+fastapi==0.122.0
+uvicorn==0.38.0
+numpy==2.3.5
 ```
 
 설치:
