@@ -134,6 +134,9 @@ ros2 run llm_for_pick_place_voice ros_web_bridge
 ---
 
 ### 8. React GUI 실행
+이 GUI는 **React + Vite** 기반으로 구현되어 있으며,  
+모든 프론트엔드 의존성은 `package.json` 에 정의되어 있습니다.
+
 GUI 소스 위치:
 ``` bash
 cd ~/llm_ws/src/YongYiHanYong/src/bussing_gui/robot-topview
@@ -146,7 +149,7 @@ npm install
 ``` bash
 npm run dev
 ```
-브라우저에서 표시된 주소(예: http://localhost:5173)로 접속하면
+브라우저에서 표시된 주소(예: `http://localhost:5173`)로 접속하면
 Top View GUI와 음성 상태 패널을 확인할 수 있습니다.
 
 ---
