@@ -5,6 +5,7 @@
 # SPDX-License-Identifier: BSD-3-Clause
 
 from dataclasses import MISSING
+import math
 
 import isaaclab.sim as sim_utils
 from isaaclab.assets import ArticulationCfg, AssetBaseCfg, DeformableObjectCfg, RigidObjectCfg
@@ -161,7 +162,7 @@ class EventCfg:
         func=mdp.reset_root_state_uniform,
         mode="reset",
         params={
-            "pose_range": {"x": (-0.3, 0.3), "y": (-0.3, 0.3), "z": (0.0, 0.0)},
+            "pose_range": {"x": (-0.3, 0.3), "y": (-0.3, 0.3), "z": (-0.055, -0.055), "roll": (math.pi, math.pi)},
             "velocity_range": {},
             "asset_cfg": SceneEntityCfg("spoon", body_names="Spoon"),
         },
@@ -171,7 +172,7 @@ class EventCfg:
         func=mdp.reset_root_state_uniform,
         mode="reset",
         params={
-            "pose_range": {"x": (-0.3, 0.3), "y": (-0.3, 0.3), "z": (0.0, 0.0)},
+            "pose_range": {"x": (-0.3, 0.3), "y": (-0.3, 0.3), "z": (-0.055, -0.055)},
             "velocity_range": {},
             "asset_cfg": SceneEntityCfg("fork", body_names="Fork"),
         },

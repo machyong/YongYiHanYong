@@ -1,0 +1,322 @@
+[0.101s] colcon DEBUG Command line arguments: ['/usr/bin/colcon', 'list', '-p', '--base-paths', '/home/jw/YongYiHanYong', '--log-base', '/dev/null']
+[0.102s] colcon DEBUG Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='list', build_base='build', ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['/home/jw/YongYiHanYong', '--log-base', '/dev/null'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], topological_order=False, names_only=False, paths_only=True, topological_graph=False, topological_graph_dot=False, topological_graph_density=False, topological_graph_legend=False, topological_graph_dot_cluster=False, topological_graph_dot_include_skipped=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7ad14a388140>, verb_extension=<colcon_package_information.verb.list.ListVerb object at 0x7ad14a35b380>, main=<bound method ListVerb.main of <colcon_package_information.verb.list.ListVerb object at 0x7ad14a35b380>>, mixin_verb=('list',))
+[0.130s] colcon.colcon_core.package_discovery Level 1 discover_packages(colcon_meta) check parameters
+[0.130s] colcon.colcon_core.package_discovery Level 1 discover_packages(recursive) check parameters
+[0.130s] colcon.colcon_core.package_discovery Level 1 discover_packages(ignore) check parameters
+[0.130s] colcon.colcon_core.package_discovery Level 1 discover_packages(path) check parameters
+[0.130s] colcon.colcon_core.package_discovery Level 1 discover_packages(recursive) discover
+[0.130s] colcon.colcon_core.package_discovery INFO Crawling recursively for packages in '/home/jw/YongYiHanYong', '/home/jw/YongYiHanYong/--log-base', '/dev/null'
+[0.130s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong) by extensions ['ignore', 'ignore_ament_install']
+[0.130s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong) by extension 'ignore'
+[0.130s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong) by extension 'ignore_ament_install'
+[0.130s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong) by extensions ['colcon_pkg']
+[0.130s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong) by extension 'colcon_pkg'
+[0.130s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong) by extensions ['colcon_meta']
+[0.130s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong) by extension 'colcon_meta'
+[0.130s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong) by extensions ['ros']
+[0.130s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong) by extension 'ros'
+[0.148s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong) by extensions ['cmake', 'python']
+[0.148s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong) by extension 'cmake'
+[0.148s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong) by extension 'python'
+[0.149s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong) by extensions ['python_setup_py']
+[0.149s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong) by extension 'python_setup_py'
+[0.149s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/install) by extensions ['ignore', 'ignore_ament_install']
+[0.149s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/install) by extension 'ignore'
+[0.149s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/install) ignored
+[0.149s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/log) by extensions ['ignore', 'ignore_ament_install']
+[0.149s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/log) by extension 'ignore'
+[0.149s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/log) ignored
+[0.149s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src) by extensions ['ignore', 'ignore_ament_install']
+[0.149s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src) by extension 'ignore'
+[0.149s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src) by extension 'ignore_ament_install'
+[0.149s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src) by extensions ['colcon_pkg']
+[0.149s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src) by extension 'colcon_pkg'
+[0.149s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src) by extensions ['colcon_meta']
+[0.149s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src) by extension 'colcon_meta'
+[0.149s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src) by extensions ['ros']
+[0.149s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src) by extension 'ros'
+[0.149s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src) by extensions ['cmake', 'python']
+[0.149s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src) by extension 'cmake'
+[0.149s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src) by extension 'python'
+[0.149s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src) by extensions ['python_setup_py']
+[0.149s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src) by extension 'python_setup_py'
+[0.149s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/bussing_gui) by extensions ['ignore', 'ignore_ament_install']
+[0.149s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/bussing_gui) by extension 'ignore'
+[0.149s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/bussing_gui) by extension 'ignore_ament_install'
+[0.149s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/bussing_gui) by extensions ['colcon_pkg']
+[0.149s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/bussing_gui) by extension 'colcon_pkg'
+[0.149s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/bussing_gui) by extensions ['colcon_meta']
+[0.150s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/bussing_gui) by extension 'colcon_meta'
+[0.150s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/bussing_gui) by extensions ['ros']
+[0.150s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/bussing_gui) by extension 'ros'
+[0.150s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/bussing_gui) by extensions ['cmake', 'python']
+[0.150s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/bussing_gui) by extension 'cmake'
+[0.150s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/bussing_gui) by extension 'python'
+[0.150s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/bussing_gui) by extensions ['python_setup_py']
+[0.150s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/bussing_gui) by extension 'python_setup_py'
+[0.150s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/bussing_gui/robot-topview) by extensions ['ignore', 'ignore_ament_install']
+[0.150s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/bussing_gui/robot-topview) by extension 'ignore'
+[0.150s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/bussing_gui/robot-topview) by extension 'ignore_ament_install'
+[0.150s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/bussing_gui/robot-topview) by extensions ['colcon_pkg']
+[0.150s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/bussing_gui/robot-topview) by extension 'colcon_pkg'
+[0.150s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/bussing_gui/robot-topview) by extensions ['colcon_meta']
+[0.150s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/bussing_gui/robot-topview) by extension 'colcon_meta'
+[0.150s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/bussing_gui/robot-topview) by extensions ['ros']
+[0.150s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/bussing_gui/robot-topview) by extension 'ros'
+[0.150s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/bussing_gui/robot-topview) by extensions ['cmake', 'python']
+[0.150s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/bussing_gui/robot-topview) by extension 'cmake'
+[0.150s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/bussing_gui/robot-topview) by extension 'python'
+[0.150s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/bussing_gui/robot-topview) by extensions ['python_setup_py']
+[0.150s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/bussing_gui/robot-topview) by extension 'python_setup_py'
+[0.150s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/bussing_gui/robot-topview/public) by extensions ['ignore', 'ignore_ament_install']
+[0.150s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/bussing_gui/robot-topview/public) by extension 'ignore'
+[0.150s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/bussing_gui/robot-topview/public) by extension 'ignore_ament_install'
+[0.150s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/bussing_gui/robot-topview/public) by extensions ['colcon_pkg']
+[0.150s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/bussing_gui/robot-topview/public) by extension 'colcon_pkg'
+[0.150s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/bussing_gui/robot-topview/public) by extensions ['colcon_meta']
+[0.150s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/bussing_gui/robot-topview/public) by extension 'colcon_meta'
+[0.150s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/bussing_gui/robot-topview/public) by extensions ['ros']
+[0.150s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/bussing_gui/robot-topview/public) by extension 'ros'
+[0.150s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/bussing_gui/robot-topview/public) by extensions ['cmake', 'python']
+[0.150s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/bussing_gui/robot-topview/public) by extension 'cmake'
+[0.150s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/bussing_gui/robot-topview/public) by extension 'python'
+[0.150s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/bussing_gui/robot-topview/public) by extensions ['python_setup_py']
+[0.150s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/bussing_gui/robot-topview/public) by extension 'python_setup_py'
+[0.150s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/bussing_gui/robot-topview/src) by extensions ['ignore', 'ignore_ament_install']
+[0.150s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/bussing_gui/robot-topview/src) by extension 'ignore'
+[0.151s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/bussing_gui/robot-topview/src) by extension 'ignore_ament_install'
+[0.151s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/bussing_gui/robot-topview/src) by extensions ['colcon_pkg']
+[0.151s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/bussing_gui/robot-topview/src) by extension 'colcon_pkg'
+[0.151s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/bussing_gui/robot-topview/src) by extensions ['colcon_meta']
+[0.151s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/bussing_gui/robot-topview/src) by extension 'colcon_meta'
+[0.151s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/bussing_gui/robot-topview/src) by extensions ['ros']
+[0.151s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/bussing_gui/robot-topview/src) by extension 'ros'
+[0.151s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/bussing_gui/robot-topview/src) by extensions ['cmake', 'python']
+[0.151s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/bussing_gui/robot-topview/src) by extension 'cmake'
+[0.151s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/bussing_gui/robot-topview/src) by extension 'python'
+[0.151s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/bussing_gui/robot-topview/src) by extensions ['python_setup_py']
+[0.151s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/bussing_gui/robot-topview/src) by extension 'python_setup_py'
+[0.151s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/bussing_gui/robot-topview/src/assets) by extensions ['ignore', 'ignore_ament_install']
+[0.151s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/bussing_gui/robot-topview/src/assets) by extension 'ignore'
+[0.151s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/bussing_gui/robot-topview/src/assets) by extension 'ignore_ament_install'
+[0.151s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/bussing_gui/robot-topview/src/assets) by extensions ['colcon_pkg']
+[0.151s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/bussing_gui/robot-topview/src/assets) by extension 'colcon_pkg'
+[0.151s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/bussing_gui/robot-topview/src/assets) by extensions ['colcon_meta']
+[0.151s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/bussing_gui/robot-topview/src/assets) by extension 'colcon_meta'
+[0.151s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/bussing_gui/robot-topview/src/assets) by extensions ['ros']
+[0.151s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/bussing_gui/robot-topview/src/assets) by extension 'ros'
+[0.151s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/bussing_gui/robot-topview/src/assets) by extensions ['cmake', 'python']
+[0.151s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/bussing_gui/robot-topview/src/assets) by extension 'cmake'
+[0.151s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/bussing_gui/robot-topview/src/assets) by extension 'python'
+[0.151s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/bussing_gui/robot-topview/src/assets) by extensions ['python_setup_py']
+[0.151s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/bussing_gui/robot-topview/src/assets) by extension 'python_setup_py'
+[0.151s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/llm_for_pick_place_voice) by extensions ['ignore', 'ignore_ament_install']
+[0.151s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/llm_for_pick_place_voice) by extension 'ignore'
+[0.151s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/llm_for_pick_place_voice) by extension 'ignore_ament_install'
+[0.151s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/llm_for_pick_place_voice) by extensions ['colcon_pkg']
+[0.151s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/llm_for_pick_place_voice) by extension 'colcon_pkg'
+[0.151s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/llm_for_pick_place_voice) by extensions ['colcon_meta']
+[0.151s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/llm_for_pick_place_voice) by extension 'colcon_meta'
+[0.151s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/llm_for_pick_place_voice) by extensions ['ros']
+[0.151s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/llm_for_pick_place_voice) by extension 'ros'
+[0.153s] colcon.colcon_core.package_identification DEBUG Package '/home/jw/YongYiHanYong/src/llm_for_pick_place_voice' with type 'ros.ament_python' and name 'llm_for_pick_place_voice'
+[0.153s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/log) by extensions ['ignore', 'ignore_ament_install']
+[0.154s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/log) by extension 'ignore'
+[0.154s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/log) ignored
+[0.154s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project) by extensions ['ignore', 'ignore_ament_install']
+[0.154s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project) by extension 'ignore'
+[0.154s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project) by extension 'ignore_ament_install'
+[0.154s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project) by extensions ['colcon_pkg']
+[0.154s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project) by extension 'colcon_pkg'
+[0.154s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project) by extensions ['colcon_meta']
+[0.154s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project) by extension 'colcon_meta'
+[0.154s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project) by extensions ['ros']
+[0.154s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project) by extension 'ros'
+[0.154s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project) by extensions ['cmake', 'python']
+[0.154s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project) by extension 'cmake'
+[0.154s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project) by extension 'python'
+[0.154s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project) by extensions ['python_setup_py']
+[0.154s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project) by extension 'python_setup_py'
+[0.154s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/__pycache__) by extensions ['ignore', 'ignore_ament_install']
+[0.154s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/__pycache__) by extension 'ignore'
+[0.154s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/__pycache__) by extension 'ignore_ament_install'
+[0.154s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/__pycache__) by extensions ['colcon_pkg']
+[0.154s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/__pycache__) by extension 'colcon_pkg'
+[0.154s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/__pycache__) by extensions ['colcon_meta']
+[0.154s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/__pycache__) by extension 'colcon_meta'
+[0.154s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/__pycache__) by extensions ['ros']
+[0.154s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/__pycache__) by extension 'ros'
+[0.154s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/__pycache__) by extensions ['cmake', 'python']
+[0.154s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/__pycache__) by extension 'cmake'
+[0.154s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/__pycache__) by extension 'python'
+[0.154s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/__pycache__) by extensions ['python_setup_py']
+[0.154s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/__pycache__) by extension 'python_setup_py'
+[0.154s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/agents) by extensions ['ignore', 'ignore_ament_install']
+[0.154s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/agents) by extension 'ignore'
+[0.155s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/agents) by extension 'ignore_ament_install'
+[0.155s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/agents) by extensions ['colcon_pkg']
+[0.155s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/agents) by extension 'colcon_pkg'
+[0.155s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/agents) by extensions ['colcon_meta']
+[0.155s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/agents) by extension 'colcon_meta'
+[0.155s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/agents) by extensions ['ros']
+[0.155s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/agents) by extension 'ros'
+[0.155s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/agents) by extensions ['cmake', 'python']
+[0.155s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/agents) by extension 'cmake'
+[0.155s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/agents) by extension 'python'
+[0.155s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/agents) by extensions ['python_setup_py']
+[0.155s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/agents) by extension 'python_setup_py'
+[0.155s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/agents/__pycache__) by extensions ['ignore', 'ignore_ament_install']
+[0.155s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/agents/__pycache__) by extension 'ignore'
+[0.155s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/agents/__pycache__) by extension 'ignore_ament_install'
+[0.155s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/agents/__pycache__) by extensions ['colcon_pkg']
+[0.155s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/agents/__pycache__) by extension 'colcon_pkg'
+[0.155s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/agents/__pycache__) by extensions ['colcon_meta']
+[0.155s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/agents/__pycache__) by extension 'colcon_meta'
+[0.155s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/agents/__pycache__) by extensions ['ros']
+[0.155s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/agents/__pycache__) by extension 'ros'
+[0.155s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/agents/__pycache__) by extensions ['cmake', 'python']
+[0.155s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/agents/__pycache__) by extension 'cmake'
+[0.155s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/agents/__pycache__) by extension 'python'
+[0.155s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/agents/__pycache__) by extensions ['python_setup_py']
+[0.155s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/agents/__pycache__) by extension 'python_setup_py'
+[0.155s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/assets) by extensions ['ignore', 'ignore_ament_install']
+[0.155s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/assets) by extension 'ignore'
+[0.155s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/assets) by extension 'ignore_ament_install'
+[0.155s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/assets) by extensions ['colcon_pkg']
+[0.155s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/assets) by extension 'colcon_pkg'
+[0.155s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/assets) by extensions ['colcon_meta']
+[0.155s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/assets) by extension 'colcon_meta'
+[0.155s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/assets) by extensions ['ros']
+[0.155s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/assets) by extension 'ros'
+[0.155s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/assets) by extensions ['cmake', 'python']
+[0.155s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/assets) by extension 'cmake'
+[0.155s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/assets) by extension 'python'
+[0.155s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/assets) by extensions ['python_setup_py']
+[0.155s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/assets) by extension 'python_setup_py'
+[0.155s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config) by extensions ['ignore', 'ignore_ament_install']
+[0.155s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config) by extension 'ignore'
+[0.156s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config) by extension 'ignore_ament_install'
+[0.156s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config) by extensions ['colcon_pkg']
+[0.156s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config) by extension 'colcon_pkg'
+[0.156s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config) by extensions ['colcon_meta']
+[0.156s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config) by extension 'colcon_meta'
+[0.156s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config) by extensions ['ros']
+[0.156s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config) by extension 'ros'
+[0.156s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config) by extensions ['cmake', 'python']
+[0.156s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config) by extension 'cmake'
+[0.156s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config) by extension 'python'
+[0.156s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config) by extensions ['python_setup_py']
+[0.156s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config) by extension 'python_setup_py'
+[0.156s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config/__pycache__) by extensions ['ignore', 'ignore_ament_install']
+[0.156s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config/__pycache__) by extension 'ignore'
+[0.156s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config/__pycache__) by extension 'ignore_ament_install'
+[0.156s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config/__pycache__) by extensions ['colcon_pkg']
+[0.156s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config/__pycache__) by extension 'colcon_pkg'
+[0.156s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config/__pycache__) by extensions ['colcon_meta']
+[0.156s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config/__pycache__) by extension 'colcon_meta'
+[0.156s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config/__pycache__) by extensions ['ros']
+[0.156s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config/__pycache__) by extension 'ros'
+[0.156s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config/__pycache__) by extensions ['cmake', 'python']
+[0.156s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config/__pycache__) by extension 'cmake'
+[0.156s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config/__pycache__) by extension 'python'
+[0.156s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config/__pycache__) by extensions ['python_setup_py']
+[0.156s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config/__pycache__) by extension 'python_setup_py'
+[0.156s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config/franka) by extensions ['ignore', 'ignore_ament_install']
+[0.156s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config/franka) by extension 'ignore'
+[0.156s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config/franka) by extension 'ignore_ament_install'
+[0.156s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config/franka) by extensions ['colcon_pkg']
+[0.156s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config/franka) by extension 'colcon_pkg'
+[0.156s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config/franka) by extensions ['colcon_meta']
+[0.156s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config/franka) by extension 'colcon_meta'
+[0.156s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config/franka) by extensions ['ros']
+[0.156s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config/franka) by extension 'ros'
+[0.156s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config/franka) by extensions ['cmake', 'python']
+[0.156s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config/franka) by extension 'cmake'
+[0.156s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config/franka) by extension 'python'
+[0.156s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config/franka) by extensions ['python_setup_py']
+[0.156s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config/franka) by extension 'python_setup_py'
+[0.156s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config/franka/__pycache__) by extensions ['ignore', 'ignore_ament_install']
+[0.157s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config/franka/__pycache__) by extension 'ignore'
+[0.157s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config/franka/__pycache__) by extension 'ignore_ament_install'
+[0.157s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config/franka/__pycache__) by extensions ['colcon_pkg']
+[0.157s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config/franka/__pycache__) by extension 'colcon_pkg'
+[0.157s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config/franka/__pycache__) by extensions ['colcon_meta']
+[0.157s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config/franka/__pycache__) by extension 'colcon_meta'
+[0.157s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config/franka/__pycache__) by extensions ['ros']
+[0.157s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config/franka/__pycache__) by extension 'ros'
+[0.157s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config/franka/__pycache__) by extensions ['cmake', 'python']
+[0.157s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config/franka/__pycache__) by extension 'cmake'
+[0.157s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config/franka/__pycache__) by extension 'python'
+[0.157s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config/franka/__pycache__) by extensions ['python_setup_py']
+[0.157s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config/franka/__pycache__) by extension 'python_setup_py'
+[0.157s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config/franka/agents) by extensions ['ignore', 'ignore_ament_install']
+[0.157s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config/franka/agents) by extension 'ignore'
+[0.157s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config/franka/agents) by extension 'ignore_ament_install'
+[0.157s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config/franka/agents) by extensions ['colcon_pkg']
+[0.157s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config/franka/agents) by extension 'colcon_pkg'
+[0.157s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config/franka/agents) by extensions ['colcon_meta']
+[0.157s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config/franka/agents) by extension 'colcon_meta'
+[0.157s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config/franka/agents) by extensions ['ros']
+[0.157s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config/franka/agents) by extension 'ros'
+[0.157s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config/franka/agents) by extensions ['cmake', 'python']
+[0.157s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config/franka/agents) by extension 'cmake'
+[0.157s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config/franka/agents) by extension 'python'
+[0.157s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config/franka/agents) by extensions ['python_setup_py']
+[0.157s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config/franka/agents) by extension 'python_setup_py'
+[0.157s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config/franka/agents/__pycache__) by extensions ['ignore', 'ignore_ament_install']
+[0.157s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config/franka/agents/__pycache__) by extension 'ignore'
+[0.157s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config/franka/agents/__pycache__) by extension 'ignore_ament_install'
+[0.157s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config/franka/agents/__pycache__) by extensions ['colcon_pkg']
+[0.157s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config/franka/agents/__pycache__) by extension 'colcon_pkg'
+[0.157s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config/franka/agents/__pycache__) by extensions ['colcon_meta']
+[0.157s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config/franka/agents/__pycache__) by extension 'colcon_meta'
+[0.157s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config/franka/agents/__pycache__) by extensions ['ros']
+[0.157s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config/franka/agents/__pycache__) by extension 'ros'
+[0.157s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config/franka/agents/__pycache__) by extensions ['cmake', 'python']
+[0.157s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config/franka/agents/__pycache__) by extension 'cmake'
+[0.157s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config/franka/agents/__pycache__) by extension 'python'
+[0.157s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config/franka/agents/__pycache__) by extensions ['python_setup_py']
+[0.157s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config/franka/agents/__pycache__) by extension 'python_setup_py'
+[0.158s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config/franka/agents/robomimic) by extensions ['ignore', 'ignore_ament_install']
+[0.158s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config/franka/agents/robomimic) by extension 'ignore'
+[0.158s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config/franka/agents/robomimic) by extension 'ignore_ament_install'
+[0.158s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config/franka/agents/robomimic) by extensions ['colcon_pkg']
+[0.158s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config/franka/agents/robomimic) by extension 'colcon_pkg'
+[0.158s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config/franka/agents/robomimic) by extensions ['colcon_meta']
+[0.158s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config/franka/agents/robomimic) by extension 'colcon_meta'
+[0.158s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config/franka/agents/robomimic) by extensions ['ros']
+[0.158s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config/franka/agents/robomimic) by extension 'ros'
+[0.158s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config/franka/agents/robomimic) by extensions ['cmake', 'python']
+[0.158s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config/franka/agents/robomimic) by extension 'cmake'
+[0.158s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config/franka/agents/robomimic) by extension 'python'
+[0.158s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config/franka/agents/robomimic) by extensions ['python_setup_py']
+[0.158s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/config/franka/agents/robomimic) by extension 'python_setup_py'
+[0.158s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/mdp) by extensions ['ignore', 'ignore_ament_install']
+[0.158s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/mdp) by extension 'ignore'
+[0.158s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/mdp) by extension 'ignore_ament_install'
+[0.158s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/mdp) by extensions ['colcon_pkg']
+[0.158s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/mdp) by extension 'colcon_pkg'
+[0.158s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/mdp) by extensions ['colcon_meta']
+[0.158s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/mdp) by extension 'colcon_meta'
+[0.158s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/mdp) by extensions ['ros']
+[0.158s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/mdp) by extension 'ros'
+[0.158s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/mdp) by extensions ['cmake', 'python']
+[0.158s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/mdp) by extension 'cmake'
+[0.158s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/mdp) by extension 'python'
+[0.158s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/mdp) by extensions ['python_setup_py']
+[0.158s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/mdp) by extension 'python_setup_py'
+[0.158s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/mdp/__pycache__) by extensions ['ignore', 'ignore_ament_install']
+[0.158s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/mdp/__pycache__) by extension 'ignore'
+[0.158s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/mdp/__pycache__) by extension 'ignore_ament_install'
+[0.158s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/mdp/__pycache__) by extensions ['colcon_pkg']
+[0.158s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/mdp/__pycache__) by extension 'colcon_pkg'
+[0.158s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/mdp/__pycache__) by extensions ['colcon_meta']
+[0.158s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/mdp/__pycache__) by extension 'colcon_meta'
+[0.158s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/mdp/__pycache__) by extensions ['ros']
+[0.158s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/mdp/__pycache__) by extension 'ros'
+[0.159s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/mdp/__pycache__) by extensions ['cmake', 'python']
+[0.159s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/mdp/__pycache__) by extension 'cmake'
+[0.159s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/mdp/__pycache__) by extension 'python'
+[0.159s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/mdp/__pycache__) by extensions ['python_setup_py']
+[0.159s] colcon.colcon_core.package_identification Level 1 _identify(/home/jw/YongYiHanYong/src/project/mdp/__pycache__) by extension 'python_setup_py'
+[0.159s] colcon.colcon_core.package_discovery Level 1 discover_packages(recursive) using defaults
