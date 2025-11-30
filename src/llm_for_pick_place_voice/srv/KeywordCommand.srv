@@ -1,0 +1,8 @@
+# Request
+string[] tables      # 테이블 번호 리스트 (예: ["table1", "table3"])
+string command       # 명령어 (예: "clean", "setting")
+string text          # 원본 텍스트 (STT 결과)
+---
+# Response
+bool success         # 성공 여부
+string message       # 응답 메시지

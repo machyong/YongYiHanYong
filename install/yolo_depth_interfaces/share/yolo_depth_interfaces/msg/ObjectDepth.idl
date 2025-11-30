@@ -1,0 +1,24 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from yolo_depth_interfaces/msg/ObjectDepth.msg
+// generated code does not contain a copyright notice
+
+
+module yolo_depth_interfaces {
+  module msg {
+    struct ObjectDepth {
+      string class_name;
+
+      float confidence;
+
+      float distance_m;
+
+      int32 x1;
+
+      int32 y1;
+
+      int32 x2;
+
+      int32 y2;
+    };
+  };
+};

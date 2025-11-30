@@ -1,0 +1,22 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from yolo_depth_interfaces/srv/MoveToPoint.srv
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/Point.idl"
+
+module yolo_depth_interfaces {
+  module srv {
+    @verbatim (language="comment", text=
+      "Request: 목표 위치")
+    struct MoveToPoint_Request {
+      geometry_msgs::msg::Point target_position;
+    };
+    @verbatim (language="comment", text=
+      "Response: 성공 여부와 메시지")
+    struct MoveToPoint_Response {
+      boolean success;
+
+      string message;
+    };
+  };
+};

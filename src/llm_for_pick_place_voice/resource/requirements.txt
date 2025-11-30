@@ -1,0 +1,11 @@
+
+scipy
+openwakeword
+sounddevice
+dotenv
+pyaudio
+onnxruntime
+langchain_openai
+langchain_core
+langchain_classic
+openai

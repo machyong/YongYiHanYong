@@ -1,0 +1,13 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from yolo_depth_interfaces/msg/ObjectDepthArray.msg
+// generated code does not contain a copyright notice
+
+#include "yolo_depth_interfaces/msg/ObjectDepth.idl"
+
+module yolo_depth_interfaces {
+  module msg {
+    struct ObjectDepthArray {
+      sequence<yolo_depth_interfaces::msg::ObjectDepth> objects;
+    };
+  };
+};

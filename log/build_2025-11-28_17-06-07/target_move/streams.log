@@ -1,0 +1,18 @@
+[0.013s] Invoking command in '/home/hun/YongYiHanYong/build/target_move': CMAKE_PREFIX_PATH=/home/hun/YongYiHanYong/install/yolo_realsense:/home/hun/YongYiHanYong/install/llm_for_pick_place_voice:/opt/ros/jazzy:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/hun/YongYiHanYong/build/target_move -- -j12 -l12
+[0.086s] [ 50%] Building CXX object CMakeFiles/target_move_node.dir/src/target_move.cpp.o
+[3.303s] /home/hun/YongYiHanYong/src/target_move/src/target_move.cpp:159:59: error: redeclaration of ‘rclcpp::Subscription<std_msgs::msg::Float32_<std::allocator<void> > >::SharedPtr TargetMoveServer::angle_info_sub_’
+[3.303s]   159 |   rclcpp::Subscription<std_msgs::msg::Float32>::SharedPtr angle_info_sub_;
+[3.303s]       |                                                           ^~~~~~~~~~~~~~~
+[3.303s] /home/hun/YongYiHanYong/src/target_move/src/target_move.cpp:59:59: note: previous declaration ‘rclcpp::Subscription<std_msgs::msg::Float32_<std::allocator<void> > >::SharedPtr TargetMoveServer::angle_info_sub_’
+[3.303s]    59 |   rclcpp::Subscription<std_msgs::msg::Float32>::SharedPtr angle_info_sub_;
+[3.303s]       |                                                           ^~~~~~~~~~~~~~~
+[3.303s] /home/hun/YongYiHanYong/src/target_move/src/target_move.cpp:160:29: error: redeclaration of ‘float TargetMoveServer::latest_angle_deg_’
+[3.303s]   160 |   float latest_angle_deg_ = 0.0;  // 최근 각도값 (도 단위)
+[3.304s]       |                             ^~~
+[3.304s] /home/hun/YongYiHanYong/src/target_move/src/target_move.cpp:60:9: note: previous declaration ‘float TargetMoveServer::latest_angle_deg_’
+[3.304s]    60 |   float latest_angle_deg_ = 0.0;  // 최근 각도값 (도 단위)
+[3.304s]       |         ^~~~~~~~~~~~~~~~~
+[6.406s] gmake[2]: *** [CMakeFiles/target_move_node.dir/build.make:76: CMakeFiles/target_move_node.dir/src/target_move.cpp.o] Error 1
+[6.406s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/target_move_node.dir/all] Error 2
+[6.407s] gmake: *** [Makefile:146: all] Error 2
+[6.409s] Invoked command in '/home/hun/YongYiHanYong/build/target_move' returned '2': CMAKE_PREFIX_PATH=/home/hun/YongYiHanYong/install/yolo_realsense:/home/hun/YongYiHanYong/install/llm_for_pick_place_voice:/opt/ros/jazzy:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/hun/YongYiHanYong/build/target_move -- -j12 -l12

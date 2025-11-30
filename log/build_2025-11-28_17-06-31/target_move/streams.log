@@ -1,0 +1,27 @@
+[0.014s] Invoking command in '/home/hun/YongYiHanYong/build/target_move': CMAKE_PREFIX_PATH=/home/hun/YongYiHanYong/install/yolo_realsense:/home/hun/YongYiHanYong/install/llm_for_pick_place_voice:/opt/ros/jazzy:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/hun/YongYiHanYong/build/target_move -- -j12 -l12
+[0.105s] [ 50%] Building CXX object CMakeFiles/target_move_node.dir/src/target_move.cpp.o
+[8.878s] [100%] Linking CXX executable target_move_node
+[9.412s] [100%] Built target target_move_node
+[9.428s] Invoked command in '/home/hun/YongYiHanYong/build/target_move' returned '0': CMAKE_PREFIX_PATH=/home/hun/YongYiHanYong/install/yolo_realsense:/home/hun/YongYiHanYong/install/llm_for_pick_place_voice:/opt/ros/jazzy:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/hun/YongYiHanYong/build/target_move -- -j12 -l12
+[9.439s] Invoking command in '/home/hun/YongYiHanYong/build/target_move': CMAKE_PREFIX_PATH=/home/hun/YongYiHanYong/install/yolo_realsense:/home/hun/YongYiHanYong/install/llm_for_pick_place_voice:/opt/ros/jazzy:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/hun/YongYiHanYong/build/target_move
+[9.446s] -- Install configuration: ""
+[9.446s] -- Installing: /home/hun/YongYiHanYong/install/target_move/lib/target_move/target_move_node
+[9.449s] -- Set non-toolchain portion of runtime path of "/home/hun/YongYiHanYong/install/target_move/lib/target_move/target_move_node" to ""
+[9.449s] -- Installing: /home/hun/YongYiHanYong/install/target_move/share/target_move/launch
+[9.449s] -- Installing: /home/hun/YongYiHanYong/install/target_move/share/target_move/launch/target_move_dsr.launch.py
+[9.449s] -- Installing: /home/hun/YongYiHanYong/install/target_move/share/ament_index/resource_index/package_run_dependencies/target_move
+[9.450s] -- Installing: /home/hun/YongYiHanYong/install/target_move/share/ament_index/resource_index/parent_prefix_path/target_move
+[9.450s] -- Installing: /home/hun/YongYiHanYong/install/target_move/share/target_move/environment/ament_prefix_path.sh
+[9.450s] -- Installing: /home/hun/YongYiHanYong/install/target_move/share/target_move/environment/ament_prefix_path.dsv
+[9.450s] -- Installing: /home/hun/YongYiHanYong/install/target_move/share/target_move/environment/path.sh
+[9.450s] -- Installing: /home/hun/YongYiHanYong/install/target_move/share/target_move/environment/path.dsv
+[9.450s] -- Installing: /home/hun/YongYiHanYong/install/target_move/share/target_move/local_setup.bash
+[9.450s] -- Installing: /home/hun/YongYiHanYong/install/target_move/share/target_move/local_setup.sh
+[9.450s] -- Installing: /home/hun/YongYiHanYong/install/target_move/share/target_move/local_setup.zsh
+[9.451s] -- Installing: /home/hun/YongYiHanYong/install/target_move/share/target_move/local_setup.dsv
+[9.451s] -- Installing: /home/hun/YongYiHanYong/install/target_move/share/target_move/package.dsv
+[9.451s] -- Installing: /home/hun/YongYiHanYong/install/target_move/share/ament_index/resource_index/packages/target_move
+[9.451s] -- Installing: /home/hun/YongYiHanYong/install/target_move/share/target_move/cmake/target_moveConfig.cmake
+[9.451s] -- Installing: /home/hun/YongYiHanYong/install/target_move/share/target_move/cmake/target_moveConfig-version.cmake
+[9.451s] -- Installing: /home/hun/YongYiHanYong/install/target_move/share/target_move/package.xml
+[9.454s] Invoked command in '/home/hun/YongYiHanYong/build/target_move' returned '0': CMAKE_PREFIX_PATH=/home/hun/YongYiHanYong/install/yolo_realsense:/home/hun/YongYiHanYong/install/llm_for_pick_place_voice:/opt/ros/jazzy:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/hun/YongYiHanYong/build/target_move

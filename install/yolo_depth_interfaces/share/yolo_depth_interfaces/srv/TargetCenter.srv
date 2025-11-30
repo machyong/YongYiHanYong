@@ -1,0 +1,9 @@
+# Request: 중심점 데이터 전송
+string target
+float64 center_x
+float64 center_y
+float64 distance_m
+---
+# Response: 수신 확인
+bool success
+string message

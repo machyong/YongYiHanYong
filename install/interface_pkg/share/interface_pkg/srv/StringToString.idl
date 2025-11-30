@@ -1,0 +1,15 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from interface_pkg/srv/StringToString.srv
+// generated code does not contain a copyright notice
+
+
+module interface_pkg {
+  module srv {
+    struct StringToString_Request {
+      string input;
+    };
+    struct StringToString_Response {
+      string output;
+    };
+  };
+};

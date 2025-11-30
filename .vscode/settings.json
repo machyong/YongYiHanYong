@@ -1,0 +1,20 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/yong/YongYiHanYong/install/dsr_visualservoing/lib/python3.12/site-packages",
+        "/home/yong/YongYiHanYong/install/dsr_tests/lib/python3.12/site-packages",
+        "/home/yong/YongYiHanYong/install/dsr_bringup2/lib/python3.12/site-packages",
+        "/home/yong/YongYiHanYong/install/dsr_msgs2/lib/python3.12/site-packages",
+        "/home/yong/YongYiHanYong/install/dsr_example/lib/python3.12/site-packages",
+        "/home/yong/YongYiHanYong/install/dsr_common2/lib/python3.12/site-packages",
+        "/opt/ros/jazzy/lib/python3.12/site-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/yong/YongYiHanYong/install/dsr_visualservoing/lib/python3.12/site-packages",
+        "/home/yong/YongYiHanYong/install/dsr_tests/lib/python3.12/site-packages",
+        "/home/yong/YongYiHanYong/install/dsr_bringup2/lib/python3.12/site-packages",
+        "/home/yong/YongYiHanYong/install/dsr_msgs2/lib/python3.12/site-packages",
+        "/home/yong/YongYiHanYong/install/dsr_example/lib/python3.12/site-packages",
+        "/home/yong/YongYiHanYong/install/dsr_common2/lib/python3.12/site-packages",
+        "/opt/ros/jazzy/lib/python3.12/site-packages"
+    ]
+}

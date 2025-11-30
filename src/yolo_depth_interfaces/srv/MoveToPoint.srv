@@ -1,0 +1,7 @@
+# Request: 목표 위치
+geometry_msgs/Point target_position
+
+---
+# Response: 성공 여부와 메시지
+bool success
+string message

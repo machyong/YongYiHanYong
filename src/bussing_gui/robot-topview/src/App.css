@@ -1,0 +1,358 @@
+/* 전체 화면 기본 */
+.map-container {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: #f2f2f2;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* TopView 영역 */
+.topview {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.return{
+  position: absolute;
+  top: 20px;
+  left: 20%;
+  transform: translateX(-50%);
+
+  width: 10%;       
+  height: 100px;  
+
+  background: #D1F3C5;
+  border-radius: 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 28px;
+  font-weight: 700;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+
+  z-index: 5;
+
+}
+
+.serving{
+  position: absolute;
+  top: 20px;
+  left: 31%;
+  transform: translateX(-50%);
+
+  width: 10%;       
+  height: 100px;  
+
+  background: #B8D7F8;
+  border-radius: 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 28px;
+  font-weight: 700;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+
+  z-index: 5;
+
+}
+
+
+/* 주방 */
+.kitchen {
+  position: absolute;
+  top: 20px;
+  left: 58.65%;
+  transform: translateX(-50%);
+
+  width: 43%;       
+  height: 100px;  
+
+  background: #FFC0CB;
+  border-radius: 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 28px;
+  font-weight: 700;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+
+  z-index: 5;
+}
+
+/* 카운터 */
+.counter {
+  position: absolute;
+  top: 20px;
+  right: 9%;
+
+  width: 180px;
+  height: 100px;
+
+  background: #ffc4fa;
+  border-radius: 12px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 28px;
+  font-weight: 600;
+
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+
+  z-index: 10;
+}
+
+/* 테이블 영역 (가운데~오른쪽 크게) */
+/* 테이블 영역 */
+.tables {
+  position: absolute;
+  top: 250px;
+  left: 58%;
+  transform: translateX(-50%);
+
+  width: 55%;
+  height: 60%;
+
+  display: grid;
+  grid-template-columns: repeat(2, minmax(220px, 1fr));
+  row-gap: 140px;
+  column-gap: 160px;
+  justify-items: center;
+  align-items: center;
+}
+
+/* 테이블 + 의자 한 세트 */
+.table-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;            /* 테이블과 의자 사이 간격 */
+}
+
+/* 테이블 직사각형 */
+.table-rect {
+  width: 120px;
+  height: 200px;        /* 세로로 길게 */
+  background: #cf9c9c;
+  /* border-radius: 16px; */
+  /* border: 2px solid #777; */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 28px;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* 좌우 의자 묶음 */
+.seats-column {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;            /* 의자 간 간격 */
+}
+
+/* 동그란 의자 */
+.seat {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #f6b64a;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.25);
+}
+
+
+/* 로봇 점 (원형 + 부드러운 이동) */
+.robot-dot {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 10px solid #000000;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  /* transition: transform 1.5s ease; */
+
+  z-index: 9999;
+}
+
+/* 전체 오버레이 컨테이너 (패널들 묶는 영역) */
+.control-overlay {
+  position: absolute;
+  top: 200px;
+  left: 40px;
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* 큰 숫자 보여주는 상단 패널 */
+.highlight-panel {
+  width: 100%;
+  height: 120px;
+
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(4px);
+  border-radius: 12px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 48px;
+  font-weight: 700;
+  color: white;
+  text-shadow: 0 0 10px rgba(255,255,255,0.4);
+}
+
+/* 왼쪽 패널 */
+.left-panel {
+  width: 100%;
+  height: 300px;
+
+  padding: 16px;
+  background: rgba(0,0,0,0.4);
+  color: white;
+  border-radius: 12px;
+  backdrop-filter: blur(4px);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* 3. STT 크게 나오는 패널 */
+.stt-panel {
+  width: 260px;
+  min-height: 120px;
+  max-height: 360px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+  overflow-y: auto;
+  scrollbar-width: none;     /* Firefox */
+}
+
+.stt-panel::-webkit-scrollbar {
+  display: none;              /* Chrome, Safari, Edge */
+}
+
+.stt-title {
+  font-size: 24px;
+  color: #cbd5f5;
+  margin-bottom: 6px;
+}
+
+.stt-main {
+  font-size: 28px;          
+  font-weight: 500;
+  line-height: 1.5;
+  white-space: normal;
+  word-break: keep-all;
+}
+
+.stt-main .placeholder {
+  color: #ffffff;
+  opacity: 0.8;
+}
+
+/* 4. 테이블/작업 정보 패널 */
+.info-panel {
+  width: 260px;
+  padding: 10px 14px;
+  border-radius: 14px;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  color: white;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.35);
+}
+
+.info-line {
+  font-size: 28px;
+  line-height: 1.6;
+}
+
+/* === 마이크 상태 / 파형 UI === */
+
+.mic-panel {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;    
+  gap: 6px;
+  padding: 0;             
+  background: transparent;
+}
+
+.mic-label {
+  font-size: 28px;
+  font-weight: 500;
+  color: #8ecbff;  
+}
+
+/* 대기 상태일 때 동그란 마이크 아이콘 */
+.mic-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 999px;
+  border: 1px solid rgba(142, 203, 255, 0.7);
+  background: rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.45);
+}
+
+.mic-icon {
+  width: 40px;
+  height: 40px;
+}
+
+/* 말하는 중일 때 파형 컨테이너 */
+.wave-container {
+  width: 91%;
+  height: 52px;
+  padding: 6px 10px;
+  margin: 0;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #2a65b8, #4fa0ff, #8fd3ff);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.55);
+}
+
+/* 바코드처럼 보이는 파형 막대 */
+.wave-bar {
+  width: 15px;
+  height: 30px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.92);
+  animation: wave 1200ms ease-in-out infinite;
+  transform-origin: center center;
+}
+
+@keyframes wave {
+  0%   { height: 20%; opacity: 0.4; }
+  25%  { height: 80%; opacity: 1;   }
+  50%  { height: 35%; opacity: 0.7; }
+  75%  { height: 65%; opacity: 1;   }
+  100% { height: 20%; opacity: 0.4; }
+}
+

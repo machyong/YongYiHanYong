@@ -1,0 +1,152 @@
+[33mcommit fc5ae18dee8f1c986f79573619e4ad82161cfae0[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32m11.28.yong2[m[33m, [m[1;32m11.28.yong[m[33m)[m
+Author: jihun3333 <jihun3333@gmail.com>
+Date:   Sun Nov 30 14:13:03 2025 +0900
+
+    Remove all .env files from repository
+
+[33mcommit 3e03961cdbec817de100f49e442a3ec9b4a19d7d[m
+Author: jihun3333 <jihun3333@gmail.com>
+Date:   Sun Nov 30 14:09:38 2025 +0900
+
+    code integration
+
+[33mcommit f58caaed3e2ce9af5183a56ca27adfec51101009[m
+Author: jihun3333 <jihun3333@gmail.com>
+Date:   Fri Nov 28 19:36:37 2025 +0900
+
+    Add updates for 11.28.yong
+
+[33mcommit cfbd33366f07d50dce684167fb91ec5f3a03beee[m
+Author: jihun3333 <jihun3333@gmail.com>
+Date:   Fri Nov 28 19:37:49 2025 +0900
+
+    Remove secret .env file
+
+[33mcommit 1f3dd12e6a3c533570d8f4846b0ba3e1a2e260f9[m
+Author: jihun3333 <jihun3333@gmail.com>
+Date:   Fri Nov 28 19:36:37 2025 +0900
+
+    Add updates for 11.28.yong
+
+[33mcommit 4970ba42211d83b04a97da9f68424050a56b26ae[m[33m ([m[1;31morigin/11.27.yong[m[33m, [m[1;32m11.27.yong[m[33m)[m
+Author: machyong <lhybio07@gmail.com>
+Date:   Thu Nov 27 23:47:24 2025 +0900
+
+            새 파일:       PIXEL_ROBOT_CONTROL_README.md
+            새 파일:       pixel.py
+            새 파일:       pixel1.py
+            새 파일:       pixel2.py
+            새 파일:       pixel3.py
+            새 파일:       test_moveit.py
+            새 파일:       test_moveit_joint.py
+
+[33mcommit 494d630be793601359129edd9bc954192cd3a1b4[m
+Author: machyong <lhybio07@gmail.com>
+Date:   Thu Nov 27 23:26:20 2025 +0900
+
+    "예시"
+            새 파일:       src/llm_for_pick_place_voice/MICROPHONE_RESUME.md
+            새 파일:       src/llm_for_pick_place_voice/MIGRATION_GUIDE.md
+            새 파일:       src/llm_for_pick_place_voice/llm_for_pick_place_voice/get_keyword copy.py
+            수정함:        src/llm_for_pick_place_voice/llm_for_pick_place_voice/get_keyword.py
+            새 파일:       src/llm_for_pick_place_voice/llm_for_pick_place_voice/get_keyword_client copy.py
+            수정함:        src/llm_for_pick_place_voice/llm_for_pick_place_voice/get_keyword_client.py
+            새 파일:       src/llm_for_pick_place_voice/llm_for_pick_place_voice/robot.py
+            새 파일:       src/llm_for_pick_place_voice/llm_for_pick_place_voice/robot2.py
+            새 파일:       src/llm_for_pick_place_voice/srv/KeywordCommand.srv
+
+[33mcommit 8a21e938087e19b359a8b0d0ae94187ecd9b88da[m[33m ([m[1;31morigin/11.26.merge[m[33m, [m[1;32m11.26.merge[m[33m)[m
+Author: jihun3333 <jihun3333@gmail.com>
+Date:   Thu Nov 27 14:25:26 2025 +0900
+
+    Update README.md
+
+[33mcommit 94712adb85015f98c02b0d75dcd67816905050c9[m
+Author: JaewoongHur <jwhur7@naver.com>
+Date:   Thu Nov 27 14:04:37 2025 +0900
+
+    update README.md
+
+[33mcommit 6bb41d2a227cdd6eb37a083ca114d08f5110c02b[m
+Author: JaewoongHur <jwhur7@naver.com>
+Date:   Thu Nov 27 14:03:34 2025 +0900
+
+    update README.md
+
+[33mcommit c23fe35ea3176e8bd48f22dd835adfd2d0f6954b[m
+Author: JaewoongHur <jwhur7@naver.com>
+Date:   Thu Nov 27 14:03:10 2025 +0900
+
+    update README.md
+
+[33mcommit 7550ef85078872d60317836e200326d572649167[m
+Author: JaewoongHur <jwhur7@naver.com>
+Date:   Thu Nov 27 13:37:29 2025 +0900
+
+    docs: modify README for installation and launch
+
+[33mcommit dee88e787e9816e3fd0a73032aaee8516cf0ec3a[m
+Author: JaewoongHur <jwhur7@naver.com>
+Date:   Thu Nov 27 13:35:53 2025 +0900
+
+    docs: modify README for installation and launch
+
+[33mcommit adc9155fd0aae8dc7189971858abe24419bc716e[m
+Author: JaewoongHur <jwhur7@naver.com>
+Date:   Thu Nov 27 12:57:38 2025 +0900
+
+    docs: modify README for installation and launch
+
+[33mcommit 7074e08892da9d3f6d3ba4ae497ab8e31adf47e8[m
+Author: JaewoongHur <jwhur7@naver.com>
+Date:   Thu Nov 27 11:56:48 2025 +0900
+
+    docs: modify README for installation and launch
+
+[33mcommit a201b234af8eb72d9f2a464a2dd21f12c6a21db6[m
+Author: JaewoongHur <jwhur7@naver.com>
+Date:   Thu Nov 27 11:53:44 2025 +0900
+
+    docs: modify README for installation and launch
+
+[33mcommit ab856eb56f1b1b81f972e41fa564a9355930642c[m
+Author: JaewoongHur <jwhur7@naver.com>
+Date:   Thu Nov 27 10:39:56 2025 +0900
+
+    docs: add README with full process and LLM/GUI usage guide
+
+[33mcommit f0f5d0094f9b4a3396af673da1ea16eb9dc2d15b[m[33m ([m[1;32m11.26.hun[m[33m)[m
+Author: JaewoongHur <jwhur7@naver.com>
+Date:   Wed Nov 26 20:51:59 2025 +0900
+
+    .
+
+[33mcommit 1a72ff6bee36f553c2ae54604a1e51642f48b9bf[m
+Author: JaewoongHur <jwhur7@naver.com>
+Date:   Wed Nov 26 19:22:28 2025 +0900
+
+    merge llm and react
+
+[33mcommit 8d532cfcf927f6c0cbfe6b6773178ab75ead8389[m[33m ([m[1;31morigin/11.26.hun[m[33m)[m
+Author: jihun3333 <jihun3333@gmail.com>
+Date:   Wed Nov 26 09:27:14 2025 +0900
+
+    llm
+
+[33mcommit 9fc37341370add393e191f036c3a323a7208cd8b[m
+Author: machyong <lhybio07@gmail.com>
+Date:   Wed Nov 12 11:18:55 2025 +0900
+
+    Remove large VSCode cache file
+
+[33mcommit b6c8152c66dd8767d992c20d5d4ec08208b993a6[m
+Author: machyong <lhybio07@gmail.com>
+Date:   Wed Nov 12 11:15:07 2025 +0900
+
+    test_first comit
+
+[33mcommit b38f840c5f9260cc003fa309d98d1133471eb1ce[m
+Author: Han-yong <151835853+machyong@users.noreply.github.com>
+Date:   Wed Nov 12 10:53:13 2025 +0900
+
+    Initial commit
