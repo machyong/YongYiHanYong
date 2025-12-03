@@ -1,8 +1,8 @@
 import rclpy
 from rclpy.node import Node
 from std_srvs.srv import Trigger
-from yolo_depth_interfaces.srv import MoveToPoint
-from interface_pkg.srv import GetTargetPoint
+# from yolo_depth_interfaces.srv import MoveToPoint
+# from interface_pkg.srv import GetTargetPoint
 from geometry_msgs.msg import Point
 from std_msgs.msg import String
 import json
@@ -24,14 +24,14 @@ class GetKeywordClient(Node):
         super().__init__('get_keyword_client')
         
         self.cli = self.create_client(Trigger, 'get_keyword')
-        self.get_target_point_client = self.create_client(GetTargetPoint, 'get_target_point')
-        self.move_to_point_client = self.create_client(MoveToPoint, 'move_to_point')
+        # self.get_target_point_client = self.create_client(GetTargetPoint, 'get_target_point')
+        # self.move_to_point_client = self.create_client(MoveToPoint, 'move_to_point')
         while not self.cli.wait_for_service(timeout_sec=1.0):
             self.get_logger().info("Waiting for get_keyword service...")
-        while not self.get_target_point_client.wait_for_service(timeout_sec=1.0):
-            self.get_logger().info("Waiting for get_target_point service...")
-        while not self.move_to_point_client.wait_for_service(timeout_sec=1.0):
-            self.get_logger().info("Waiting for move_to_point service...")
+        # while not self.get_target_point_client.wait_for_service(timeout_sec=1.0):
+        #     self.get_logger().info("Waiting for get_target_point service...")
+        # while not self.move_to_point_client.wait_for_service(timeout_sec=1.0):
+        #     self.get_logger().info("Waiting for move_to_point service...")
         
         # target_object_class 토픽 구독
         self.class_subscriber = self.create_subscription(
@@ -46,6 +46,17 @@ class GetKeywordClient(Node):
         self.latest_keyword = None
         
         self.get_logger().info("GetKeywordClient initialized.")
+
+        # self.robot_return_pub = self.create_publisher(
+        #     String,
+        #     "robot_return",
+        #     10
+        # )
+
+        # self.robot_return_callback()
+        
+
+
     
     def class_callback(self, msg):
         """target_object_class 토픽 콜백"""
@@ -210,6 +221,26 @@ class GetKeywordClient(Node):
             self.get_logger().error(f"JSON parsing error: {e}")
         except Exception as e:
             self.get_logger().error(f"Error calling move_to_point service: {e}")
+
+    # def robot_return_callback(self):
+    #     """로봇 상태를 robot_return 토픽으로 퍼블리시"""
+    #     msg = String()
+
+    #     payload = {
+
+    #             "type": "keyword",
+
+    #             "tables": "table0",
+
+    #             "command": "",
+
+    #             "text": "",     
+
+    #         }
+
+    #     msg.data = json.dumps(payload, ensure_ascii=False)
+    #     self.robot_return_pub.publish(msg)
+    #     self.get_logger().info(f"Published robot return state: {msg.data}")
 
 
 def main(args=None):

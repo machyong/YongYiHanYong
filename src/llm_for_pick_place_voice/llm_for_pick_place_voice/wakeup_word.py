@@ -8,6 +8,7 @@ from ament_index_python.packages import get_package_share_directory
 # MODEL 추가시: setup.py의 data_files에 model 추가 필
 MODEL_NAME = "alexa.onnx"
 # MODEL_NAME = "hey_yong_yihan.onnx"
+# MODEL_NAME = "javis.onnx"
 package_path = get_package_share_directory("llm_for_pick_place_voice")
 MODEL_PATH = os.path.join(f"{package_path}/resource/{MODEL_NAME}")
 
@@ -39,7 +40,7 @@ class WakeupWord:
         # print("model name:", self.model_name)
         print(f"Tell me wakeupword: {self.model_name} \n confidence: ", confidence)
         # Wakeword 탐지
-        if confidence > 0.05:    # 임계값 조정 가능(0~1)
+        if confidence > 0.0001:    # 임계값 조정 가능(0~1)
             print("Wakeupword detected!")
             return True
         return False

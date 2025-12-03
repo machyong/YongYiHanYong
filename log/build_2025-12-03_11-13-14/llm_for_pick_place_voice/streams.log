@@ -1,0 +1,27 @@
+[0.546s] Invoking command in '/home/jw/YongYiHanYong/src/llm_for_pick_place_voice': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/jw/YongYiHanYong/build/llm_for_pick_place_voice/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jw/YongYiHanYong/install/llm_for_pick_place_voice/lib/python3.12/site-packages:/home/jw/YongYiHanYong/install/interface_pkg/lib/python3.12/site-packages:/home/jw/YongYiHanYong/install/llm_for_pick_place_voice/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/llm_for_pick_place_voice build --build-base /home/jw/YongYiHanYong/build/llm_for_pick_place_voice/build install --record /home/jw/YongYiHanYong/build/llm_for_pick_place_voice/install.log --single-version-externally-managed install_data
+[0.713s] running egg_info
+[0.725s] writing ../../build/llm_for_pick_place_voice/llm_for_pick_place_voice.egg-info/PKG-INFO
+[0.725s] writing dependency_links to ../../build/llm_for_pick_place_voice/llm_for_pick_place_voice.egg-info/dependency_links.txt
+[0.725s] writing entry points to ../../build/llm_for_pick_place_voice/llm_for_pick_place_voice.egg-info/entry_points.txt
+[0.725s] writing requirements to ../../build/llm_for_pick_place_voice/llm_for_pick_place_voice.egg-info/requires.txt
+[0.725s] writing top-level names to ../../build/llm_for_pick_place_voice/llm_for_pick_place_voice.egg-info/top_level.txt
+[0.749s] reading manifest file '../../build/llm_for_pick_place_voice/llm_for_pick_place_voice.egg-info/SOURCES.txt'
+[0.750s] writing manifest file '../../build/llm_for_pick_place_voice/llm_for_pick_place_voice.egg-info/SOURCES.txt'
+[0.750s] running build
+[0.750s] running build_py
+[0.750s] running install
+[0.754s] running install_lib
+[0.768s] running install_data
+[0.768s] running install_egg_info
+[0.780s] removing '/home/jw/YongYiHanYong/install/llm_for_pick_place_voice/lib/python3.12/site-packages/llm_for_pick_place_voice-0.0.0-py3.12.egg-info' (and everything under it)
+[0.780s] Copying ../../build/llm_for_pick_place_voice/llm_for_pick_place_voice.egg-info to /home/jw/YongYiHanYong/install/llm_for_pick_place_voice/lib/python3.12/site-packages/llm_for_pick_place_voice-0.0.0-py3.12.egg-info
+[0.781s] running install_scripts
+[0.870s] Installing arrive_test script to /home/jw/YongYiHanYong/install/llm_for_pick_place_voice/lib/llm_for_pick_place_voice
+[0.870s] Installing get_keyword script to /home/jw/YongYiHanYong/install/llm_for_pick_place_voice/lib/llm_for_pick_place_voice
+[0.870s] Installing get_keyword_client script to /home/jw/YongYiHanYong/install/llm_for_pick_place_voice/lib/llm_for_pick_place_voice
+[0.870s] Installing ros_web_bridge script to /home/jw/YongYiHanYong/install/llm_for_pick_place_voice/lib/llm_for_pick_place_voice
+[0.870s] Installing stt script to /home/jw/YongYiHanYong/install/llm_for_pick_place_voice/lib/llm_for_pick_place_voice
+[0.870s] Installing test_robot script to /home/jw/YongYiHanYong/install/llm_for_pick_place_voice/lib/llm_for_pick_place_voice
+[0.870s] Installing wakeup_word script to /home/jw/YongYiHanYong/install/llm_for_pick_place_voice/lib/llm_for_pick_place_voice
+[0.871s] writing list of installed files to '/home/jw/YongYiHanYong/build/llm_for_pick_place_voice/install.log'
+[0.902s] Invoked command in '/home/jw/YongYiHanYong/src/llm_for_pick_place_voice' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/jw/YongYiHanYong/build/llm_for_pick_place_voice/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jw/YongYiHanYong/install/llm_for_pick_place_voice/lib/python3.12/site-packages:/home/jw/YongYiHanYong/install/interface_pkg/lib/python3.12/site-packages:/home/jw/YongYiHanYong/install/llm_for_pick_place_voice/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/llm_for_pick_place_voice build --build-base /home/jw/YongYiHanYong/build/llm_for_pick_place_voice/build install --record /home/jw/YongYiHanYong/build/llm_for_pick_place_voice/install.log --single-version-externally-managed install_data

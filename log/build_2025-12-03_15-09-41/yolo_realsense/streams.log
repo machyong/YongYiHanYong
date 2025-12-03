@@ -1,0 +1,25 @@
+[0.725s] Invoking command in '/home/jw/YongYiHanYong/src/yolo_realsense': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/jw/YongYiHanYong/build/yolo_realsense/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jw/YongYiHanYong/install/yolo_realsense/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/yolo_realsense build --build-base /home/jw/YongYiHanYong/build/yolo_realsense/build install --record /home/jw/YongYiHanYong/build/yolo_realsense/install.log --single-version-externally-managed install_data
+[0.930s] running egg_info
+[0.945s] writing ../../build/yolo_realsense/yolo_realsense.egg-info/PKG-INFO
+[0.945s] writing dependency_links to ../../build/yolo_realsense/yolo_realsense.egg-info/dependency_links.txt
+[0.945s] writing entry points to ../../build/yolo_realsense/yolo_realsense.egg-info/entry_points.txt
+[0.945s] writing requirements to ../../build/yolo_realsense/yolo_realsense.egg-info/requires.txt
+[0.945s] writing top-level names to ../../build/yolo_realsense/yolo_realsense.egg-info/top_level.txt
+[0.971s] reading manifest file '../../build/yolo_realsense/yolo_realsense.egg-info/SOURCES.txt'
+[0.971s] writing manifest file '../../build/yolo_realsense/yolo_realsense.egg-info/SOURCES.txt'
+[0.971s] running build
+[0.972s] running build_py
+[0.972s] running install
+[0.979s] running install_lib
+[0.995s] running install_data
+[0.995s] running install_egg_info
+[1.011s] removing '/home/jw/YongYiHanYong/install/yolo_realsense/lib/python3.12/site-packages/yolo_realsense-0.0.0-py3.12.egg-info' (and everything under it)
+[1.012s] Copying ../../build/yolo_realsense/yolo_realsense.egg-info to /home/jw/YongYiHanYong/install/yolo_realsense/lib/python3.12/site-packages/yolo_realsense-0.0.0-py3.12.egg-info
+[1.012s] running install_scripts
+[1.116s] Installing picxel2world script to /home/jw/YongYiHanYong/install/yolo_realsense/lib/yolo_realsense
+[1.116s] Installing priority_object script to /home/jw/YongYiHanYong/install/yolo_realsense/lib/yolo_realsense
+[1.116s] Installing world_trigger script to /home/jw/YongYiHanYong/install/yolo_realsense/lib/yolo_realsense
+[1.116s] Installing yolo_depth_viewer script to /home/jw/YongYiHanYong/install/yolo_realsense/lib/yolo_realsense
+[1.117s] Installing yolo_result_publisher script to /home/jw/YongYiHanYong/install/yolo_realsense/lib/yolo_realsense
+[1.117s] writing list of installed files to '/home/jw/YongYiHanYong/build/yolo_realsense/install.log'
+[1.156s] Invoked command in '/home/jw/YongYiHanYong/src/yolo_realsense' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/jw/YongYiHanYong/build/yolo_realsense/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jw/YongYiHanYong/install/yolo_realsense/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/yolo_realsense build --build-base /home/jw/YongYiHanYong/build/yolo_realsense/build install --record /home/jw/YongYiHanYong/build/yolo_realsense/install.log --single-version-externally-managed install_data

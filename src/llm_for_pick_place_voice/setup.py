@@ -11,7 +11,7 @@ setup(
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
         # .env 파일, wakeupword 모델 파일을 package data에 포함
-        ('share/' + package_name + '/resource', ['resource/.env', 'resource/alexa.onnx', 'resource/hey_yong_yihan.onnx']),
+        ('share/' + package_name + '/resource', ['resource/.env', 'resource/alexa.onnx', 'resource/hey_yong_yihan.onnx', 'resource/javis.onnx']),
     ],
     install_requires=['setuptools', 'interface_pkg'],
     zip_safe=True,

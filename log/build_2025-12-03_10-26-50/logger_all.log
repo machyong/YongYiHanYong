@@ -1,0 +1,272 @@
+[0.064s] [34mcolcon[0m [1;30mDEBUG[0m [32mCommand line arguments: ['/usr/bin/colcon', 'build', '--packages-select', 'interface_pkg'][0m
+[0.064s] [34mcolcon[0m [1;30mDEBUG[0m [32mParsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=16, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=['interface_pkg'], packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7600d3601f70>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7600d3e0ebd0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7600d3e0ebd0>>, mixin_verb=('build',))[0m
+[0.086s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(colcon_meta) check parameters
+[0.086s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(recursive) check parameters
+[0.086s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(ignore) check parameters
+[0.086s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(path) check parameters
+[0.087s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(colcon_meta) discover
+[0.087s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(recursive) discover
+[0.087s] [34mcolcon.colcon_core.package_discovery[0m [1;30mINFO[0m Crawling recursively for packages in '/home/jw/YongYiHanYong'
+[0.087s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.087s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'ignore'
+[0.087s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'ignore_ament_install'
+[0.087s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['colcon_pkg']
+[0.087s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'colcon_pkg'
+[0.087s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['colcon_meta']
+[0.087s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'colcon_meta'
+[0.087s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['ros']
+[0.087s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'ros'
+[0.100s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['cmake', 'python']
+[0.100s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'cmake'
+[0.100s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'python'
+[0.100s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['python_setup_py']
+[0.100s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'python_setup_py'
+[0.101s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.101s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(build) by extension 'ignore'
+[0.101s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(build) ignored
+[0.101s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.101s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(install) by extension 'ignore'
+[0.101s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(install) ignored
+[0.101s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.101s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(log) by extension 'ignore'
+[0.101s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(log) ignored
+[0.101s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.101s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'ignore'
+[0.101s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'ignore_ament_install'
+[0.101s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['colcon_pkg']
+[0.101s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'colcon_pkg'
+[0.101s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['colcon_meta']
+[0.101s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'colcon_meta'
+[0.101s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['ros']
+[0.101s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'ros'
+[0.101s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['cmake', 'python']
+[0.101s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'cmake'
+[0.101s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'python'
+[0.101s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['python_setup_py']
+[0.101s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'python_setup_py'
+[0.101s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/bussing_gui) by extensions ['ignore', 'ignore_ament_install']
+[0.101s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/bussing_gui) by extension 'ignore'
+[0.101s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/bussing_gui) by extension 'ignore_ament_install'
+[0.101s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/bussing_gui) by extensions ['colcon_pkg']
+[0.101s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/bussing_gui) by extension 'colcon_pkg'
+[0.101s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/bussing_gui) by extensions ['colcon_meta']
+[0.101s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/bussing_gui) by extension 'colcon_meta'
+[0.101s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/bussing_gui) by extensions ['ros']
+[0.101s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/bussing_gui) by extension 'ros'
+[0.101s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/bussing_gui) by extensions ['cmake', 'python']
+[0.101s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/bussing_gui) by extension 'cmake'
+[0.101s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/bussing_gui) by extension 'python'
+[0.102s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/bussing_gui) by extensions ['python_setup_py']
+[0.102s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/bussing_gui) by extension 'python_setup_py'
+[0.102s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/bussing_gui/robot-topview) by extensions ['ignore', 'ignore_ament_install']
+[0.102s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/bussing_gui/robot-topview) by extension 'ignore'
+[0.102s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/bussing_gui/robot-topview) by extension 'ignore_ament_install'
+[0.102s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/bussing_gui/robot-topview) by extensions ['colcon_pkg']
+[0.102s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/bussing_gui/robot-topview) by extension 'colcon_pkg'
+[0.102s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/bussing_gui/robot-topview) by extensions ['colcon_meta']
+[0.102s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/bussing_gui/robot-topview) by extension 'colcon_meta'
+[0.102s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/bussing_gui/robot-topview) by extensions ['ros']
+[0.102s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/bussing_gui/robot-topview) by extension 'ros'
+[0.102s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/bussing_gui/robot-topview) by extensions ['cmake', 'python']
+[0.102s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/bussing_gui/robot-topview) by extension 'cmake'
+[0.102s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/bussing_gui/robot-topview) by extension 'python'
+[0.102s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/bussing_gui/robot-topview) by extensions ['python_setup_py']
+[0.102s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/bussing_gui/robot-topview) by extension 'python_setup_py'
+[0.102s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/bussing_gui/robot-topview/public) by extensions ['ignore', 'ignore_ament_install']
+[0.102s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/bussing_gui/robot-topview/public) by extension 'ignore'
+[0.102s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/bussing_gui/robot-topview/public) by extension 'ignore_ament_install'
+[0.102s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/bussing_gui/robot-topview/public) by extensions ['colcon_pkg']
+[0.102s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/bussing_gui/robot-topview/public) by extension 'colcon_pkg'
+[0.102s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/bussing_gui/robot-topview/public) by extensions ['colcon_meta']
+[0.102s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/bussing_gui/robot-topview/public) by extension 'colcon_meta'
+[0.102s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/bussing_gui/robot-topview/public) by extensions ['ros']
+[0.102s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/bussing_gui/robot-topview/public) by extension 'ros'
+[0.102s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/bussing_gui/robot-topview/public) by extensions ['cmake', 'python']
+[0.102s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/bussing_gui/robot-topview/public) by extension 'cmake'
+[0.102s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/bussing_gui/robot-topview/public) by extension 'python'
+[0.102s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/bussing_gui/robot-topview/public) by extensions ['python_setup_py']
+[0.102s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/bussing_gui/robot-topview/public) by extension 'python_setup_py'
+[0.102s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/bussing_gui/robot-topview/src) by extensions ['ignore', 'ignore_ament_install']
+[0.102s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/bussing_gui/robot-topview/src) by extension 'ignore'
+[0.102s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/bussing_gui/robot-topview/src) by extension 'ignore_ament_install'
+[0.102s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/bussing_gui/robot-topview/src) by extensions ['colcon_pkg']
+[0.102s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/bussing_gui/robot-topview/src) by extension 'colcon_pkg'
+[0.102s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/bussing_gui/robot-topview/src) by extensions ['colcon_meta']
+[0.102s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/bussing_gui/robot-topview/src) by extension 'colcon_meta'
+[0.102s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/bussing_gui/robot-topview/src) by extensions ['ros']
+[0.102s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/bussing_gui/robot-topview/src) by extension 'ros'
+[0.102s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/bussing_gui/robot-topview/src) by extensions ['cmake', 'python']
+[0.102s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/bussing_gui/robot-topview/src) by extension 'cmake'
+[0.102s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/bussing_gui/robot-topview/src) by extension 'python'
+[0.102s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/bussing_gui/robot-topview/src) by extensions ['python_setup_py']
+[0.102s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/bussing_gui/robot-topview/src) by extension 'python_setup_py'
+[0.102s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/bussing_gui/robot-topview/src/assets) by extensions ['ignore', 'ignore_ament_install']
+[0.102s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/bussing_gui/robot-topview/src/assets) by extension 'ignore'
+[0.103s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/bussing_gui/robot-topview/src/assets) by extension 'ignore_ament_install'
+[0.103s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/bussing_gui/robot-topview/src/assets) by extensions ['colcon_pkg']
+[0.103s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/bussing_gui/robot-topview/src/assets) by extension 'colcon_pkg'
+[0.103s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/bussing_gui/robot-topview/src/assets) by extensions ['colcon_meta']
+[0.103s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/bussing_gui/robot-topview/src/assets) by extension 'colcon_meta'
+[0.103s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/bussing_gui/robot-topview/src/assets) by extensions ['ros']
+[0.103s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/bussing_gui/robot-topview/src/assets) by extension 'ros'
+[0.103s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/bussing_gui/robot-topview/src/assets) by extensions ['cmake', 'python']
+[0.103s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/bussing_gui/robot-topview/src/assets) by extension 'cmake'
+[0.103s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/bussing_gui/robot-topview/src/assets) by extension 'python'
+[0.103s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/bussing_gui/robot-topview/src/assets) by extensions ['python_setup_py']
+[0.103s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/bussing_gui/robot-topview/src/assets) by extension 'python_setup_py'
+[0.103s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/interface_pkg) by extensions ['ignore', 'ignore_ament_install']
+[0.103s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/interface_pkg) by extension 'ignore'
+[0.103s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/interface_pkg) by extension 'ignore_ament_install'
+[0.103s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/interface_pkg) by extensions ['colcon_pkg']
+[0.103s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/interface_pkg) by extension 'colcon_pkg'
+[0.103s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/interface_pkg) by extensions ['colcon_meta']
+[0.103s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/interface_pkg) by extension 'colcon_meta'
+[0.103s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/interface_pkg) by extensions ['ros']
+[0.103s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/interface_pkg) by extension 'ros'
+[0.104s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/interface_pkg' with type 'ros.ament_cmake' and name 'interface_pkg'[0m
+[0.104s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/llm_for_pick_place_voice) by extensions ['ignore', 'ignore_ament_install']
+[0.104s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/llm_for_pick_place_voice) by extension 'ignore'
+[0.105s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/llm_for_pick_place_voice) by extension 'ignore_ament_install'
+[0.105s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/llm_for_pick_place_voice) by extensions ['colcon_pkg']
+[0.105s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/llm_for_pick_place_voice) by extension 'colcon_pkg'
+[0.105s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/llm_for_pick_place_voice) by extensions ['colcon_meta']
+[0.105s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/llm_for_pick_place_voice) by extension 'colcon_meta'
+[0.105s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/llm_for_pick_place_voice) by extensions ['ros']
+[0.105s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/llm_for_pick_place_voice) by extension 'ros'
+[0.105s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/llm_for_pick_place_voice' with type 'ros.ament_python' and name 'llm_for_pick_place_voice'[0m
+[0.105s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/target_move) by extensions ['ignore', 'ignore_ament_install']
+[0.105s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/target_move) by extension 'ignore'
+[0.105s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/target_move) by extension 'ignore_ament_install'
+[0.105s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/target_move) by extensions ['colcon_pkg']
+[0.105s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/target_move) by extension 'colcon_pkg'
+[0.105s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/target_move) by extensions ['colcon_meta']
+[0.105s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/target_move) by extension 'colcon_meta'
+[0.105s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/target_move) by extensions ['ros']
+[0.105s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/target_move) by extension 'ros'
+[0.106s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/target_move' with type 'ros.ament_cmake' and name 'target_move'[0m
+[0.106s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolo_depth_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.106s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolo_depth_interfaces) by extension 'ignore'
+[0.106s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolo_depth_interfaces) by extension 'ignore_ament_install'
+[0.106s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolo_depth_interfaces) by extensions ['colcon_pkg']
+[0.106s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolo_depth_interfaces) by extension 'colcon_pkg'
+[0.106s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolo_depth_interfaces) by extensions ['colcon_meta']
+[0.106s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolo_depth_interfaces) by extension 'colcon_meta'
+[0.106s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolo_depth_interfaces) by extensions ['ros']
+[0.106s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolo_depth_interfaces) by extension 'ros'
+[0.106s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/yolo_depth_interfaces' with type 'ros.catkin' and name 'yolo_depth_interfaces'[0m
+[0.106s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolo_realsense) by extensions ['ignore', 'ignore_ament_install']
+[0.106s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolo_realsense) by extension 'ignore'
+[0.106s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolo_realsense) by extension 'ignore_ament_install'
+[0.107s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolo_realsense) by extensions ['colcon_pkg']
+[0.107s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolo_realsense) by extension 'colcon_pkg'
+[0.107s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolo_realsense) by extensions ['colcon_meta']
+[0.107s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolo_realsense) by extension 'colcon_meta'
+[0.107s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolo_realsense) by extensions ['ros']
+[0.107s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolo_realsense) by extension 'ros'
+[0.107s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/yolo_realsense' with type 'ros.ament_python' and name 'yolo_realsense'[0m
+[0.107s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(recursive) using defaults
+[0.107s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(ignore) discover
+[0.107s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(ignore) using defaults
+[0.107s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(path) discover
+[0.107s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(path) using defaults
+[0.116s] [34mcolcon.colcon_core.package_selection[0m [1;30mINFO[0m Skipping not selected package 'yolo_depth_interfaces' in 'src/yolo_depth_interfaces'
+[0.116s] [34mcolcon.colcon_core.package_selection[0m [1;30mINFO[0m Skipping not selected package 'yolo_realsense' in 'src/yolo_realsense'
+[0.116s] [34mcolcon.colcon_core.package_selection[0m [1;30mINFO[0m Skipping not selected package 'llm_for_pick_place_voice' in 'src/llm_for_pick_place_voice'
+[0.116s] [34mcolcon.colcon_core.package_selection[0m [1;30mINFO[0m Skipping not selected package 'target_move' in 'src/target_move'
+[0.116s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(prefix_path) check parameters
+[0.116s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(prefix_path) discover
+[0.119s] [34mcolcon.colcon_installed_package_information.package_discovery[0m [1;30mDEBUG[0m [32mFound 430 installed packages in /opt/ros/jazzy[0m
+[0.120s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(prefix_path) using defaults
+[0.148s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'interface_pkg' build argument 'cmake_args' from command line to 'None'
+[0.148s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'interface_pkg' build argument 'cmake_target' from command line to 'None'
+[0.148s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'interface_pkg' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.148s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'interface_pkg' build argument 'cmake_clean_cache' from command line to 'False'
+[0.148s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'interface_pkg' build argument 'cmake_clean_first' from command line to 'False'
+[0.148s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'interface_pkg' build argument 'cmake_force_configure' from command line to 'False'
+[0.148s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'interface_pkg' build argument 'ament_cmake_args' from command line to 'None'
+[0.148s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'interface_pkg' build argument 'catkin_cmake_args' from command line to 'None'
+[0.148s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'interface_pkg' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.148s] [34mcolcon.colcon_core.verb[0m [1;30mDEBUG[0m [32mBuilding package 'interface_pkg' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jw/YongYiHanYong/build/interface_pkg', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jw/YongYiHanYong/install/interface_pkg', 'merge_install': False, 'path': '/home/jw/YongYiHanYong/src/interface_pkg', 'symlink_install': False, 'test_result_base': None}[0m
+[0.148s] [34mcolcon.colcon_core.executor[0m [1;30mINFO[0m Executing jobs using 'parallel' executor
+[0.149s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mrun_until_complete[0m
+[0.149s] [34mcolcon.colcon_ros.task.ament_cmake.build[0m [1;30mINFO[0m Building ROS package in '/home/jw/YongYiHanYong/src/interface_pkg' with build type 'ament_cmake'
+[0.149s] [34mcolcon.colcon_cmake.task.cmake.build[0m [1;30mINFO[0m Building CMake package in '/home/jw/YongYiHanYong/src/interface_pkg'
+[0.151s] [34mcolcon.colcon_core.plugin_system[0m [1;30mINFO[0m Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.151s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.151s] [34mcolcon.colcon_core.shell[0m [1;30mDEBUG[0m [32mSkip shell extension 'dsv' for command environment[0m
+[0.159s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoking command in '/home/jw/YongYiHanYong/build/interface_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/jw/YongYiHanYong/src/interface_pkg -DCMAKE_INSTALL_PREFIX=/home/jw/YongYiHanYong/install/interface_pkg[0m
+[2.456s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoked command in '/home/jw/YongYiHanYong/build/interface_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/jw/YongYiHanYong/src/interface_pkg -DCMAKE_INSTALL_PREFIX=/home/jw/YongYiHanYong/install/interface_pkg[0m
+[2.457s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoking command in '/home/jw/YongYiHanYong/build/interface_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/jw/YongYiHanYong/build/interface_pkg -- -j16 -l16[0m
+[4.392s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoked command in '/home/jw/YongYiHanYong/build/interface_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/jw/YongYiHanYong/build/interface_pkg -- -j16 -l16[0m
+[4.402s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoking command in '/home/jw/YongYiHanYong/build/interface_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/jw/YongYiHanYong/build/interface_pkg[0m
+[4.461s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_environment_scripts_only(interface_pkg)
+[4.462s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoked command in '/home/jw/YongYiHanYong/build/interface_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/jw/YongYiHanYong/build/interface_pkg[0m
+[4.463s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/jw/YongYiHanYong/install/interface_pkg' for CMake module files
+[4.463s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/jw/YongYiHanYong/install/interface_pkg' for CMake config files
+[4.463s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('interface_pkg', 'cmake_prefix_path')
+[4.464s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/jw/YongYiHanYong/install/interface_pkg/share/interface_pkg/hook/cmake_prefix_path.ps1'
+[4.464s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/jw/YongYiHanYong/install/interface_pkg/share/interface_pkg/hook/cmake_prefix_path.dsv'
+[4.464s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/jw/YongYiHanYong/install/interface_pkg/share/interface_pkg/hook/cmake_prefix_path.sh'
+[4.465s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/jw/YongYiHanYong/install/interface_pkg/lib'
+[4.465s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('interface_pkg', 'ld_library_path_lib')
+[4.465s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/jw/YongYiHanYong/install/interface_pkg/share/interface_pkg/hook/ld_library_path_lib.ps1'
+[4.465s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/jw/YongYiHanYong/install/interface_pkg/share/interface_pkg/hook/ld_library_path_lib.dsv'
+[4.465s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/jw/YongYiHanYong/install/interface_pkg/share/interface_pkg/hook/ld_library_path_lib.sh'
+[4.465s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/jw/YongYiHanYong/install/interface_pkg/bin'
+[4.465s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/jw/YongYiHanYong/install/interface_pkg/lib/pkgconfig/interface_pkg.pc'
+[4.466s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/jw/YongYiHanYong/install/interface_pkg/lib/python3.12/site-packages'
+[4.466s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('interface_pkg', 'pythonpath')
+[4.466s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/jw/YongYiHanYong/install/interface_pkg/share/interface_pkg/hook/pythonpath.ps1'
+[4.466s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/jw/YongYiHanYong/install/interface_pkg/share/interface_pkg/hook/pythonpath.dsv'
+[4.466s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/jw/YongYiHanYong/install/interface_pkg/share/interface_pkg/hook/pythonpath.sh'
+[4.466s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/jw/YongYiHanYong/install/interface_pkg/bin'
+[4.466s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/jw/YongYiHanYong/install/interface_pkg/share/interface_pkg/package.ps1'
+[4.467s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package descriptor '/home/jw/YongYiHanYong/install/interface_pkg/share/interface_pkg/package.dsv'
+[4.467s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/jw/YongYiHanYong/install/interface_pkg/share/interface_pkg/package.sh'
+[4.468s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/jw/YongYiHanYong/install/interface_pkg/share/interface_pkg/package.bash'
+[4.468s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/jw/YongYiHanYong/install/interface_pkg/share/interface_pkg/package.zsh'
+[4.468s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_file_with_runtime_dependencies(/home/jw/YongYiHanYong/install/interface_pkg/share/colcon-core/packages/interface_pkg)
+[4.469s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_environment_scripts_only(interface_pkg)
+[4.469s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/jw/YongYiHanYong/install/interface_pkg' for CMake module files
+[4.469s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/jw/YongYiHanYong/install/interface_pkg' for CMake config files
+[4.469s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('interface_pkg', 'cmake_prefix_path')
+[4.469s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/jw/YongYiHanYong/install/interface_pkg/share/interface_pkg/hook/cmake_prefix_path.ps1'
+[4.470s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/jw/YongYiHanYong/install/interface_pkg/share/interface_pkg/hook/cmake_prefix_path.dsv'
+[4.470s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/jw/YongYiHanYong/install/interface_pkg/share/interface_pkg/hook/cmake_prefix_path.sh'
+[4.470s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/jw/YongYiHanYong/install/interface_pkg/lib'
+[4.470s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('interface_pkg', 'ld_library_path_lib')
+[4.470s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/jw/YongYiHanYong/install/interface_pkg/share/interface_pkg/hook/ld_library_path_lib.ps1'
+[4.470s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/jw/YongYiHanYong/install/interface_pkg/share/interface_pkg/hook/ld_library_path_lib.dsv'
+[4.471s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/jw/YongYiHanYong/install/interface_pkg/share/interface_pkg/hook/ld_library_path_lib.sh'
+[4.471s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/jw/YongYiHanYong/install/interface_pkg/bin'
+[4.471s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/jw/YongYiHanYong/install/interface_pkg/lib/pkgconfig/interface_pkg.pc'
+[4.471s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/jw/YongYiHanYong/install/interface_pkg/lib/python3.12/site-packages'
+[4.471s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('interface_pkg', 'pythonpath')
+[4.471s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/jw/YongYiHanYong/install/interface_pkg/share/interface_pkg/hook/pythonpath.ps1'
+[4.472s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/jw/YongYiHanYong/install/interface_pkg/share/interface_pkg/hook/pythonpath.dsv'
+[4.472s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/jw/YongYiHanYong/install/interface_pkg/share/interface_pkg/hook/pythonpath.sh'
+[4.472s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/jw/YongYiHanYong/install/interface_pkg/bin'
+[4.472s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/jw/YongYiHanYong/install/interface_pkg/share/interface_pkg/package.ps1'
+[4.473s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package descriptor '/home/jw/YongYiHanYong/install/interface_pkg/share/interface_pkg/package.dsv'
+[4.473s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/jw/YongYiHanYong/install/interface_pkg/share/interface_pkg/package.sh'
+[4.473s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/jw/YongYiHanYong/install/interface_pkg/share/interface_pkg/package.bash'
+[4.473s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/jw/YongYiHanYong/install/interface_pkg/share/interface_pkg/package.zsh'
+[4.474s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_file_with_runtime_dependencies(/home/jw/YongYiHanYong/install/interface_pkg/share/colcon-core/packages/interface_pkg)
+[4.474s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mclosing loop[0m
+[4.474s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mloop closed[0m
+[4.474s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mrun_until_complete finished with '0'[0m
+[4.474s] [34mcolcon.colcon_core.event_reactor[0m [1;30mDEBUG[0m [32mjoining thread[0m
+[4.479s] [34mcolcon.colcon_core.plugin_system[0m [1;30mINFO[0m Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[4.480s] [34mcolcon.colcon_core.plugin_system[0m [1;30mINFO[0m Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[4.480s] [34mcolcon.colcon_notification.desktop_notification[0m [1;30mINFO[0m Sending desktop notification using 'notify2'
+[4.490s] [34mcolcon.colcon_core.event_reactor[0m [1;30mDEBUG[0m [32mjoined thread[0m
+[4.491s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix script '/home/jw/YongYiHanYong/install/local_setup.ps1'
+[4.492s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix util module '/home/jw/YongYiHanYong/install/_local_setup_util_ps1.py'
+[4.492s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix chain script '/home/jw/YongYiHanYong/install/setup.ps1'
+[4.493s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix script '/home/jw/YongYiHanYong/install/local_setup.sh'
+[4.493s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix util module '/home/jw/YongYiHanYong/install/_local_setup_util_sh.py'
+[4.493s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix chain script '/home/jw/YongYiHanYong/install/setup.sh'
+[4.494s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix script '/home/jw/YongYiHanYong/install/local_setup.bash'
+[4.494s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix chain script '/home/jw/YongYiHanYong/install/setup.bash'
+[4.495s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix script '/home/jw/YongYiHanYong/install/local_setup.zsh'
+[4.495s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix chain script '/home/jw/YongYiHanYong/install/setup.zsh'

@@ -1,0 +1,4 @@
+Invoking command in '/home/jw/YongYiHanYong/build/yolo_depth_interfaces': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/jw/YongYiHanYong/build/yolo_depth_interfaces -- -j16 -l16
+Invoked command in '/home/jw/YongYiHanYong/build/yolo_depth_interfaces' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/jw/YongYiHanYong/build/yolo_depth_interfaces -- -j16 -l16
+Invoking command in '/home/jw/YongYiHanYong/build/yolo_depth_interfaces': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/jw/YongYiHanYong/build/yolo_depth_interfaces
+Invoked command in '/home/jw/YongYiHanYong/build/yolo_depth_interfaces' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/jw/YongYiHanYong/build/yolo_depth_interfaces

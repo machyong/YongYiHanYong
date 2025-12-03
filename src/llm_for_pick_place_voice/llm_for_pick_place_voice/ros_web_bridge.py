@@ -27,7 +27,7 @@ bridge_node: "BridgeNode | None" = None
 class BridgeNode(Node):
     def __init__(self):
         super().__init__("ros_web_bridge")
-
+        self.robot_state = ""
         # keyword_topic → React
         self.keyword_sub = self.create_subscription(
             String,
@@ -46,10 +46,18 @@ class BridgeNode(Node):
 
         # 🔥 React → ROS : 로봇 도착 이벤트 토픽
         #   - 토픽명: "robot_event"
-        #   - 메시지 예: "arrived:3"
+        #   - 메시지 예: "arrived"
         self.robot_event_pub = self.create_publisher(
             String,
             "robot_event",
+            10,
+        )
+        self.timer = self.create_timer(1.0, self.timer_callback)
+
+        self.robot_return_sub = self.create_subscription(
+            String,
+            "robot_return",
+            self.robot_return_state_callback,
             10,
         )
 
@@ -73,11 +81,22 @@ class BridgeNode(Node):
         self.get_logger().info(f"[BRIDGE] voice_state: {payload}")
         message_queue.put(payload)
 
+    def robot_return_state_callback(self, msg: String):
+        # msg.data는 이미 JSON string (get_keyword 쪽에서 json.dumps 한 것)
+        data = msg.data
+        self.get_logger().info(f"[BRIDGE] robot_return: {data}")
+        message_queue.put(data)
+
+    def timer_callback(self):
+        msg = String()
+        msg.data = self.robot_state  # "", "moving", "arrived"
+        self.robot_event_pub.publish(msg)
+        
 
 def ros_spin():
     global bridge_node
     rclpy.init()
-    bridge_node = BridgeNode()   # ⭐ 여기서 BridgeNode 생성 후 전역에 저장
+    bridge_node = BridgeNode()
     rclpy.spin(bridge_node)
     bridge_node.destroy_node()
     bridge_node = None
@@ -159,11 +178,12 @@ async def websocket_robot_events(websocket: WebSocket):
                 # ROS 토픽으로 전달
                 global bridge_node
                 if bridge_node is not None:
-                    ros_msg = String()
-                    ros_msg.data = "arrived"
-                    bridge_node.robot_event_pub.publish(ros_msg)
+                    if table == 0:
+                        bridge_node.robot_state = "moving"
+                    else:
+                        bridge_node.robot_state = "arrived"
                     bridge_node.get_logger().info(
-                        f"[BRIDGE] Published robot_event: {ros_msg.data}"
+                        f"[BRIDGE] robot_state changed to: {bridge_node.robot_state}"
                     )
                 else:
                     print("⚠ bridge_node is None, cannot publish robot_event")

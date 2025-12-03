@@ -172,7 +172,7 @@
 }
 
 
-/* 로봇 점 (원형 + 부드러운 이동) */
+/* 로봇 점 (원형 + 부드러운 이동)
 .robot-dot {
   position: absolute;
   top: 0;
@@ -185,8 +185,26 @@
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
   /* transition: transform 1.5s ease; */
 
+  /* z-index: 9999;
+} */
+
+.robot-dot {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 144px;
+  height: 144px;
+
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url('./assets/bussing_mate.png');
+
+  background-color: transparent;
+  pointer-events: none;
   z-index: 9999;
 }
+
 
 /* 전체 오버레이 컨테이너 (패널들 묶는 영역) */
 .control-overlay {

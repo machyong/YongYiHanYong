@@ -1,0 +1,9 @@
+[0.000000] (-) TimerEvent: {}
+[0.000423] (-) JobUnselected: {'identifier': 'interface_pkg'}
+[0.000460] (-) JobUnselected: {'identifier': 'target_move'}
+[0.000483] (-) JobUnselected: {'identifier': 'yolo_depth_interfaces'}
+[0.000522] (-) JobUnselected: {'identifier': 'yolo_realsense'}
+[0.000542] (llm_for_pick_place_voice) JobQueued: {'identifier': 'llm_for_pick_place_voice', 'dependencies': OrderedDict({'interface_pkg': '/home/jw/YongYiHanYong/install/interface_pkg'})}
+[0.000593] (llm_for_pick_place_voice) JobStarted: {'identifier': 'llm_for_pick_place_voice'}
+[0.004218] (llm_for_pick_place_voice) JobEnded: {'identifier': 'llm_for_pick_place_voice', 'rc': 1}
+[0.014701] (-) EventReactorShutdown: {}

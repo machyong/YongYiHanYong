@@ -1,0 +1,72 @@
+-- The C compiler identification is GNU 13.3.0
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+-- Found moveit_ros_planning_interface: 2.12.3 (/opt/ros/jazzy/share/moveit_ros_planning_interface/cmake)
+-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: date_time filesystem program_options system thread 
+-- Found rosidl_generator_c: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+-- Found rosidl_generator_cpp: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: chrono date_time filesystem iostreams program_options regex serialization system thread 
+-- Found parameter_traits: 0.5.0 (/opt/ros/jazzy/share/parameter_traits/cmake)
+-- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+-- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found rclcpp_lifecycle: 28.1.13 (/opt/ros/jazzy/share/rclcpp_lifecycle/cmake)
+-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: filesystem 
+-- Found Eigen3: TRUE (found version "3.4.0") 
+-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: system filesystem date_time program_options thread chrono 
+-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: thread system filesystem regex date_time program_options 
+-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: system filesystem date_time program_options thread 
+-- Found yolo_depth_interfaces: 0.0.0 (/home/jw/YongYiHanYong/install/yolo_depth_interfaces/share/yolo_depth_interfaces/cmake)
+-- Found ament_lint_auto: 0.17.3 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+-- Added test 'cppcheck' to perform static code analysis on C / C++ code
+-- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/jw/YongYiHanYong/src/target_move/include>
+-- Configured cppcheck exclude dirs and/or files: 
+-- Added test 'flake8' to check Python code syntax and style conventions
+-- Configured 'flake8' exclude dirs and/or files: 
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+-- Added test 'uncrustify' to check C / C++ code style
+-- Configured uncrustify additional arguments: 
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done (1.9s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/jw/YongYiHanYong/build/target_move
+[ 50%] [32mBuilding CXX object CMakeFiles/target_move_node.dir/src/target_move.cpp.o[0m
+[100%] [32m[1mLinking CXX executable target_move_node[0m
+[100%] Built target target_move_node
+-- Install configuration: ""
+-- Installing: /home/jw/YongYiHanYong/install/target_move/lib/target_move/target_move_node
+-- Set non-toolchain portion of runtime path of "/home/jw/YongYiHanYong/install/target_move/lib/target_move/target_move_node" to ""
+-- Installing: /home/jw/YongYiHanYong/install/target_move/share/target_move/launch
+-- Installing: /home/jw/YongYiHanYong/install/target_move/share/target_move/launch/target_move_dsr.launch.py
+-- Installing: /home/jw/YongYiHanYong/install/target_move/share/ament_index/resource_index/package_run_dependencies/target_move
+-- Installing: /home/jw/YongYiHanYong/install/target_move/share/ament_index/resource_index/parent_prefix_path/target_move
+-- Installing: /home/jw/YongYiHanYong/install/target_move/share/target_move/environment/ament_prefix_path.sh
+-- Installing: /home/jw/YongYiHanYong/install/target_move/share/target_move/environment/ament_prefix_path.dsv
+-- Installing: /home/jw/YongYiHanYong/install/target_move/share/target_move/environment/path.sh
+-- Installing: /home/jw/YongYiHanYong/install/target_move/share/target_move/environment/path.dsv
+-- Installing: /home/jw/YongYiHanYong/install/target_move/share/target_move/local_setup.bash
+-- Installing: /home/jw/YongYiHanYong/install/target_move/share/target_move/local_setup.sh
+-- Installing: /home/jw/YongYiHanYong/install/target_move/share/target_move/local_setup.zsh
+-- Installing: /home/jw/YongYiHanYong/install/target_move/share/target_move/local_setup.dsv
+-- Installing: /home/jw/YongYiHanYong/install/target_move/share/target_move/package.dsv
+-- Installing: /home/jw/YongYiHanYong/install/target_move/share/ament_index/resource_index/packages/target_move
+-- Installing: /home/jw/YongYiHanYong/install/target_move/share/target_move/cmake/target_moveConfig.cmake
+-- Installing: /home/jw/YongYiHanYong/install/target_move/share/target_move/cmake/target_moveConfig-version.cmake
+-- Installing: /home/jw/YongYiHanYong/install/target_move/share/target_move/package.xml

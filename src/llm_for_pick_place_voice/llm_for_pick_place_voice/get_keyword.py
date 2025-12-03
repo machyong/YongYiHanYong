@@ -7,6 +7,9 @@ import time
 from rclpy.node import Node
 import pyaudio
 
+from threading import Event
+from rclpy.callback_groups import ReentrantCallbackGroup
+from rclpy.executors import MultiThreadedExecutor
 from ament_index_python.packages import get_package_share_directory
 from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
@@ -150,15 +153,28 @@ class GetKeyword(Node):
         self.keyword_pub = self.create_publisher(String, "keyword_topic", 10)
         self.voice_state_pub = self.create_publisher(String, "voice_state", 10)
 
+        # 임시 테스트
+        self.robot_return_pub = self.create_publisher(
+            String,
+            "robot_return",
+            10
+        )
+
+        self.latest_robot_event = ""
+        self.robot_arrived_event = Event()
+
+        # 콜백 그룹 (재진입 허용)
+        self.cb_group = ReentrantCallbackGroup()
+
         # robot_event 토픽 subscriber 생성
         self.robot_event_subscriber = self.create_subscription(
             String,
             "robot_event",
             self.robot_event_callback,
-            10
+            10,
+            callback_group=self.cb_group,
         )
-        # robot_event 상태 변수
-        self.latest_robot_event = None
+
 
     ### 중요 키워드(table num, action) 추출
     def extract_keyword(self, output_message):
@@ -265,12 +281,25 @@ class GetKeyword(Node):
             self.get_logger().info(
                 f"[Service response] success={res.success}, object={objects_str}, action={actions_str}"
             )
+
             
             # robot_event 토픽 대기
-            self.get_logger().info("Waiting for robot_event...")
-            while self.latest_robot_event != "arrived":
-                rclpy.spin_once(self, timeout_sec=0.1)
+            self.get_logger().info("Waiting for robot_:event...")
             
+             # 🔥 콜 시작할 때 상태 초기화
+            self.latest_robot_event = ""
+            self.robot_arrived_event.clear()
+            timeout = 30.0
+            isArrived = self.robot_arrived_event.wait(timeout)
+
+            if not isArrived:
+                self.get_logger().warn("Timeout while waiting for robot arrival")
+                res.success = False
+                res.message = "Timeout while waiting for robot arrival"
+                return res
+            
+            self.get_logger().info("while문 탈출 완료")
+            self.robot_return_callback()
             self.get_logger().info("Robot arrived")
 
         except Exception as e:
@@ -296,6 +325,30 @@ class GetKeyword(Node):
     ### robot_event 토픽 콜백
     def robot_event_callback(self, msg: String):
         self.latest_robot_event = msg.data
+        self.get_logger().info(f"[ROBOT_EVENT] {self.latest_robot_event}")
+        if msg.data == "arrived":
+            self.robot_arrived_event.set()
+
+    def robot_return_callback(self):
+        """로봇 상태를 robot_return 토픽으로 퍼블리시"""
+        msg = String()
+
+
+        payload = {
+
+                "type": "keyword",
+
+                "tables": ["table0"],
+
+                "command": "return",
+
+                "text": "퇴식구로 이동",     
+
+            }
+
+        msg.data = json.dumps(payload, ensure_ascii=False)
+        self.robot_return_pub.publish(msg)
+        self.get_logger().info(f"Published robot return state: {msg.data}")
 
     
 
@@ -305,12 +358,15 @@ def main(args=None):
     rclpy.init(args=args)
     node = GetKeyword()
 
+    executor = MultiThreadedExecutor()
+    executor.add_node(node)
+
     try:
-        while rclpy.ok():
-            rclpy.spin_once(node)
+        executor.spin()
     except KeyboardInterrupt:
         pass
     finally:
+        executor.shutdown()
         node.destroy_node()
         rclpy.shutdown()
 

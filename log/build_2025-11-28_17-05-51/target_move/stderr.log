@@ -1,7 +1,0 @@
-/home/hun/YongYiHanYong/src/target_move/src/target_move.cpp:16:10: fatal error: nlohmann/json.hpp: No such file or directory
-   16 | #include <nlohmann/json.hpp>
-      |          ^~~~~~~~~~~~~~~~~~~
-compilation terminated.
-gmake[2]: *** [CMakeFiles/target_move_node.dir/build.make:76: CMakeFiles/target_move_node.dir/src/target_move.cpp.o] Error 1
-gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/target_move_node.dir/all] Error 2
-gmake: *** [Makefile:146: all] Error 2

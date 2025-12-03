@@ -1,0 +1,61 @@
+[0.687s] Invoking command in '/home/jw/YongYiHanYong/src/yolo_realsense': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/jw/YongYiHanYong/build/yolo_realsense/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jw/YongYiHanYong/install/yolo_realsense/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/yolo_realsense build --build-base /home/jw/YongYiHanYong/build/yolo_realsense/build install --record /home/jw/YongYiHanYong/build/yolo_realsense/install.log --single-version-externally-managed install_data
+[0.895s] running egg_info
+[0.896s] creating ../../build/yolo_realsense/yolo_realsense.egg-info
+[0.910s] writing ../../build/yolo_realsense/yolo_realsense.egg-info/PKG-INFO
+[0.910s] writing dependency_links to ../../build/yolo_realsense/yolo_realsense.egg-info/dependency_links.txt
+[0.910s] writing entry points to ../../build/yolo_realsense/yolo_realsense.egg-info/entry_points.txt
+[0.910s] writing requirements to ../../build/yolo_realsense/yolo_realsense.egg-info/requires.txt
+[0.910s] writing top-level names to ../../build/yolo_realsense/yolo_realsense.egg-info/top_level.txt
+[0.910s] writing manifest file '../../build/yolo_realsense/yolo_realsense.egg-info/SOURCES.txt'
+[0.938s] reading manifest file '../../build/yolo_realsense/yolo_realsense.egg-info/SOURCES.txt'
+[0.939s] writing manifest file '../../build/yolo_realsense/yolo_realsense.egg-info/SOURCES.txt'
+[0.939s] running build
+[0.939s] running build_py
+[0.939s] creating /home/jw/YongYiHanYong/build/yolo_realsense/build
+[0.939s] creating /home/jw/YongYiHanYong/build/yolo_realsense/build/lib
+[0.940s] creating /home/jw/YongYiHanYong/build/yolo_realsense/build/lib/yolo_realsense
+[0.940s] copying yolo_realsense/picxel2world.py -> /home/jw/YongYiHanYong/build/yolo_realsense/build/lib/yolo_realsense
+[0.940s] copying yolo_realsense/priority_object.py -> /home/jw/YongYiHanYong/build/yolo_realsense/build/lib/yolo_realsense
+[0.940s] copying yolo_realsense/__init__.py -> /home/jw/YongYiHanYong/build/yolo_realsense/build/lib/yolo_realsense
+[0.940s] copying yolo_realsense/yolo_depth_viewer.py -> /home/jw/YongYiHanYong/build/yolo_realsense/build/lib/yolo_realsense
+[0.940s] copying yolo_realsense/world_trigger.py -> /home/jw/YongYiHanYong/build/yolo_realsense/build/lib/yolo_realsense
+[0.940s] copying yolo_realsense/picxel2world copy.py -> /home/jw/YongYiHanYong/build/yolo_realsense/build/lib/yolo_realsense
+[0.940s] copying yolo_realsense/yolo_result_publisher.py -> /home/jw/YongYiHanYong/build/yolo_realsense/build/lib/yolo_realsense
+[0.940s] running install
+[0.947s] running install_lib
+[0.961s] creating /home/jw/YongYiHanYong/install/yolo_realsense/lib/python3.12/site-packages/yolo_realsense
+[0.961s] copying /home/jw/YongYiHanYong/build/yolo_realsense/build/lib/yolo_realsense/picxel2world.py -> /home/jw/YongYiHanYong/install/yolo_realsense/lib/python3.12/site-packages/yolo_realsense
+[0.961s] copying /home/jw/YongYiHanYong/build/yolo_realsense/build/lib/yolo_realsense/priority_object.py -> /home/jw/YongYiHanYong/install/yolo_realsense/lib/python3.12/site-packages/yolo_realsense
+[0.961s] copying /home/jw/YongYiHanYong/build/yolo_realsense/build/lib/yolo_realsense/__init__.py -> /home/jw/YongYiHanYong/install/yolo_realsense/lib/python3.12/site-packages/yolo_realsense
+[0.961s] copying /home/jw/YongYiHanYong/build/yolo_realsense/build/lib/yolo_realsense/yolo_depth_viewer.py -> /home/jw/YongYiHanYong/install/yolo_realsense/lib/python3.12/site-packages/yolo_realsense
+[0.962s] copying /home/jw/YongYiHanYong/build/yolo_realsense/build/lib/yolo_realsense/world_trigger.py -> /home/jw/YongYiHanYong/install/yolo_realsense/lib/python3.12/site-packages/yolo_realsense
+[0.962s] copying /home/jw/YongYiHanYong/build/yolo_realsense/build/lib/yolo_realsense/picxel2world copy.py -> /home/jw/YongYiHanYong/install/yolo_realsense/lib/python3.12/site-packages/yolo_realsense
+[0.962s] copying /home/jw/YongYiHanYong/build/yolo_realsense/build/lib/yolo_realsense/yolo_result_publisher.py -> /home/jw/YongYiHanYong/install/yolo_realsense/lib/python3.12/site-packages/yolo_realsense
+[0.962s] byte-compiling /home/jw/YongYiHanYong/install/yolo_realsense/lib/python3.12/site-packages/yolo_realsense/picxel2world.py to picxel2world.cpython-312.pyc
+[0.964s] byte-compiling /home/jw/YongYiHanYong/install/yolo_realsense/lib/python3.12/site-packages/yolo_realsense/priority_object.py to priority_object.cpython-312.pyc
+[0.968s] byte-compiling /home/jw/YongYiHanYong/install/yolo_realsense/lib/python3.12/site-packages/yolo_realsense/__init__.py to __init__.cpython-312.pyc
+[0.969s] byte-compiling /home/jw/YongYiHanYong/install/yolo_realsense/lib/python3.12/site-packages/yolo_realsense/yolo_depth_viewer.py to yolo_depth_viewer.cpython-312.pyc
+[0.970s] byte-compiling /home/jw/YongYiHanYong/install/yolo_realsense/lib/python3.12/site-packages/yolo_realsense/world_trigger.py to world_trigger.cpython-312.pyc
+[0.970s] byte-compiling /home/jw/YongYiHanYong/install/yolo_realsense/lib/python3.12/site-packages/yolo_realsense/picxel2world copy.py to picxel2world copy.cpython-312.pyc
+[0.971s] byte-compiling /home/jw/YongYiHanYong/install/yolo_realsense/lib/python3.12/site-packages/yolo_realsense/yolo_result_publisher.py to yolo_result_publisher.cpython-312.pyc
+[0.973s] running install_data
+[0.974s] creating /home/jw/YongYiHanYong/install/yolo_realsense/share/ament_index
+[0.974s] creating /home/jw/YongYiHanYong/install/yolo_realsense/share/ament_index/resource_index
+[0.974s] creating /home/jw/YongYiHanYong/install/yolo_realsense/share/ament_index/resource_index/packages
+[0.974s] copying resource/yolo_realsense -> /home/jw/YongYiHanYong/install/yolo_realsense/share/ament_index/resource_index/packages
+[0.974s] copying package.xml -> /home/jw/YongYiHanYong/install/yolo_realsense/share/yolo_realsense
+[0.974s] creating /home/jw/YongYiHanYong/install/yolo_realsense/share/yolo_realsense/launch
+[0.974s] copying launch/yolo_all.launch.py -> /home/jw/YongYiHanYong/install/yolo_realsense/share/yolo_realsense/launch
+[0.974s] copying launch/integrated_realsense_yolo.launch.py -> /home/jw/YongYiHanYong/install/yolo_realsense/share/yolo_realsense/launch
+[0.974s] creating /home/jw/YongYiHanYong/install/yolo_realsense/share/yolo_realsense/config
+[0.974s] copying config/yolo_params.yaml -> /home/jw/YongYiHanYong/install/yolo_realsense/share/yolo_realsense/config
+[0.974s] running install_egg_info
+[0.989s] Copying ../../build/yolo_realsense/yolo_realsense.egg-info to /home/jw/YongYiHanYong/install/yolo_realsense/lib/python3.12/site-packages/yolo_realsense-0.0.0-py3.12.egg-info
+[0.990s] running install_scripts
+[1.095s] Installing picxel2world script to /home/jw/YongYiHanYong/install/yolo_realsense/lib/yolo_realsense
+[1.096s] Installing priority_object script to /home/jw/YongYiHanYong/install/yolo_realsense/lib/yolo_realsense
+[1.096s] Installing world_trigger script to /home/jw/YongYiHanYong/install/yolo_realsense/lib/yolo_realsense
+[1.096s] Installing yolo_depth_viewer script to /home/jw/YongYiHanYong/install/yolo_realsense/lib/yolo_realsense
+[1.096s] Installing yolo_result_publisher script to /home/jw/YongYiHanYong/install/yolo_realsense/lib/yolo_realsense
+[1.096s] writing list of installed files to '/home/jw/YongYiHanYong/build/yolo_realsense/install.log'
+[1.133s] Invoked command in '/home/jw/YongYiHanYong/src/yolo_realsense' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/jw/YongYiHanYong/build/yolo_realsense/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jw/YongYiHanYong/install/yolo_realsense/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/yolo_realsense build --build-base /home/jw/YongYiHanYong/build/yolo_realsense/build install --record /home/jw/YongYiHanYong/build/yolo_realsense/install.log --single-version-externally-managed install_data

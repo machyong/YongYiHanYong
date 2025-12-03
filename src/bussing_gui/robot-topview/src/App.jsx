@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect} from "react";
 import "./App.css";
 import { KeywordListener } from "./KeywordListener"; 
+import bussingMate from "./assets/bussing_mate.png";
 
 const TABLE_POSITIONS = {
   0: { x: 343, y: 150 },
@@ -59,7 +60,7 @@ const PATH_MAP = {
   }
 };
 
-const ALLOWED_COMMANDS = ["clean", "setting"];
+const ALLOWED_COMMANDS = ["clean", "setting", "return"];
 
 const lerp = (a, b, t) => a + (b - a) * t;
 
@@ -256,7 +257,8 @@ const handleKeyword = (payload) => {
         <div
           className="robot-dot"
           style={{
-            transform: `translate(${robotPos.x}px, ${robotPos.y}px)`,
+            transform: `translate(${robotPos.x - 36}px, ${robotPos.y - 36}px)`,
+            backgroundImage: `url(${bussingMate})`,
           }}
         />
 

@@ -1,0 +1,78 @@
+[0.009s] Invoking command in '/home/jw/YongYiHanYong/build/target_move': CMAKE_PREFIX_PATH=/home/jw/YongYiHanYong/install/llm_for_pick_place_voice:/opt/ros/jazzy:/home/jw/YongYiHanYong/install/yolo_depth_interfaces:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/jw/YongYiHanYong/install/yolo_depth_interfaces/lib:${LD_LIBRARY_PATH} PKG_CONFIG_PATH=/home/jw/YongYiHanYong/install/yolo_depth_interfaces/lib/x86_64-linux-gnu/pkgconfig:/home/jw/YongYiHanYong/install/yolo_depth_interfaces/lib/pkgconfig PYTHONPATH=/home/jw/YongYiHanYong/install/yolo_depth_interfaces/lib/python3.12/site-packages:${PYTHONPATH} ROS_PACKAGE_PATH=/home/jw/YongYiHanYong/install/yolo_depth_interfaces/share /usr/bin/cmake /home/jw/YongYiHanYong/src/target_move -DCMAKE_INSTALL_PREFIX=/home/jw/YongYiHanYong/install/target_move
+[0.062s] -- The C compiler identification is GNU 13.3.0
+[0.117s] -- The CXX compiler identification is GNU 13.3.0
+[0.135s] -- Detecting C compiler ABI info
+[0.231s] -- Detecting C compiler ABI info - done
+[0.237s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.237s] -- Detecting C compile features
+[0.237s] -- Detecting C compile features - done
+[0.246s] -- Detecting CXX compiler ABI info
+[0.357s] -- Detecting CXX compiler ABI info - done
+[0.368s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.369s] -- Detecting CXX compile features
+[0.369s] -- Detecting CXX compile features - done
+[0.371s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.513s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.593s] -- Found moveit_ros_planning_interface: 2.12.3 (/opt/ros/jazzy/share/moveit_ros_planning_interface/cmake)
+[0.734s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: date_time filesystem program_options system thread 
+[0.777s] -- Found rosidl_generator_c: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.787s] -- Found rosidl_generator_cpp: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.799s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.816s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.114s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: chrono date_time filesystem iostreams program_options regex serialization system thread 
+[1.193s] -- Found parameter_traits: 0.5.0 (/opt/ros/jazzy/share/parameter_traits/cmake)
+[1.248s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[1.253s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[1.369s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[1.387s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[1.412s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.499s] -- Found rclcpp_lifecycle: 28.1.13 (/opt/ros/jazzy/share/rclcpp_lifecycle/cmake)
+[1.537s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: filesystem 
+[1.602s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[1.603s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[1.761s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: system filesystem date_time program_options thread chrono 
+[1.802s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: thread system filesystem regex date_time program_options 
+[1.824s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: system filesystem date_time program_options thread 
+[1.859s] -- Found yolo_depth_interfaces: 0.0.0 (/home/jw/YongYiHanYong/install/yolo_depth_interfaces/share/yolo_depth_interfaces/cmake)
+[1.879s] -- Found ament_lint_auto: 0.17.3 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[1.965s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.965s] -- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/jw/YongYiHanYong/src/target_move/include>
+[1.965s] -- Configured cppcheck exclude dirs and/or files: 
+[1.965s] -- Added test 'flake8' to check Python code syntax and style conventions
+[1.965s] -- Configured 'flake8' exclude dirs and/or files: 
+[1.966s] -- Added test 'lint_cmake' to check CMake code style
+[1.966s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[1.967s] -- Added test 'uncrustify' to check C / C++ code style
+[1.967s] -- Configured uncrustify additional arguments: 
+[1.967s] -- Added test 'xmllint' to check XML markup files
+[1.968s] -- Configuring done (1.9s)
+[1.998s] -- Generating done (0.0s)
+[2.002s] -- Build files have been written to: /home/jw/YongYiHanYong/build/target_move
+[2.016s] Invoked command in '/home/jw/YongYiHanYong/build/target_move' returned '0': CMAKE_PREFIX_PATH=/home/jw/YongYiHanYong/install/llm_for_pick_place_voice:/opt/ros/jazzy:/home/jw/YongYiHanYong/install/yolo_depth_interfaces:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/jw/YongYiHanYong/install/yolo_depth_interfaces/lib:${LD_LIBRARY_PATH} PKG_CONFIG_PATH=/home/jw/YongYiHanYong/install/yolo_depth_interfaces/lib/x86_64-linux-gnu/pkgconfig:/home/jw/YongYiHanYong/install/yolo_depth_interfaces/lib/pkgconfig PYTHONPATH=/home/jw/YongYiHanYong/install/yolo_depth_interfaces/lib/python3.12/site-packages:${PYTHONPATH} ROS_PACKAGE_PATH=/home/jw/YongYiHanYong/install/yolo_depth_interfaces/share /usr/bin/cmake /home/jw/YongYiHanYong/src/target_move -DCMAKE_INSTALL_PREFIX=/home/jw/YongYiHanYong/install/target_move
+[2.017s] Invoking command in '/home/jw/YongYiHanYong/build/target_move': CMAKE_PREFIX_PATH=/home/jw/YongYiHanYong/install/llm_for_pick_place_voice:/opt/ros/jazzy:/home/jw/YongYiHanYong/install/yolo_depth_interfaces:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/jw/YongYiHanYong/install/yolo_depth_interfaces/lib:${LD_LIBRARY_PATH} PKG_CONFIG_PATH=/home/jw/YongYiHanYong/install/yolo_depth_interfaces/lib/x86_64-linux-gnu/pkgconfig:/home/jw/YongYiHanYong/install/yolo_depth_interfaces/lib/pkgconfig PYTHONPATH=/home/jw/YongYiHanYong/install/yolo_depth_interfaces/lib/python3.12/site-packages:${PYTHONPATH} ROS_PACKAGE_PATH=/home/jw/YongYiHanYong/install/yolo_depth_interfaces/share /usr/bin/cmake --build /home/jw/YongYiHanYong/build/target_move -- -j16 -l16
+[2.085s] [ 50%] [32mBuilding CXX object CMakeFiles/target_move_node.dir/src/target_move.cpp.o[0m
+[12.103s] [100%] [32m[1mLinking CXX executable target_move_node[0m
+[12.753s] [100%] Built target target_move_node
+[12.765s] Invoked command in '/home/jw/YongYiHanYong/build/target_move' returned '0': CMAKE_PREFIX_PATH=/home/jw/YongYiHanYong/install/llm_for_pick_place_voice:/opt/ros/jazzy:/home/jw/YongYiHanYong/install/yolo_depth_interfaces:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/jw/YongYiHanYong/install/yolo_depth_interfaces/lib:${LD_LIBRARY_PATH} PKG_CONFIG_PATH=/home/jw/YongYiHanYong/install/yolo_depth_interfaces/lib/x86_64-linux-gnu/pkgconfig:/home/jw/YongYiHanYong/install/yolo_depth_interfaces/lib/pkgconfig PYTHONPATH=/home/jw/YongYiHanYong/install/yolo_depth_interfaces/lib/python3.12/site-packages:${PYTHONPATH} ROS_PACKAGE_PATH=/home/jw/YongYiHanYong/install/yolo_depth_interfaces/share /usr/bin/cmake --build /home/jw/YongYiHanYong/build/target_move -- -j16 -l16
+[12.766s] Invoking command in '/home/jw/YongYiHanYong/build/target_move': CMAKE_PREFIX_PATH=/home/jw/YongYiHanYong/install/llm_for_pick_place_voice:/opt/ros/jazzy:/home/jw/YongYiHanYong/install/yolo_depth_interfaces:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/jw/YongYiHanYong/install/yolo_depth_interfaces/lib:${LD_LIBRARY_PATH} PKG_CONFIG_PATH=/home/jw/YongYiHanYong/install/yolo_depth_interfaces/lib/x86_64-linux-gnu/pkgconfig:/home/jw/YongYiHanYong/install/yolo_depth_interfaces/lib/pkgconfig PYTHONPATH=/home/jw/YongYiHanYong/install/yolo_depth_interfaces/lib/python3.12/site-packages:${PYTHONPATH} ROS_PACKAGE_PATH=/home/jw/YongYiHanYong/install/yolo_depth_interfaces/share /usr/bin/cmake --install /home/jw/YongYiHanYong/build/target_move
+[12.773s] -- Install configuration: ""
+[12.774s] -- Installing: /home/jw/YongYiHanYong/install/target_move/lib/target_move/target_move_node
+[12.779s] -- Set non-toolchain portion of runtime path of "/home/jw/YongYiHanYong/install/target_move/lib/target_move/target_move_node" to ""
+[12.779s] -- Installing: /home/jw/YongYiHanYong/install/target_move/share/target_move/launch
+[12.779s] -- Installing: /home/jw/YongYiHanYong/install/target_move/share/target_move/launch/target_move_dsr.launch.py
+[12.779s] -- Installing: /home/jw/YongYiHanYong/install/target_move/share/ament_index/resource_index/package_run_dependencies/target_move
+[12.780s] -- Installing: /home/jw/YongYiHanYong/install/target_move/share/ament_index/resource_index/parent_prefix_path/target_move
+[12.780s] -- Installing: /home/jw/YongYiHanYong/install/target_move/share/target_move/environment/ament_prefix_path.sh
+[12.780s] -- Installing: /home/jw/YongYiHanYong/install/target_move/share/target_move/environment/ament_prefix_path.dsv
+[12.780s] -- Installing: /home/jw/YongYiHanYong/install/target_move/share/target_move/environment/path.sh
+[12.780s] -- Installing: /home/jw/YongYiHanYong/install/target_move/share/target_move/environment/path.dsv
+[12.780s] -- Installing: /home/jw/YongYiHanYong/install/target_move/share/target_move/local_setup.bash
+[12.780s] -- Installing: /home/jw/YongYiHanYong/install/target_move/share/target_move/local_setup.sh
+[12.780s] -- Installing: /home/jw/YongYiHanYong/install/target_move/share/target_move/local_setup.zsh
+[12.781s] -- Installing: /home/jw/YongYiHanYong/install/target_move/share/target_move/local_setup.dsv
+[12.781s] -- Installing: /home/jw/YongYiHanYong/install/target_move/share/target_move/package.dsv
+[12.781s] -- Installing: /home/jw/YongYiHanYong/install/target_move/share/ament_index/resource_index/packages/target_move
+[12.781s] -- Installing: /home/jw/YongYiHanYong/install/target_move/share/target_move/cmake/target_moveConfig.cmake
+[12.781s] -- Installing: /home/jw/YongYiHanYong/install/target_move/share/target_move/cmake/target_moveConfig-version.cmake
+[12.781s] -- Installing: /home/jw/YongYiHanYong/install/target_move/share/target_move/package.xml
+[12.785s] Invoked command in '/home/jw/YongYiHanYong/build/target_move' returned '0': CMAKE_PREFIX_PATH=/home/jw/YongYiHanYong/install/llm_for_pick_place_voice:/opt/ros/jazzy:/home/jw/YongYiHanYong/install/yolo_depth_interfaces:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/jw/YongYiHanYong/install/yolo_depth_interfaces/lib:${LD_LIBRARY_PATH} PKG_CONFIG_PATH=/home/jw/YongYiHanYong/install/yolo_depth_interfaces/lib/x86_64-linux-gnu/pkgconfig:/home/jw/YongYiHanYong/install/yolo_depth_interfaces/lib/pkgconfig PYTHONPATH=/home/jw/YongYiHanYong/install/yolo_depth_interfaces/lib/python3.12/site-packages:${PYTHONPATH} ROS_PACKAGE_PATH=/home/jw/YongYiHanYong/install/yolo_depth_interfaces/share /usr/bin/cmake --install /home/jw/YongYiHanYong/build/target_move
