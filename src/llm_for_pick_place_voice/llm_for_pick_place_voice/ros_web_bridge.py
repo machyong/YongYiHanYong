@@ -160,7 +160,7 @@ async def websocket_robot_events(websocket: WebSocket):
                 global bridge_node
                 if bridge_node is not None:
                     ros_msg = String()
-                    ros_msg.data = f"arrived:{table}"
+                    ros_msg.data = "arrived"
                     bridge_node.robot_event_pub.publish(ros_msg)
                     bridge_node.get_logger().info(
                         f"[BRIDGE] Published robot_event: {ros_msg.data}"

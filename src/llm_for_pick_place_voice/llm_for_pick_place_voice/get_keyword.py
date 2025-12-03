@@ -3,6 +3,7 @@
 import os
 import rclpy
 import json
+import time
 from rclpy.node import Node
 import pyaudio
 
@@ -149,6 +150,16 @@ class GetKeyword(Node):
         self.keyword_pub = self.create_publisher(String, "keyword_topic", 10)
         self.voice_state_pub = self.create_publisher(String, "voice_state", 10)
 
+        # robot_event 토픽 subscriber 생성
+        self.robot_event_subscriber = self.create_subscription(
+            String,
+            "robot_event",
+            self.robot_event_callback,
+            10
+        )
+        # robot_event 상태 변수
+        self.latest_robot_event = None
+
     ### 중요 키워드(table num, action) 추출
     def extract_keyword(self, output_message):
         llm_response = self.lang_chain.invoke({"user_input": output_message})
@@ -254,6 +265,14 @@ class GetKeyword(Node):
             self.get_logger().info(
                 f"[Service response] success={res.success}, object={objects_str}, action={actions_str}"
             )
+            
+            # robot_event 토픽 대기
+            self.get_logger().info("Waiting for robot_event...")
+            while self.latest_robot_event != "arrived":
+                rclpy.spin_once(self, timeout_sec=0.1)
+            
+            self.get_logger().info("Robot arrived")
+
         except Exception as e:
             self.get_logger().error(f"Error: Failed processing: {e}")
             res.success = False
@@ -273,6 +292,10 @@ class GetKeyword(Node):
         self.voice_state_pub.publish(msg)
 
         self.get_logger().info(f"[VOICE_STATE] {state}")
+
+    ### robot_event 토픽 콜백
+    def robot_event_callback(self, msg: String):
+        self.latest_robot_event = msg.data
 
     
 
