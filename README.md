@@ -141,6 +141,9 @@ GUI 소스 위치:
 cd ~/llm_ws/src/YongYiHanYong/src/bussing_gui/robot-topview
 ```
 ## 8-1. Node 패키지 설치
+```bash
+sudo apt install npm
+```
 ``` bash
 npm install
 ```
