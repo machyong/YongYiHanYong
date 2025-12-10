@@ -22,13 +22,13 @@ connected_clients: set[WebSocket] = set()
 # BridgeNode를 다른 쓰레드(WebSocket)에서 접근하기 위한 전역 포인터
 bridge_node: "BridgeNode | None" = None
 
-
 # --------- ROS2 Bridge 노드 ---------
 class BridgeNode(Node):
     def __init__(self):
         super().__init__("ros_web_bridge")
-
+        self.robot_state = ""
         # keyword_topic → React
+        # llm으로부터 받는 친구
         self.keyword_sub = self.create_subscription(
             String,
             "keyword_topic",
@@ -37,6 +37,7 @@ class BridgeNode(Node):
         )
 
         # voice_state → React
+        # 마이크상태 받는 친구
         self.voice_state_sub = self.create_subscription(
             String,
             "voice_state",
@@ -46,10 +47,20 @@ class BridgeNode(Node):
 
         # 🔥 React → ROS : 로봇 도착 이벤트 토픽
         #   - 토픽명: "robot_event"
-        #   - 메시지 예: "arrived:3"
+        #   - 메시지 예: "arrived"
+        # gui 이동상태 쏘는 친구
         self.robot_event_pub = self.create_publisher(
             String,
             "robot_event",
+            10,
+        )
+        self.timer = self.create_timer(1.0, self.timer_callback)
+
+        # 0번 받는 친구
+        self.robot_return_sub = self.create_subscription(
+            String,
+            "robot_return",
+            self.robot_return_state_callback,
             10,
         )
 
@@ -72,12 +83,27 @@ class BridgeNode(Node):
         )
         self.get_logger().info(f"[BRIDGE] voice_state: {payload}")
         message_queue.put(payload)
+    # def 대충 콜백(self, msg: String):
+    #     self.robot_event = msg.data
+    #     if self.robot_event != 종료:
+    #         self.robot_state = moving
 
+    def robot_return_state_callback(self, msg: String):
+        # msg.data는 이미 JSON string (get_keyword 쪽에서 json.dumps 한 것)
+        data = msg.data
+        self.get_logger().info(f"[BRIDGE] robot_return: {data}")
+        message_queue.put(data)
+
+    def timer_callback(self):
+        msg = String()
+        msg.data = self.robot_state  # "", "moving", "arrived"
+        self.robot_event_pub.publish(msg)
+        
 
 def ros_spin():
     global bridge_node
     rclpy.init()
-    bridge_node = BridgeNode()   # ⭐ 여기서 BridgeNode 생성 후 전역에 저장
+    bridge_node = BridgeNode()
     rclpy.spin(bridge_node)
     bridge_node.destroy_node()
     bridge_node = None
@@ -157,13 +183,14 @@ async def websocket_robot_events(websocket: WebSocket):
                 print(f"🚀 React says robot arrived at table: {table}")
 
                 # ROS 토픽으로 전달
-                global bridge_node
+            global bridge_node
                 if bridge_node is not None:
-                    ros_msg = String()
-                    ros_msg.data = f"arrived:{table}"
-                    bridge_node.robot_event_pub.publish(ros_msg)
+                    if table == 0:
+                        bridge_node.robot_state = "moving"
+                    else:
+                        bridge_node.robot_state = "arrived"
                     bridge_node.get_logger().info(
-                        f"[BRIDGE] Published robot_event: {ros_msg.data}"
+                        f"[BRIDGE] robot_state changed to: {bridge_node.robot_state}"
                     )
                 else:
                     print("⚠ bridge_node is None, cannot publish robot_event")
@@ -185,4 +212,3 @@ def main(args=None):
 if __name__ == "__main__":
     # python ros_web_bridge.py 로 직접 실행할 때
     main()
-

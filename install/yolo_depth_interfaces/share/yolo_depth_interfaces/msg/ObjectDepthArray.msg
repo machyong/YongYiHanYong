@@ -1,1 +1,0 @@
-yolo_depth_interfaces/ObjectDepth[] objects

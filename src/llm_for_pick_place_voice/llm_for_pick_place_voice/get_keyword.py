@@ -47,7 +47,13 @@ class GetKeyword(Node):
             self.get_logger().error("Failed to load openai_api_key from .env file.")
         else:
             self.get_logger().info("openai_api_key loaded successfully.")
-
+        self.robot_sub = self.create_subscription(
+            String,
+            '/robot_status',
+            self.robot_status_callback,
+            10
+        )
+        self.robot_status = "waiting"
         # 오디오 설정
         mic_config = MicConfig(
             chunk=12000,
@@ -148,6 +154,8 @@ class GetKeyword(Node):
 
         self.keyword_pub = self.create_publisher(String, "keyword_topic", 10)
         self.voice_state_pub = self.create_publisher(String, "voice_state", 10)
+    def robot_status_callback(self, msg: String):
+        self.robot_status = msg.data
 
     ### 중요 키워드(table num, action) 추출
     def extract_keyword(self, output_message):
@@ -254,6 +262,8 @@ class GetKeyword(Node):
             self.get_logger().info(
                 f"[Service response] success={res.success}, object={objects_str}, action={actions_str}"
             )
+            while rclpy.ok() and self.robot_status != "waiting":
+                rclpy.spin_once(self, timeout_sec=0.1)
         except Exception as e:
             self.get_logger().error(f"Error: Failed processing: {e}")
             res.success = False

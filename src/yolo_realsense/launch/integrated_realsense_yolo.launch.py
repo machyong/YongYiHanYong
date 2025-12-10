@@ -23,7 +23,7 @@ def generate_launch_description():
     # -----------------------------
     model_path_arg = DeclareLaunchArgument(
         'model_path',
-        default_value='/home/hun/YongYiHanYong/src/yolo_realsense/yolo_realsense/best.pt',
+        default_value='/home/up/YongYiHanYong/src/yolo_realsense/yolo_realsense/best.pt',
         description='YOLO 학습 가중치(.pt)'
     )
 

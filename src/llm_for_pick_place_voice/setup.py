@@ -33,6 +33,7 @@ setup(
             'ros_web_bridge = llm_for_pick_place_voice.ros_web_bridge:main',
             'arrive_test = llm_for_pick_place_voice.arrive_test:main',
             'test_robot = llm_for_pick_place_voice.test_robot:main',
+            'test_bridge = llm_for_pick_place_voice.test_bridge:main',
         ],
     },
 )

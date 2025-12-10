@@ -20,6 +20,7 @@ import json
 from ultralytics import YOLO
 from interface_pkg.srv import GetTargetPoint
 from geometry_msgs.msg import Point
+from std_srvs.srv import Trigger
 
 warnings.filterwarnings('ignore', category=FutureWarning)
 
@@ -55,7 +56,7 @@ class PixelToWorld(Node):
 
         # YOLO 관련
         # model_name 은 .pt 파일의 전체 경로를 권장 (예: /home/min/proj_ws/.../best.pt)
-        self.declare_parameter('model_path', '/home/hun/YongYiHanYong/src/yolo_realsense/yolo_realsense/best.pt')
+        self.declare_parameter('model_path', '/home/up/YongYiHanYong/src/yolo_realsense/yolo_realsense/best.pt')
         self.declare_parameter('use_yolo', True)
         # 기본 confidence threshold 0.7 (사용자 요청: 70% 이하 필터링)
         self.declare_parameter('confidence_threshold', 0.7)
@@ -162,7 +163,7 @@ class PixelToWorld(Node):
         # ------------------------
         # 서비스: get_target_point (비어있는 요청 -> geometry_msgs/Point 응답)
         # ------------------------
-        self.srv = self.create_service(GetTargetPoint, 'get_target_point', self.handle_get_target_point)
+        self.srv = self.create_service(Trigger, '/get_target_point', self.handle_get_target_point)
         self.get_logger().info('GetTargetPoint service is ready to receive requests.')
 
     # ------------------------
@@ -656,30 +657,34 @@ class PixelToWorld(Node):
     # 요청: 비어있음, 응답: geometry_msgs/Point + class_name + confidence
     # ------------------------
     def handle_get_target_point(self, request, response):
-        self.get_logger().info('Received a request for get_target_point service.')
+        self.get_logger().info('Received request for /get_target_point')
 
-        # 최신 angle_info 데이터를 서비스 응답으로 전송
         if self.latest_angle_info:
-            # Point 객체 생성 및 설정
-            point = Point()
-            point.x = float(self.latest_angle_info['x'])
-            point.y = float(self.latest_angle_info['y'])
-            point.z = float(self.latest_angle_info['z'])
-            
-            response.target_point = point
-            response.class_name = self.latest_angle_info['class']
-            response.confidence = float(self.latest_angle_info['confidence'])
-            
+            payload = {
+                'class': self.latest_angle_info['class'],
+                'center' : [self.latest_angle_info['x'], self.latest_angle_info['y'], self.latest_angle_info['z']],
+                'x': self.latest_angle_info['x'],
+                'y': self.latest_angle_info['y'],
+                'z': self.latest_angle_info['z'],
+                'angle_deg': self.latest_angle_info['angle_deg'],
+                'yaw_cam': self.latest_angle_info['yaw_cam'],
+                'pitch_cam': self.latest_angle_info['pitch_cam'],
+                'yaw_world': self.latest_angle_info['yaw_world'],
+                'pitch_world': self.latest_angle_info['pitch_world'],
+                'confidence': self.latest_angle_info['confidence']
+            }
+
+            response.success = True
+            response.message = json.dumps(payload)
+
             self.get_logger().info(
-                f"Sent target point: ({point.x}, {point.y}, {point.z}), "
-                f"class: {response.class_name}, conf: {response.confidence}"
+                f"Sent target info: {response.message}"
             )
         else:
-            # 데이터 없을 경우 기본값
-            response.target_point = Point(x=0.0, y=0.0, z=0.0)
-            response.class_name = "unknown"
-            response.confidence = 0.0
-            self.get_logger().warn("No target point available, sending default values.")
+            response.success = False
+            response.message = "None"
+
+            self.get_logger().warn("No target available, returning None")
 
         return response
 

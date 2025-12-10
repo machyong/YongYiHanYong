@@ -16,5 +16,6 @@
         "/home/yong/YongYiHanYong/install/dsr_example/lib/python3.12/site-packages",
         "/home/yong/YongYiHanYong/install/dsr_common2/lib/python3.12/site-packages",
         "/opt/ros/jazzy/lib/python3.12/site-packages"
-    ]
+    ],
+    "ros.distro": "jazzy"
 }
