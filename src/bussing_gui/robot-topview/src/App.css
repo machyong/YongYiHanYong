@@ -20,7 +20,7 @@ html, body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
+  background-color: #d6bee4;
   font-family: 'BinggraeMelona', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
@@ -86,7 +86,7 @@ html, body {
 /* 테이블 영역 */
 .tables {
   position: absolute;
-  top: 220px;             /* 250px → 220px 정도로 조금만 위로 */
+  top: 265px;             /* 250px → 220px 정도로 조금만 위로 */
   left: 58%;
   transform: translateX(-50%);
 
@@ -158,9 +158,9 @@ html, body {
 .robot-dot {
   position: absolute;
   top: 0;
-  left: 0;
-  width: 144px;
-  height: 144px;
+  left: 0px;
+  width: 200px;
+  height: 200px;
 
   background-size: contain;
   background-repeat: no-repeat;
@@ -176,7 +176,7 @@ html, body {
 /* 전체 오버레이 컨테이너 (패널들 묶는 영역) */
 .control-overlay {
   position: absolute;
-  top: 200px;
+  top: 285px;
   left: 40px;
   width: 280px;
   display: flex;
@@ -288,7 +288,7 @@ html, body {
 .mic-label {
   font-size: 28px;
   font-weight: 500;
-  color: #8ecbff;  
+  color: #0088ff;  
 }
 
 /* 대기 상태일 때 동그란 마이크 아이콘 */

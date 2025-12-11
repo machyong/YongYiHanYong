@@ -58,7 +58,7 @@ const PATH_MAP = {
   },
 
   4:{
-    0:["T4", 3, "T3", "T0", 0],
+    0:["T4", 3, "T3", 0],
     1:["T4", "T2", 1],
     2:["T4", "T2", 2],
     3:["T4", 3],
@@ -261,7 +261,7 @@ const handleKeyword = (payload) => {
 
   return (
     <div className="map-container"
-     style={{ backgroundImage: `url(${restaurantBg})` }}
+    //  style={{ backgroundImage: `url(${restaurantBg})` }}
     >
       {/* 🔵 WebSocket → onKeyword + onVoiceState 연결 */}
       <KeywordListener
@@ -295,7 +295,7 @@ const handleKeyword = (payload) => {
         <div
           className="robot-dot"
           style={{
-            transform: `translate(${robotPos.x - 36}px, ${robotPos.y - 36}px)`,
+            transform: `translate(${robotPos.x - 65}px, ${robotPos.y - 65}px)`,
             backgroundImage: `url(${bussingMate})`,
           }}
         />
