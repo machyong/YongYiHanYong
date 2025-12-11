@@ -28,10 +28,10 @@ class GetKeywordClient(Node):
         self.move_to_point_client = self.create_client(StringToString, '/move_to_point')
 
         # RL 이동 서비스2
-        self.move_to_box_rl_client = self.create_client(StringToString, '/move_to_box_rl')
+        self.move_to_point_rl_client = self.create_client(StringToString, '/move_to_box_rl')
 
         # 수거함 이동 서비스
-        self.move_to_box_client = self.create_client(StringToString, '/move_to_box')
+        self.move_to_point_client = self.create_client(StringToString, '/move_to_box')
 
         # 상태 퍼블리셔
         self.publisher_ = self.create_publisher(String, '/robot_status', 10)
@@ -138,11 +138,9 @@ class GetKeywordClient(Node):
         """
         1) /move_to_point_rl(coord_str)
         2) RL 응답 그대로 → /move_to_point(forward_str)
-        3) /move_to_box_rl → RL 결과 → /move_to_box
         """
-
         # ============================================
-        # STEP 1 — RL 서비스 호출 (move_to_point_rl)
+        # STEP 1 — RL 서비스 호출
         # ============================================
         self.get_logger().info(f"[1] Sending to /move_to_point_rl: '{coord_str}'")
 
@@ -156,6 +154,7 @@ class GetKeywordClient(Node):
 
             self.get_logger().info(f"[RL Response] {res_rl}")
 
+            # RL 응답 parsing
             if hasattr(res_rl, "output") and res_rl.output:
                 forward_str = res_rl.output
             elif hasattr(res_rl, "message") and res_rl.message:
@@ -168,7 +167,7 @@ class GetKeywordClient(Node):
             return
 
         # ============================================
-        # STEP 2 — RL 결과 → move_to_point 전달
+        # STEP 2 — RL 결과를 /move_to_point 로 전달
         # ============================================
         self.get_logger().info(f"[2] Forwarding to /move_to_point: '{forward_str}'")
 
@@ -180,64 +179,10 @@ class GetKeywordClient(Node):
             rclpy.spin_until_future_complete(self, future_final)
 
             res_final = future_final.result()
-
-            if hasattr(res_final, "output") and res_final.output:
-                second_str = res_final.output
-            elif hasattr(res_final, "message") and res_final.message:
-                second_str = res_final.message
-            else:
-                second_str = coord_str
+            self.get_logger().info(f"[MoveToPoint Response] {res_final}")
 
         except Exception as e:
             self.get_logger().error(f"Error calling /move_to_point: {e}")
-            return
-
-        # ============================================
-        # STEP 3 — RL 서비스 호출 (move_to_box_rl)
-        # ============================================
-        self.get_logger().info(f"[3] Sending to /move_to_box_rl: '{second_str}'")
-
-        try:
-            rl_box = StringToString.Request()
-            rl_box.input = second_str
-
-            future_box_rl = self.move_to_box_rl_client.call_async(rl_box)
-            rclpy.spin_until_future_complete(self, future_box_rl)
-
-            res_box_rl = future_box_rl.result()
-            self.get_logger().info(f"[RL Box Response] {res_box_rl}")
-
-            if hasattr(res_box_rl, "output") and res_box_rl.output:
-                third_str = res_box_rl.output
-            elif hasattr(res_box_rl, "message") and res_box_rl.message:
-                third_str = res_box_rl.message
-            else:
-                third_str = second_str
-
-        except Exception as e:
-            self.get_logger().error(f"Error in /move_to_box_rl: {e}")
-            return
-
-        # ============================================
-        # STEP 4 — RL 결과 → move_to_box 호출 (수정됨)
-        # ============================================
-        self.get_logger().info(f"[4] Forwarding to /move_to_box: '{third_str}'")
-
-        try:
-            req_box = StringToString.Request()
-            req_box.input = third_str
-
-            future_box = self.move_to_box_client.call_async(req_box)
-            rclpy.spin_until_future_complete(self, future_box)
-
-            res_box_final = future_box.result()
-            self.get_logger().info(f"[MoveToBox Response] {res_box_final}")
-
-        except Exception as e:
-            self.get_logger().error(f"Error calling /move_to_box: {e}")
-
-
-        
 
 
 def main(args=None):
