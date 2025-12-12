@@ -114,6 +114,8 @@ class GetKeywordClient(Node):
 
                     self.forward_string_to_move_to_point(coord_str)
 
+            
+
             self.robot_status = "waiting"
 
         except Exception as e:

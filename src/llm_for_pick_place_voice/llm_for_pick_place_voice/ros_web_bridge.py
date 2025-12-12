@@ -47,11 +47,11 @@ class BridgeNode(Node):
 
         # 🔥 React → ROS : 로봇 도착 이벤트 토픽
         #   - 토픽명: "robot_event"
-        #   - 메시지 예: "arrived"
+        #   - 메시지 예: "move, arrived"
         # gui 이동상태 쏘는 친구
         self.robot_event_pub = self.create_publisher(
             String,
-            "robot_event",
+            "robot_status",
             10,
         )
         self.timer = self.create_timer(1.0, self.timer_callback)
@@ -59,7 +59,7 @@ class BridgeNode(Node):
         # 0번 받는 친구
         self.robot_return_sub = self.create_subscription(
             String,
-            "robot_return",
+            "/robot_command",
             self.robot_return_state_callback,
             10,
         )
@@ -183,17 +183,17 @@ async def websocket_robot_events(websocket: WebSocket):
                 print(f"🚀 React says robot arrived at table: {table}")
 
                 # ROS 토픽으로 전달
-            global bridge_node
+                global bridge_node
                 if bridge_node is not None:
                     if table == 0:
-                        bridge_node.robot_state = "moving"
+                        bridge_node.robot_state = "waiting"
                     else:
                         bridge_node.robot_state = "arrived"
                     bridge_node.get_logger().info(
                         f"[BRIDGE] robot_state changed to: {bridge_node.robot_state}"
                     )
                 else:
-                    print("⚠ bridge_node is None, cannot publish robot_event")
+                        print("⚠ bridge_node is None, cannot publish robot_event")
 
     except WebSocketDisconnect:
         print("WebSocket /ws/robot_events client disconnected")

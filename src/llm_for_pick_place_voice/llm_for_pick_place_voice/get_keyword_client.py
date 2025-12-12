@@ -38,6 +38,9 @@ class GetKeywordClient(Node):
         self.robot_status = "waiting"
         self.timer = self.create_timer(0.5, self.robot_status_publisher)
 
+        #로봇 리턴 퍼블리셔
+        self.robot_command_pub = self.create_publisher(String, '/robot_command', 10)
+        
         # 서비스 대기
         while not self.cli.wait_for_service(timeout_sec=1.0):
             self.get_logger().info("Waiting for get_keyword service...")
@@ -114,7 +117,18 @@ class GetKeywordClient(Node):
 
                     self.forward_string_to_move_to_point(coord_str)
 
-            self.robot_status = "waiting"
+            self.robot_status = "returning"
+
+            cmd = String()
+            cmd.data = json.dumps({
+                "type": "keyword",
+                "tables": ["table0"],
+                "command": "return",
+                "text": "퇴식구로 이동합니다",
+            }, ensure_ascii=False)
+
+            self.robot_command_pub.publish(cmd)
+            self.get_logger().info("Published robot_command: return_to_home")
 
         except Exception as e:
             self.get_logger().error(f"Error calling get_keyword: {e}")

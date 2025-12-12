@@ -102,7 +102,7 @@ class GetKeyword(Node):
 
             <특수 규칙>
             - "몇 번 테이블", "3번", "3번 자리" 등 숫자 기반 표현을 table3과 같이 리스트 항목으로 변환하세요.
-            - "치워줘, 정리해줘, 비워줘, 채워줘, 재워줘" → clean
+            - "치워줘, 정리해줘, 비워줘, 채워줘, 재워줘, 지어줘" → clean
             - "세팅해줘, 준비해줘, 셋팅해줘, 세트해줘" → setting
             - 여러 테이블 번호가 동시에 등장할 경우 각각에 맞는 작업을 지정하세요.
             - "1번 세팅하고 2번 정리해줘" 같은 문장에서는 각 테이블마다 다른 작업을 지정합니다.
@@ -201,6 +201,7 @@ class GetKeyword(Node):
         # 서비스 처리
         try:
             # wakeup word 대기
+            
             self.publish_voice_state("waiting")
             self.get_logger().info("Waiting for wakeupword...")
             while not self.wakeup_word.is_wakeup():
@@ -262,8 +263,8 @@ class GetKeyword(Node):
             self.get_logger().info(
                 f"[Service response] success={res.success}, object={objects_str}, action={actions_str}"
             )
-            while rclpy.ok() and self.robot_status != "waiting":
-                rclpy.spin_once(self, timeout_sec=0.1)
+            # while rclpy.ok() and self.robot_status != "waiting":
+            #     rclpy.spin_once(self, timeout_sec=0.1)
         except Exception as e:
             self.get_logger().error(f"Error: Failed processing: {e}")
             res.success = False

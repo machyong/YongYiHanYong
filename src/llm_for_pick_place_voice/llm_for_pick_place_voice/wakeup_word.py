@@ -39,7 +39,7 @@ class WakeupWord:
         # print("model name:", self.model_name)
         print(f"Tell me wakeupword: {self.model_name} \n confidence: ", confidence)
         # Wakeword 탐지
-        if confidence > 0.05:    # 임계값 조정 가능(0~1)
+        if confidence > 0.30:    # 임계값 조정 가능(0~1)
             print("Wakeupword detected!")
             return True
         return False

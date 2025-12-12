@@ -252,7 +252,7 @@ class PPOPositionControlNode(Node):
             dist = math.sqrt(dx*dx + dy*dy)
 
             # ⭐ 목표 도달 조건
-            if dist < 0.1:
+            if dist < 0.12:
                 self.get_logger().info(f"🎉 REACHED target: dist={dist:.3f}m → STOP")
 
                 self.stop_motion = True

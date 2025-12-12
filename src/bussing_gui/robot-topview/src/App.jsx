@@ -1,6 +1,13 @@
 import { useState, useRef, useEffect} from "react";
 import "./App.css";
 import { KeywordListener } from "./KeywordListener"; 
+import bussingMate from "./assets/bussing_mate.png";
+import returnIcon from "./assets/return.png";
+import servingIcon from "./assets/serving.png";
+import kitchenIcon from "./assets/kitchen.png";
+import counterIcon from "./assets/counter.png";
+import tableImage from "./assets/table.png"; 
+import restaurantBg from "./assets/restaurant.png";
 
 const TABLE_POSITIONS = {
   0: { x: 343, y: 150 },
@@ -51,7 +58,7 @@ const PATH_MAP = {
   },
 
   4:{
-    0:["T4", 3, "T3", "T0", 0],
+    0:["T4", 3, "T3", 0],
     1:["T4", "T2", 1],
     2:["T4", "T2", 2],
     3:["T4", 3],
@@ -59,7 +66,7 @@ const PATH_MAP = {
   }
 };
 
-const ALLOWED_COMMANDS = ["clean", "setting"];
+const ALLOWED_COMMANDS = ["clean", "setting", "return"];
 
 const lerp = (a, b, t) => a + (b - a) * t;
 
@@ -106,6 +113,7 @@ function App() {
 
     return () => wsRef.current && wsRef.current.close();
   }, []);
+
 
   /* -------------- 도착 메시지 보내는 함수 -------------- */
   const notifyArrived = (dest) => {
@@ -235,10 +243,26 @@ const handleKeyword = (payload) => {
     moveNext(0);
   };
 
+  // useEffect(() => {
+  //   window.go = (dest) => go(dest);
+  //   window.testCmd = (table, cmd = "clean") =>
+  //     handleKeyword({ tables: [String(table)], command: cmd, text: "test" });
 
+  //   console.log(
+  //     "%c[DEBUG] window.go(table), window.testCmd(table, cmd) 사용 가능",
+  //     "color: #22c55e; font-weight: bold;"
+  //   );
+
+  //   return () => {
+  //     delete window.go;
+  //     delete window.testCmd;
+  //   };
+  // }, [go, handleKeyword]);
 
   return (
-    <div className="map-container">
+    <div className="map-container"
+    //  style={{ backgroundImage: `url(${restaurantBg})` }}
+    >
       {/* 🔵 WebSocket → onKeyword + onVoiceState 연결 */}
       <KeywordListener
         onKeyword={handleKeyword}
@@ -247,34 +271,49 @@ const handleKeyword = (payload) => {
 
       {/* 상단 TopView 영역 */}
       <div className="topview">
-        <div className="return">퇴식구</div>
-        <div className="serving">배식구</div>
-        <div className="kitchen">주방 </div>
-        <div className="counter">카운터</div>
+        <div className="top-badge return">
+          <img src={returnIcon} alt="퇴식구 아이콘" className="top-icon" />
+          <span>퇴식구</span>
+        </div>
+
+        <div className="top-badge serving">
+          <img src={servingIcon} alt="배식구 아이콘" className="top-icon" />
+          <span>배식구</span>
+        </div>
+
+        <div className="top-badge kitchen">
+          <img src={kitchenIcon} alt="주방 아이콘" className="top-icon" />
+          <span>주방</span>
+        </div>
+
+        <div className="top-badge counter">
+          <img src={counterIcon} alt="카운터 아이콘" className="top-icon" />
+          <span>카운터</span>
+        </div>
 
         {/* 로봇 점 */}
         <div
           className="robot-dot"
           style={{
-            transform: `translate(${robotPos.x}px, ${robotPos.y}px)`,
+            transform: `translate(${robotPos.x - 65}px, ${robotPos.y - 65}px)`,
+            backgroundImage: `url(${bussingMate})`,
           }}
         />
 
         {/* 테이블 2×2 */}
         <div className="tables">
           {[1, 2, 3, 4].map((id) => (
-            <div className={`table-block table-${id}`} key={id}>
-              <div className="seats-column seats-left">
-                <div className="seat" />
-                <div className="seat" />
+            <div className="table-block" key={id}>
+              <div className="table-title">테이블 {id}</div>
+
+              <div className="table-rect">
+                <img
+                  src={tableImage}  // 혹은 동일 이미지
+                  alt={`${id}번 테이블`}
+                  className="table-img"
+                />
               </div>
 
-              <div className="table-rect">{id}</div>
-
-              <div className="seats-column seats-right">
-                <div className="seat" />
-                <div className="seat" />
-              </div>
             </div>
           ))}
         </div>
