@@ -149,6 +149,6 @@ ros2 run dsr_example place
 ### 최종 시연 영상
 
 ## 🎥 Demo Video
-[유튜브 영상 보기]([https://www.youtube.com/watch?v=영상ID](https://youtu.be/wBLrudZ3EMo/maxresdefault.jpg)
+[![yongyihan 조 시연 영상 bussing mate](https://img.youtube.com/vi/wBLrudZ3EMo/0.jpg)](https://youtu.be/wBLrudZ3EMo?si=vk7Fah76RO8QvoYz)
 
 
