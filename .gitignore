@@ -99,3 +99,5 @@ dist-ssr
 *.sln
 *.sw?
 
+*.ppt
+*.pptx
