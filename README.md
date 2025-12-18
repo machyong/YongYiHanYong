@@ -147,7 +147,7 @@ ros2 run dsr_example place
 ---
 ### 발표자료
 
-[![PPT 미리보기](ppt_thumbnail.png)](https://docs.google.com/presentation/d/1gKDBglbkKiGBZN7u62VMBC9nMkdloyiE/edit?usp=drive_link&ouid=113187910485490670619&rtpof=true&sd=true)
+[![발표자료 다운로드](ppt_thumbnail.png)](https://docs.google.com/presentation/d/1gKDBglbkKiGBZN7u62VMBC9nMkdloyiE/edit?usp=drive_link&ouid=113187910485490670619&rtpof=true&sd=true)
 
 ---
 ### 최종 시연 영상
