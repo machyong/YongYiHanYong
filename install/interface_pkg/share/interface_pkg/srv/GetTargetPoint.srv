@@ -1,4 +1,0 @@
----
-geometry_msgs/Point target_point
-string class_name
-float32 confidence

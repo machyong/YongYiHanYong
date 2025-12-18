@@ -13,30 +13,21 @@
 
 ---
 
-### 2. ROS2 워크스페이스 & 패키지 구성
+### 2. 두산 로봇 설정
 
 ```bash
-# ROS2 워크스페이스 생성 (이미 있다면 생략)
-mkdir -p ~/llm_ws/src
-cd ~/llm_ws/src
+# 아래 두산 github에 자신과 맞는 ros2 버전에 따라 설치
+https://github.com/DoosanRobotics/doosan-robot2/tree/humble
 ```
 ```bash
-# 프로젝트 클론
-git clone https://github.com/your-org/YongYiHanYong.git
-cd YongYiHanYong
+# 두산 로봇 움직임을 위한 package 덮어 씌우기
+ros2_ws/src/doosan-robot2/dsr_bringup과 dsr_example에 현 깃허브에 ros2_ws폴더의 파일 붙여 넣기
 ```
 
 ---
 
-### 3. Python 가상환경 생성 (Strongly Recommended)
-Ubuntu 24.04에서는 pip가 시스템 환경을 보호하기 때문에
-반드시 가상환경(venv) 사용을 권장합니다.
-``` bash
-cd ~/llm_ws/src/YongYiHanYong
-
-python3 -m venv .venv
-source .venv/bin/activate
-```
+### 3. isaaclab 설정
+학습을 위해 isaaclab 폴더에 현 깃허브 isaacsim 폴더에 있는 파일 붙여넣기 
 
 ---
 
@@ -71,18 +62,18 @@ pip install -r requirements.txt
 
 음성 명령 파싱을 위한 LLM 호출은 .env 파일에서 API 키를 읽습니다.
 ```bash
-nano ~/llm_ws/src/YongYiHanYong/llm_for_pick_place_voice/resource/.env
+nano ~/YongYiHanYong/colcon_ws/llm_for_pick_place_voice/resource/.env
 ```
 예시:
 ``` env
-OPENAI_API_KEY=sk-xxxxxx_your_key_here
+OPENAI_API_KEY=your_key_here
 ```
 
 ---
 
 ### 6. ROS2 빌드
 ``` bash
-cd ~/llm_ws
+cd ~/YONGYIHANYONG/colcon_ws
 
 # ROS2 기본 환경 로드
 source /opt/ros/jazzy/setup.bash
@@ -94,57 +85,44 @@ colcon build --symlink-install
 source install/setup.bash
 
 ```
-⚠ package.xml과 setup.py에서
-get_keyword · ros_web_bridge 노드를 entry point로 등록해야
-ros2 run 명령을 사용할 수 있습니다.
 
 ---
 
-### 7. ROS2 노드 실행
-## 7-1. 음성 명령 트리거 클라이언트 노드 (get_keyword_client)
-get_keyword 서비스에 한 번 요청을 보내
-웨이크업 워드 감지 → STT → LLM 파싱을 한 사이클 수행시키는 클라이언트 노드입니다.
-``` bash
-cd ~/llm_ws
-source /opt/ros/jazzy/setup.bash
-source install/setup.bash
-ros2 run llm_for_pick_place_voice get_keyword_client
-```
-참고: get_keyword_client 대신 직접 서비스 호출로 테스트할 수도 있습니다.
-``` bash
-ros2 service call /get_keyword std_srvs/srv/Trigger "{}"
-```
+### 7. insterface_pkg 
+llm_for_pick_place_voice패키지와 동일한 서비스 인터페이스를 가지기 위해 interface_pkg를 ros2_ws/src에 복사한다.
 
-## 7-2. LLM + STT 음성 처리 서버 노드 (get_keyword)
-``` bash
-cd ~/llm_ws
-source /opt/ros/jazzy/setup.bash
-source install/setup.bash
-ros2 run llm_for_pick_place_voice get_keyword
+## 8. 실행
+## 8-0. 설치
 ```
-
-## 7-3. ROS & Web Bridge (FastAPI WebSocket 서버)
+cd ~/YONGYIHANYONG/colcon_ws
+colcon build
+cd ~/YONGYIHANYONG/ros2_ws
+colcon build
+source ~/YONGYIHANYONG/colcon_wsinstall/setup.bash
+source ~/YONGYIHANYONG/ros2_ws/install/setup.bash
+```
+### 8-1 ROS & Web Bridge (FastAPI WebSocket 서버)
 ``` bash
-cd ~/llm_ws
+cd ~/YONGYIHANYONG/colcon_ws
 source /opt/ros/jazzy/setup.bash
 source install/setup.bash
 ros2 run llm_for_pick_place_voice ros_web_bridge
 ```
 ---
 
-### 8. React GUI 실행
+### 8-2. React GUI 실행
 이 GUI는 **React + Vite** 기반으로 구현되어 있으며,  
 모든 프론트엔드 의존성은 `package.json` 에 정의되어 있습니다.
 
 GUI 소스 위치:
 ``` bash
-cd ~/llm_ws/src/YongYiHanYong/src/bussing_gui/robot-topview
+cd ~/YongYiHanYong/colcon_ws/src/bussing_gui/robot-topview
 ```
-## 8-1. Node 패키지 설치
+##### Node 패키지 설치
 ``` bash
 npm install
 ```
-## 8-2. 실행
+##### 실행
 ``` bash
 npm run dev
 ```
@@ -152,56 +130,28 @@ npm run dev
 Top View GUI와 음성 상태 패널을 확인할 수 있습니다.
 
 ---
+### 8-3. 로봇 동작 노드 실행
+```bash
+ros2 launch llm_for_pick_place_voice llm_pick_place_voice.launch.py
+```
+다른 2개의 터미널에 아래 명령어 각각 실행
+```
 
+cd ~/YONGYIHANYONG/ros2_ws
+ros2 run dsr_example pick
+```
+```
+cd ~/YONGYIHANYONG/ros2_ws
+ros2 run dsr_example place
+```
 
-## 🔁 GUI 프로세스 및 사용 가이드
+### 발표자료
+⬇[PPT 다운로드](./present_docs/용이한_부싱메이트_발표자료_최종.pptx)
 
-이 프로젝트는 **ROS2 + LLM → WebSocket → React** 구조로 동작하며,
-음성 입력에서 GUI 로봇 이동까지 다음 순서로 진행됩니다.
+### 최종 시연 영상
 
-1. **웨이크업 워드 감지**  
-   ROS2 노드가 마이크 스트림에서 wakeup word("Alexa")를 감지합니다.
+## 🎥 Demo Video
 
-2. **음성 인식(STT)**  
-   감지 후 6초간 음성을 녹음하고 텍스트로 변환합니다.
+[![Watch the video](https://youtu.be/wBLrudZ3EMo/maxresdefault.jpg)]
+(https://youtu.be/wBLrudZ3EMo)
 
-3. **LLM 기반 명령 파싱**  
-   변환된 문장을 LLM(GPT-4o)에 전달해  
-   `table` 과 `action(clean/setting)` 을 추출합니다.
-   table의 경우 1~4번만 유효합니다.
-
-4. **ROS → WebSocket 브로드캐스트**  
-   추출된 명령과 음성 상태는 WebSocket(`/ws/keywords`)으로 전송됩니다.
-
-5. **React GUI 업데이트**  
-   브라우저는 WebSocket 이벤트를 받아 
-   테이블/작업을 표시하고 로봇 Dot 이동을 시작합니다.
-
-6. **로봇 Dot 애니메이션 이동**  
-   로봇 Dot은 경유지(PATH_MAP)를 따라 목표 테이블까지 애니메이션으로 이동합니다.
-
-7. **도착 이벤트 React → ROS2 전송**  
-   - 도착 시 WebSocket(`/ws/robot_events`)으로 ROS에  
-   `"arrived:<table>"` 메시지를 보내 후속 로봇 작업을 트리거합니다.
-   - ROS의 로봇 제어 노드가 해당 테이블에서 실제 동작(clean/setting)을 수행합니다.
-   - **모든 작업이 완료되면, 다시 웨이크업 워드로 새로운 음성 명령을 입력할 수 있습니다.**
-
-
-## 📸 실제 실행 화면 (GUI)
-- GUI는 2D top-view 기반이며, 좌측 패널에서 음성 입력 상태, 인식된 명령,  
-및 현재 이동 중인 목표 테이블 정보를 확인할 수 있습니다.
-
-### 1) 시작 화면 (Idle)
-프로그램 실행 직후 로봇은 기본 위치에 있으며 마이크는 웨이크업 워드 대기 상태입니다.
-
-![Idle](./src/bussing_gui/robot-topview/src/assets/UI_1.png)
-
-### 2) 웨이크업 워드 감지 후 음성 명령 입력 화면 (Listening + STT)
-웨이크업 워드가 감지되면 마이크가 Listening 상태로 전환되고 사용자의 음성 명령(STT 결과)이 화면에 실시간으로 표시됩니다.
-
-![Listening + STT](./src/bussing_gui/robot-topview/src/assets/UI_2.png)
-
-### 3) 로봇 이동 화면 (Moving)
-LLM이 분석한 테이블/작업 정보에 따라 로봇 Dot이 해당 테이블까지 애니메이션으로 이동하는 장면입니다.
-
-![Moving](./src/bussing_gui/robot-topview/src/assets/UI_3.png)
