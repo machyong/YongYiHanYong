@@ -149,7 +149,6 @@ ros2 run dsr_example place
 ### 최종 시연 영상
 
 ## 🎥 Demo Video
+[유튜브 영상 보기]([https://www.youtube.com/watch?v=영상ID](https://youtu.be/wBLrudZ3EMo/maxresdefault.jpg)
 
-[![Watch the video](https://youtu.be/wBLrudZ3EMo/maxresdefault.jpg)]
-(https://youtu.be/wBLrudZ3EMo)
 
