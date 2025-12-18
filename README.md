@@ -145,8 +145,6 @@ cd ~/YONGYIHANYONG/ros2_ws
 ros2 run dsr_example place
 ```
 
-### 발표자료
-⬇[PPT 다운로드](./present_docs/용이한_부싱메이트_발표자료_최종.pptx)
 
 ### 최종 시연 영상
 
